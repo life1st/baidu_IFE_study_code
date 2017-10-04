@@ -1,0 +1,23 @@
+.commonForm-box .w240 {
+    text-align: right;
+    width: 240px;
+}
+.commonForm-box .toast-info {
+    color: #B8BCB5;
+}
+.commonForm-box .form-item {
+    padding: 6px 0;
+}
+.commonForm-box p {
+    display: inline-block;
+    user-select: none;
+}
+.commonForm-box input[type=submit] {
+    width: 100%;
+    line-height: 48px;
+    background-color: #3355D0;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+}
