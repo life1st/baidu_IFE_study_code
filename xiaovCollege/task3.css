@@ -1,0 +1,44 @@
+body,.main-content,.team-box,.intro-box,.personal-logo-box{
+    padding: 20px;
+    border: 1px solid #B8B8B8;
+}
+.main-content {
+    background-color: #eee;
+    min-width: 600px;
+}
+.team-box {
+    float: left;
+    width: 158px;
+    background-color: #fff;
+}
+.logo {
+    display: inline-block;
+    background-color: #eee;
+    width: 78px;
+    height: 78px;
+    border: 1px solid #B8B8B8;
+}
+.name-box {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 10px;
+}
+.intro-box {
+    margin:0 140px 0 220px;
+    background-color: #fff;
+    vertical-align: top;
+}
+.personal-logo-box {
+    float: right;
+    width: 78px;
+    background-color: #fff;
+}
+.personal-logo-box .logo {
+    margin-bottom: 20px;
+}
+.personal-logo-box .logo:last-child {
+    margin-bottom: 0;
+}
+.bottom-box {
+    clear: both;
+}
