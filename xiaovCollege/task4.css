@@ -1,0 +1,28 @@
+.main-box {
+    width: 400px;
+    height: 200px;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.left-top-box,.right-bottom-box {
+    width: 50px;
+    height: 50px;
+    background-color: #fc0;
+}
+.left-top-box {
+    border-radius: 0 0 50px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.right-bottom-box {
+    border-radius: 50px 0 0 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
