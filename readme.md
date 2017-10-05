@@ -13,3 +13,5 @@
 [任务一：零基础HTML编码](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task1.html)
 
 [任务二：零基础HTML及CSS编码（一）](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task2.html)
+
+[任务三：三栏式布局](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task3.html)
