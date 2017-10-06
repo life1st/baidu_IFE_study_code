@@ -21,3 +21,5 @@
 [任务四：定位和居中问题](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task4.html)
 
 [任务五：零基础HTML及CSS编码（二）](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task5.html)
+
+[任务六：通过HTML及CSS模拟报纸排版](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task6.html)
