@@ -12,3 +12,6 @@ html {overflow-y: scroll;}
 .fr {
     float: right;
 }
+.cl {
+    clear: both;
+}

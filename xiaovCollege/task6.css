@@ -1,0 +1,330 @@
+.main-content {
+    width: 892px;
+    height: 1386px;
+    margin: 0 auto;
+    padding: 0 44px;
+    font-size: 0;
+}
+/*top*/
+.top {
+    width: 892px;
+    height: 61px;
+    margin: 0 auto 34px;
+    border-bottom: 2px solid #938e8c;
+    font-size: 12px;
+    font-family: '黑体';
+}
+.logo {
+    width: 110px;
+    height: 61px;
+    background-color: #d45d5c;
+}
+.logo p {
+    padding-top: 44px;
+    color: #fff;
+}
+.top time {
+    padding-top: 44px;
+    float: right;
+    color: #d45d5c;
+}
+/*content-box1*/
+.content-box1 {
+    margin-bottom: 40px;
+}
+.img-box {
+    position: relative;
+    top: 0;
+    width: 641px;
+    height: 301px;
+    display: inline-block;
+}
+.img-left-wrap,.img-right-wrap {
+    position: absolute;
+    width: 191px;
+    height: 301px;
+}
+.img-left-wrap {
+    left: 0;
+    background-color: rgba(66,141,89,0.5);
+}
+.img-right-wrap {
+    right: 0;
+    background-color: rgba(204,118,128,0.5);
+}
+.about-box {
+    float: right;
+    width: 203px;
+    border-top: 2px solid #cc8091;
+    vertical-align: top;
+}
+.about-box .about-title {
+}
+.about-title h2 {
+    font-size: 24px;
+    color: #000;
+    font-family: 'Microsoft YaHei UI';
+    font-weight: 500;
+    font-variant: small-caps;
+    text-decoration: underline;
+}
+.about-title h3 {
+    font-size: 12px;
+    color: #676767;
+    font-weight: 500;
+    font-family: '楷体';
+    line-height: 10px;
+}
+.seven00 {
+    font-size: 116px;
+    color: #75b86b;
+    font-family: 'Microsoft YaHei';
+    font-style: oblique;
+    position: relative;
+    left: -24px;
+}
+.css-title {
+    color: #cc8091;
+    font-family: 'Microsoft YaHei';
+}
+.css-title h2{
+    font-size: 55px;
+    float: left;
+    font-weight: normal;
+}
+.css-title h3 {
+    font-size: 21px;
+    font-weight: normal;
+    margin-top: 18px;
+    display: inline-block;
+}
+.css-title h4 {
+    font-size: 12px;
+    color: rgba(35,24,21,0.4);
+    font-weight: normal;
+}
+/*content-box2*/
+.content-box2 {
+    width: 661px;
+    font-size: 0;
+    margin-bottom: 72px;
+}
+.content-box2 h2 {
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.content-box2 p {
+    font-size: 12px;
+    line-height: 16px;
+    color: #231815;
+    font-family: 'Microsoft YaHei';
+    opacity: .7;
+}
+.what-box,.when-box,.how-box {
+    display: inline-block;
+    width: 229px;
+    vertical-align: top;
+    margin-right: 20px;
+}
+.what-box h2 {
+    color: #418c59;
+}
+.when-box h2 {
+    color: #d2994f;
+}
+.how-box {
+    width: 143px;
+}
+.how-box h2 {
+    color: #cc7680;
+}
+.msgs {
+    position: relative;
+    bottom: -48px;
+    left: 4px;
+    line-height: 16px;
+}
+.msgs span {
+    color: #cd4a48;
+    opacity: .7;
+}
+/*content-box3*/
+.content-box3 {
+    margin-bottom: 30px;
+}
+.content-box3 .left {
+    width: 415px;
+    display: inline-block;
+}
+.left .title {
+    border-bottom: 2px solid #11456b;
+    padding-bottom: 16px;
+    margin-bottom: 25px;
+}
+.left .title h2 {
+    font-size: 42px;
+    font-family: '黑体';
+    color: #11456b;
+    line-height: 46px;
+}
+.left .title span {
+    font-size: 72px;
+    font-style: oblique;
+    position: relative;
+    right: 12px;
+    color: #f5e327;
+}
+.left .title h3 {
+    font-size: 33px;
+    color: #11456b;
+    font-family: '黑体';
+}
+.left-content img {
+    float: right;
+    padding: 20px 0 20px 20px;
+    position: relative;
+}
+.left-content p {
+    font-size: 12px;
+    color: #767777;
+    font-family: '宋体';
+    line-height: 16px;
+}
+.left-content p:last-child {
+    text-indent: 2em;
+}
+.left-content span {
+    font-size: 70px;
+    font-family: 'Microsoft YaHei ';
+    color: #f5e327;
+    float: left;
+    line-height: 70px;
+}
+.content-box3 .right {
+    float: right;
+}
+.right-img-box {
+    position: relative;
+    width: 458px;
+    height: 257px;
+    margin-bottom: 30px;
+    background: url("imgs/right-content-img.jpg") top left no-repeat;
+}
+.right-img-box .img-title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(4,0,0,0.4);
+    height: 61px;
+    width: 458px;
+}
+.right-img-box .img-title h2 {
+    margin: 8px 0 8px 38px;
+    padding-left: 10px;
+    display: inline-block;
+    font-size: 26px;
+    line-height: 44px;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    font-weight: 500;
+    border-left: 3px solid #72b16a;
+}
+.right-img-box .img-title h3 {
+    display: inline-block;
+    font-size: 12px;
+    color: #72b16a;
+    font-style: oblique;
+    margin-left: 6px;
+}
+.right-content {
+    background-color: #eeedd6;
+}
+.right-index {
+    padding: 20px;
+}
+.right-index p:before {
+    content: '▲';
+    margin-right: 4px;
+    font-size: 10px;
+}
+.right-index p {
+    font-size: 16px;
+    line-height: 36px;
+    font-family: '宋体';
+    font-weight: 500;
+}
+.right-index span {
+    font-size: 12px;
+    font-style: oblique;
+}
+.red-box {
+    float: left;
+    width: 238px;
+    height: 130px;
+    margin-right: 10px;
+    background-color: #d45d5c;
+    padding: 40px 0 0 12px;
+    color: #fff;
+}
+.red-box h2 {
+    float: left;
+    font-size: 110px;
+    line-height: 86px;
+    border-right: 2px solid #fff;
+    font-family: 'Microsoft YaHei';
+    font-weight: 500;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.red-box h3 {
+    display: inline-block;
+    font-size: 21px;
+    font-style: oblique;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: '黑体';
+    margin-top: 2px;
+}
+.red-box p {
+    font-size: 12px;
+    line-height: 12px;
+    font-family: '黑体';
+    margin-top: 8px;
+}
+.detail-box {
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    font-size: 14px;
+    font-family: '黑体';
+    line-height: 16px;
+    font-style: oblique;
+    color: #5a5b5b;
+}
+.detail-box p:before,.detail-box p:after {
+    font-size: 72px;
+    color: #d45d5c;
+    font-family: '黑体';
+    position: relative;
+    top: 36px;
+    right: 16px;
+}
+.detail-box p:before {
+    content: '“';
+}
+.detail-box p:after {
+    content: '”';
+}
+/*bottom*/
+.bottom {
+    width: 892px;
+    border-top: 1px solid #938e8c;
+}
+.bottom p {
+    float: right;
+    color: #d45d5c;
+    font-family: '黑体';
+    font-size: 12px;
+}
