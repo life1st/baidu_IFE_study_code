@@ -4,6 +4,7 @@ body { background:#fff;font-size:14px; font-family: Verdana, Arial, Helvetica, s
 td,th,caption { font-size:14px; }
 address, caption, cite, code, dfn, em, strong, var { font-style:normal; font-weight:normal;}
 a { color:#555; text-decoration:none; }
+a:hover { color: #e74f4d; transition: color .2s}
 img { border:none; }
 input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
 table { border-collapse:collapse; }
@@ -14,4 +15,7 @@ html {overflow-y: scroll;}
 }
 .cl {
     clear: both;
+}
+.ib {
+    display: inline-block;
 }
