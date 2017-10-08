@@ -25,3 +25,5 @@
 [任务六：通过HTML及CSS模拟报纸排版](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task6.html)
 
 [任务七：实现常见的技术产品官网的页面架构及样式布局](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task7.html)
+
+> 任务七的样式多的一批，写了大概五分之三实在受不了了，主要是重复的类名，非常烦人。所以后半段用{less}来写的。无缝切换，前半部分完全不用更改，直接复制到.less文件里就能用。还没写的用{less}语法来写就行了。嵌套语法很爽！不过行数貌似没怎么变少，编译后和编译前的行数其实差不多。
