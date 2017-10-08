@@ -443,12 +443,23 @@ header {
   padding: 0 45px;
 }
 .about-us-box .about-img {
+  position: relative;
   width: 40%;
   height: 521px;
   overflow: hidden;
 }
 .about-us-box .about-img img {
   width: 100%;
+}
+.about-us-box .about-img::before {
+  content: ' ';
+  display: block;
+  width: 26px;
+  height: 31px;
+  position: absolute;
+  left: -2px;
+  top: 50%;
+  background: url("imgs/right-triangle.png") 0 0 no-repeat;
 }
 /*join-box*/
 .join-box {

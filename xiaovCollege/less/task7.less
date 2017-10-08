@@ -438,11 +438,22 @@ header {
     padding: 0 45px;
   }
   .about-img {
+    position: relative;
     width: 40%;
     height: 521px;
     overflow: hidden;
     img {
       width: 100%;
+    }
+    &::before {
+      content: ' ';
+      display: block;
+      width: 26px;
+      height: 31px;
+      position: absolute;
+      left: -2px;
+      top: 50%;
+      background: url("imgs/right-triangle.png") 0 0 no-repeat;
     }
   }
 }
