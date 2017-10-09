@@ -1,0 +1,77 @@
+/*栅格布局*/
+//容器 (The Container)
+.grid-container {
+  width : 100%;
+  & * {
+    box-sizing: border-box;
+  }
+  //列 (The Column)
+  .col-1{
+    width: 8.3333%;
+  }
+  .col-2{
+    width: 16.6666%;
+  }
+  .col-3{
+    width: 25%;
+  }
+  .col-4{
+    width: 33.3333%;
+  }
+  .col-5{
+    width: 41.66%;
+  }
+  .col-6{
+    width: 50%;
+  }
+  .col-7{
+    width: 58.3333%;
+  }
+  .col-8{
+    width: 66.6666%;
+  }
+  .col-9{
+    width: 75%;
+  }
+  .col-10{
+    width: 80%;
+  }
+  .col-11{
+    width: 91.6666%;
+  }
+  .col-12{
+    width: 100%;
+  }
+  @media screen and (max-width:768px) {
+    .col-md-2 {
+      width: 16.6666%;
+    }
+    .col-md-3 {
+      width: 25%;
+    }
+    .col-md-6 {
+      width: 50%;
+    }
+    .col-md-8 {
+      width: 66.6666%;
+    }
+    .col-md-12 {
+      width: 100%;
+    }
+  }
+}
+//行 (The Row)
+.row {
+  & div {
+    float: left;
+    padding: 12px;
+    min-height: 1px;
+    margin-bottom: 20px;
+  }
+  &::before,&::after {
+    /*-- 清除浮动 -- */
+    content:"";
+    display: table ;
+    clear:both;
+  }
+}

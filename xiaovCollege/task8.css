@@ -1,0 +1,164 @@
+/*reset.*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fff;
+  font-size: 14px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+td,
+th,
+caption {
+  font-size: 14px;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+a {
+  color: #555;
+  text-decoration: none;
+}
+a:hover {
+  color: #e74f4d;
+  transition: color 0.2s;
+}
+img {
+  border: none;
+}
+input,
+textarea,
+select,
+button {
+  font: 14px Verdana, Helvetica, Arial, sans-serif;
+}
+table {
+  border-collapse: collapse;
+}
+html {
+  overflow-y: scroll;
+}
+/*other*/
+.fr {
+  float: right;
+}
+.cl {
+  clear: both;
+}
+.ib {
+  display: inline-block;
+}
+/*栅格布局*/
+.grid-container {
+  width: 100%;
+}
+.grid-container * {
+  box-sizing: border-box;
+}
+.grid-container .col-1 {
+  width: 8.3333%;
+}
+.grid-container .col-2 {
+  width: 16.6666%;
+}
+.grid-container .col-3 {
+  width: 25%;
+}
+.grid-container .col-4 {
+  width: 33.3333%;
+}
+.grid-container .col-5 {
+  width: 41.66%;
+}
+.grid-container .col-6 {
+  width: 50%;
+}
+.grid-container .col-7 {
+  width: 58.3333%;
+}
+.grid-container .col-8 {
+  width: 66.6666%;
+}
+.grid-container .col-9 {
+  width: 75%;
+}
+.grid-container .col-10 {
+  width: 80%;
+}
+.grid-container .col-11 {
+  width: 91.6666%;
+}
+.grid-container .col-12 {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .grid-container .col-md-2 {
+    width: 16.6666%;
+  }
+  .grid-container .col-md-3 {
+    width: 25%;
+  }
+  .grid-container .col-md-6 {
+    width: 50%;
+  }
+  .grid-container .col-md-8 {
+    width: 66.6666%;
+  }
+  .grid-container .col-md-12 {
+    width: 100%;
+  }
+}
+.row div {
+  float: left;
+  padding: 12px;
+  min-height: 1px;
+  margin-bottom: 20px;
+}
+.row::before,
+.row::after {
+  /*-- 清除浮动 -- */
+  content: "";
+  display: table ;
+  clear: both;
+}
+p {
+  display: block;
+  height: 50px;
+  background-color: #eee;
+  border: 1px solid #999;
+  color: #c00;
+}
