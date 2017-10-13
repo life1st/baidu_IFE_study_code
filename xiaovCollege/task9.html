@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>task9</title>
+    <link rel="stylesheet" href="task9.css">
+</head>
+<body>
+<header>
+    <div class="logo-box">
+        <img src="imgs-task9/logo-icon.png" alt="logo">
+    </div>
+    <div class="login-box">
+        <a href="#">登录</a>
+    </div>
+    <div class="search-box">
+        <span class="search-icon"></span>
+        <input type="text">
+    </div>
+</header>
+<div class="main-content">
+    <div class="left-content">
+        <div class="user-content">
+            <div class="user-header">
+                <img src="imgs-task9/user-header-img.png" alt="用户头像">
+                <p class="user-name">ABC123</p>
+            </div>
+            <div class="user-info cl">
+                <div class="collection">
+                    <p class="num">110</p>
+                    <p>收藏</p>
+                </div>
+                <div class="fans">
+                    <p class="num">313</p>
+                    <p>粉丝</p>
+                </div>
+            </div>
+        </div>
+        <div class="navi">
+            <ul>
+                <li class="active">
+                    <a href="#"><img src="imgs-task9/navi-icon/navi1.png" alt="navi1">个人报表</a>
+                    <ul class="secend-navi">
+                        <li><a href="#"><img src="imgs-task9/navi-icon/2ed.navi1.png" alt="">文件一</a></li>
+                        <li>
+                            <a href="#"><img src="imgs-task9/navi-icon/2ed.navi1.png" alt="">文件二</a>
+                            <ul class="third-navi">
+                                <li><a href="#"><img src="imgs-task9/navi-icon/3rd.navi1.png" alt="">文档一</a></li>
+                                <li><a href="#"><img src="imgs-task9/navi-icon/3rd.navi1.png" alt="">文档二</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><img src="imgs-task9/navi-icon/2ed.navi1.png" alt="">文件三</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="imgs-task9/navi-icon/navi2.png" alt="">个人收藏</a></li>
+                <li><a href="#"><img src="imgs-task9/navi-icon/navi3.png" alt="">我的分享</a></li>
+                <li><a href="#"><img src="imgs-task9/navi-icon/navi4.png" alt="">图库</a></li>
+                <li><a href="#"><img src="imgs-task9/navi-icon/navi5.png" alt="">成长记录</a></li>
+                <li><a href="#"><img src="imgs-task9/navi-icon/navi6.png" alt="">账户信息</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-content">
+        <div class="pbc">
+            <p>
+                <span>C站</span>/
+                <span>个人报表</span>/
+                <span>文件一</span>/
+                <a href="#"><span>文档一</span></a>
+            </p>
+        </div>
+        <div class="grid-wrap">
+            <div class="grid-container">
+                <div class="row box1">
+                    <div class="col-2">
+                        <p>查询项</p>
+                        <select>
+                            <option value="one">第一项</option>
+                            <option value="two">第二项</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var ClassNode = {
+        element: null,
+        getClassName : function (element) {
+            if(!!element){
+                let classN = element.getAttribute('class');
+                return classN;
+            }else {
+                return false;
+            }
+        },
+        deleteClass : function (element,classN,deleteClassN) {
+            let classVal = classN.replace(deleteClassN,'');
+            element.setAttribute('class',classVal);
+        },
+        addClass : function (element,classN,addClassN) {
+            let classVal = classN.concat(' '+addClassN);
+            element.setAttribute('class',classVal);
+        }
+
+    };
+
+
+</script>
+</html>

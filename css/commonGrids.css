@@ -62,7 +62,6 @@
   float: left;
   padding: 12px;
   min-height: 1px;
-  margin-bottom: 20px;
 }
 .row::before,
 .row::after {

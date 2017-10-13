@@ -1,0 +1,173 @@
+@import (less) '../../css/common.css';
+
+body {
+  min-width: 1280px;
+  height: 100%;
+}
+header {
+  height: 56px;
+  padding: 0 72px 0 50px;
+  background-color: #2189bf;
+  .logo-box {
+    float: left;
+    margin-top: 8px;
+  }
+  .login-box {
+    float: right;
+    a {
+      font-size: 12px;
+      line-height: 56px;
+      color: #fff;
+      font-family: 'Adobe 黑体 Std R';
+      &::before {
+        content: ' ';
+        display: inline-block;
+        height: 16px;
+        width: 15px;
+        margin: 0 4px 0 0;
+        background: url("imgs-task9/user-login-icon.png") center no-repeat;
+        vertical-align: text-bottom;
+      }
+    }
+  }
+  .search-box {
+    float: right;
+    position: relative;
+    input {
+      width: 315px;
+      height: 28px;
+      margin: 14px 20px 14px 0;
+      border-radius: 14px;
+      border: none;
+      text-indent: 38px;
+      &:focus {
+        outline: none;
+      }
+    }
+    .search-icon {
+      display: block;
+      position: absolute;
+      top: 19px;
+      left: 16px;
+      width: 17px;
+      height: 17px;
+      background: url("imgs-task9/search-icon.png") center no-repeat;
+    }
+  }
+}
+
+.main-content {
+  height: 100%;
+}
+.left-content {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  width: 260px;
+  background-color: #2a2e3d;
+  font-family: '黑体';
+  .user-header {
+    padding: 16px 0 0 45px;
+  }
+  .user-header img {
+    padding: 2px;
+    border: 1px solid #bababe;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 18px;
+  }
+  .user-name {
+    display: inline-block;
+    color: #f6f5f5;
+    font-size: 16px;
+  }
+  .user-info {
+    font-size: 0;
+    padding: 0 0 20px 26px;
+  }
+  .collection,.fans {
+    display: inline-block;
+    font-size: 16px;
+    color: #6e8095;
+    margin-top: 24px;
+    padding: 0 28px;
+  }
+  .collection {
+    border-right: 1px solid #313545;
+  }
+
+  .navi {
+    a {
+      color: #6e8095;
+    }
+    ul {
+      list-style: none;
+      a {
+        display: block;
+        padding: 16px 0 12px 44px;
+        transition: all .2s;
+        &:hover {
+          color: #ededef;
+          background-color: #393d4e;
+        }
+        img {
+          padding-right: 12px;
+        }
+      }
+      .active {
+        >a {
+          color: #ededef;
+        }
+        background-color: #393d4e;
+      }
+    }
+    .secend-navi {
+      padding-left: 22px;
+    }
+    .third-navi {
+      padding-left: 34px;
+    }
+  }
+}
+@import '../../css/less/commonGrids.less';
+
+.right-content {
+  position: fixed;
+  left: 260px;
+  top: 56px;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto;
+  background-color: #ededec;
+  .pbc {
+    padding-left: 30px;
+    height: 30px;
+    background-color: #fff;
+    line-height: 30px;
+    p {
+      font-size: 12px;
+      font-family: '黑体';
+      color: #aaa;
+    }
+    span:last-child {
+      color: #6898c2;
+    }
+  }
+  .grid-wrap {
+    padding: 0 60px 12px;
+  }
+  .row {
+    background-color: #fff;
+    margin: 12px 0;
+  }
+  .box1 {
+    .col-2 {
+      p,select{
+        display: inline-block;
+      }
+    }
+
+  }
+}
