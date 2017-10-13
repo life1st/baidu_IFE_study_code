@@ -50,7 +50,6 @@ var {
   font-weight: normal;
 }
 a {
-  color: #555;
   text-decoration: none;
 }
 a:hover {
@@ -146,7 +145,6 @@ html {
   float: left;
   padding: 12px;
   min-height: 1px;
-  margin-bottom: 20px;
 }
 .row::before,
 .row::after {
@@ -161,4 +159,7 @@ p {
   background-color: #eee;
   border: 1px solid #999;
   color: #c00;
+}
+.row div {
+  margin-bottom: 20px;
 }
