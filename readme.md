@@ -40,4 +40,6 @@
 
 ### 斌斌学院
 
+[任务一：零基础JavaScript编码（一）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task1.html)
+
 [任务二：零基础JavaScript编码（二）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task2.html)
