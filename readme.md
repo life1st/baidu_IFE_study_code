@@ -37,3 +37,7 @@
 [任务九：使用HTML/CSS实现一个复杂页面](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task9.html)
 
 > 想了下，这个后面的任务确实工作量比较大...要做完一个提交一次恐怕很久都不能提交，所以每天做多少就提交多少了。
+
+### 斌斌学院
+
+[任务二：零基础JavaScript编码（二）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task2.html)
