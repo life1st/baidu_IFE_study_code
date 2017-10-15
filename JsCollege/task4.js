@@ -14,7 +14,6 @@ function initNum(numArr) {
         pNode.innerText = numArr[i];
         box.appendChild(pNode);
         pNode.onclick = function () {
-            this.parentNode.removeChild(this);
             numArr.splice(i,1);
             initNum(numArr);//重新绑定点击事件，所有数据都是从数组中更新，保持数据纯洁~
         }
