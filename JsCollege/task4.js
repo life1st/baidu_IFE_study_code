@@ -19,10 +19,6 @@ function initNum(numArr) {
             initNum(numArr);//重新绑定点击事件，所有数据都是从数组中更新，保持数据纯洁~
         }
     }
-/*    var tag = document.getElementById('num_box').getElementsByTagName('p');
-    for(let i = 0;i<tag.length;i++){
-
-    }*/
 }
 
 function addNum() {
