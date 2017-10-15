@@ -51,10 +51,12 @@ right_enter.onclick = function () {
     }
 };
 left_out.onclick = function () {
+    alert('你删除的元素是：'+numArr[0]);
     numArr.shift();
     initNum(numArr);
 };
 right_out.onclick = function () {
+    alert('你删除的元素是：'+numArr[numArr.length-1]);
     numArr.pop();
     initNum(numArr);
 };
