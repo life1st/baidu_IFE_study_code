@@ -44,5 +44,8 @@
 
 [任务二：零基础JavaScript编码（二）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task2.html)
 
-[
-任务三：零基础JavaScript编码（三）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task3.html)
+[任务三：零基础JavaScript编码（三）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task3.html)
+
+[任务四：基础JavaScript练习（一）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task4.html)
+
+> 这个练习其实还有点疑惑。怎样优雅的实现点击元素更新数组的功能？前提是只从数组更新DOM，而不用DOM元素更新整个数组。目前用的绑定方法略复杂。
