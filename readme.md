@@ -10,42 +10,42 @@
 
 ### 小薇学院
 
-[任务一：零基础HTML编码](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task1.html)
+[任务一：零基础HTML编码](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task1.html) [任务页](http://ife.baidu.com/course/detail/id/90)
 
-[任务二：零基础HTML及CSS编码（一）](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task2.html)
+[任务二：零基础HTML及CSS编码（一）](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task2.html) [任务页](http://ife.baidu.com/course/detail/id/92)
 
-[任务三：三栏式布局](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task3.html)
+[任务三：三栏式布局](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task3.html) [任务页](http://ife.baidu.com/course/detail/id/94)
 
 > 需要将左右两边的盒子写在中间自定义宽度的前面，否则未设置浮动的盒子会占满一行，造成之后的浮动元素位置被挤到下一行中。
 
-[任务四：定位和居中问题](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task4.html)
+[任务四：定位和居中问题](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task4.html) [任务页](http://ife.baidu.com/course/detail/id/95)
 
-[任务五：零基础HTML及CSS编码（二）](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task5.html)
+[任务五：零基础HTML及CSS编码（二）](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task5.html) [任务页](http://ife.baidu.com/course/detail/id/96)
 
-[任务六：通过HTML及CSS模拟报纸排版](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task6.html)
+[任务六：通过HTML及CSS模拟报纸排版](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task6.html) [任务页](http://ife.baidu.com/course/detail/id/99)
 
-[任务七：实现常见的技术产品官网的页面架构及样式布局](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task7.html)
+[任务七：实现常见的技术产品官网的页面架构及样式布局](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task7.html) [任务页](http://ife.baidu.com/course/detail/id/102)
 
 > 任务七的样式多的一批，写了大概五分之三实在受不了了，主要是重复的类名，非常烦人。所以后半段用{less}来写的。无缝切换，前半部分完全不用更改，直接复制到.less文件里就能用。还没写的用{less}语法来写就行了。嵌套语法很爽！不过行数貌似没怎么变少，编译后和编译前的行数其实差不多。
 
-[任务八：响应式网格（栅格化）布局](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task8.html)
+[任务八：响应式网格（栅格化）布局](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task8.html) [任务页](http://ife.baidu.com/course/detail/id/104)
 
 > 这个布局实现得有缺陷，每一个内容块的高度都是固定的，同一行里，无法随着最高的元素自适应高度。另外，.row类的设置好像没什么意义，不设置row，也可以实现同样的布局。{less}写起来很舒服，抽象出的组件，可以直接用import编译，非常好。
 
 > update 2017.10.10 .row类的意义是设置负外边距
 
-[任务九：使用HTML/CSS实现一个复杂页面](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task9.html)
+[任务九：使用HTML/CSS实现一个复杂页面](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task9.html) [任务页](http://ife.baidu.com/course/detail/id/113)
 
 > 想了下，这个后面的任务确实工作量比较大...要做完一个提交一次恐怕很久都不能提交，所以每天做多少就提交多少了。
 
 ### 斌斌学院
 
-[任务一：零基础JavaScript编码（一）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task1.html)
+[任务一：零基础JavaScript编码（一）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task1.html) [任务页](http://ife.baidu.com/course/detail/id/93)
 
-[任务二：零基础JavaScript编码（二）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task2.html)
+[任务二：零基础JavaScript编码（二）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task2.html) [任务页](http://ife.baidu.com/course/detail/id/91)
 
-[任务三：零基础JavaScript编码（三）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task3.html)
+[任务三：零基础JavaScript编码（三）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task3.html) [任务页](http://ife.baidu.com/course/detail/id/98)
 
-[任务四：基础JavaScript练习（一）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task4.html)
+[任务四：基础JavaScript练习（一）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task4.html) [任务页](http://ife.baidu.com/course/detail/id/103)
 
 > 这个练习其实还有点疑惑。怎样优雅的实现点击元素更新数组的功能？前提是只从数组更新DOM，而不用DOM元素更新整个数组。目前用的绑定方法略复杂。
