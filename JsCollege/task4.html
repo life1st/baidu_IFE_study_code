@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>task4</title>
+    <style>
+        body {
+            width: 600px;
+            margin: 120px auto;
+        }
+        .enter,.exit {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .num-box p {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 12px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .num-box p:hover {
+            background-color: #e8e8e8;
+        }
+    </style>
+</head>
+<body>
+<input type="text" class="num" id="num">
+<div class="enter">
+    <button id="left_enter">左侧入</button>
+    <button id="right_enter">右侧入</button>
+</div>
+<div class="exit">
+    <button id="left_out">左侧出</button>
+    <button id="right_out">右侧出</button>
+</div>
+<br>
+<button id="add">添加一个随机数</button>
+<div id="num_box" class="num-box">
+</div>
+<script src="task4.js"></script>
+</body>
+</html>
