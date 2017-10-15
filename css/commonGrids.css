@@ -58,7 +58,7 @@
     width: 100%;
   }
 }
-.row div {
+.row > div {
   float: left;
   padding: 12px;
   min-height: 1px;

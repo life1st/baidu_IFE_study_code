@@ -269,7 +269,7 @@ header .search-box .search-icon {
     width: 100%;
   }
 }
-.row div {
+.row > div {
   float: left;
   padding: 12px;
   min-height: 1px;
@@ -313,5 +313,18 @@ header .search-box .search-icon {
 }
 .right-content .box1 .col-2 p,
 .right-content .box1 .col-2 select {
+  display: inline-block;
+}
+.right-content .box1 .buyer *,
+.right-content .box1 .seller * {
+  display: inline-block;
+}
+.right-content .box1 .info {
+  float: left;
+}
+.right-content .box1 .switch-btn {
+  margin-top: 3px;
+}
+.right-content .box1 .col-5 > .item * {
   display: inline-block;
 }
