@@ -2,7 +2,8 @@ var left_enter = document.getElementById('left_enter'),
     right_enter = document.getElementById('right_enter'),
     left_out = document.getElementById('left_out'),
     right_out = document.getElementById('right_out');
-var add = document.getElementById('add');
+var add = document.getElementById('add'),
+    add_all = document.getElementById('add_all');
 var bubble_sort = document.getElementById('bubble_sort'),
     quick_sort = document.getElementById('quick_sort');
 var numArr = [];
@@ -18,7 +19,7 @@ var SORT = {
                         numArr[i] = numArr[i]-numArr[j];
                         NUM.initNum(numArr);
                     }
-                },i*j*5)
+                },i*j*2)
             }
         }
     },
@@ -50,11 +51,12 @@ var NUM = {
         for(let i = 0;i<numArr.length;i++){
             var pNode = document.createElement('p');
             pNode.style.height = numArr[i]*2+'px';
+            pNode.innerText = numArr[i];
             box.appendChild(pNode);
             pNode.onclick = function () {
                 alert('你点击的第'+(i+1)+'个元素：'+numArr[i]+'，将被删除。')
                 numArr.splice(i,1);
-                initNum(numArr);//重新绑定点击事件，所有数据都是从数组中更新，保持数据纯洁~
+                NUM.initNum(numArr);//重新绑定点击事件，所有数据都是从数组中更新，保持数据纯洁~
             }
         }
     },
@@ -106,10 +108,18 @@ add.onclick = function () {
     numNode.value = '';
     numNode.value = num;
 };
-
+add_all.onclick = function () {
+    numArr = [];
+    for(let i=0;i<61;i++){
+        setTimeout(function () {
+            numArr.push(NUM.randomNum(10,100));
+            NUM.initNum(numArr);
+        },i*10)
+    }
+};
 bubble_sort.onclick = function () {
     SORT.bubbleSort(numArr);
-}
+};
 quick_sort.onclick = function () {
     SORT.veryQuickSort(numArr);
-}
+};
