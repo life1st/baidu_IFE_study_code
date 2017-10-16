@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>task5</title>
+    <style>
+        .input-box {
+            width: 1200px;
+            margin: 120px auto 20px;
+        }
+        .enter,.exit,.sort {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .num-box {
+            height: 200px;
+            text-align: center;
+        }
+        .num-box p {
+            vertical-align: top;
+            display: inline-block;
+            width: 10px;
+            border: 1px solid #ccc;
+            margin: 5px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #c00;
+        }
+    </style>
+</head>
+<body>
+<div class="input-box">
+    <input type="text" class="num" id="num">
+    <div class="enter">
+        <button id="left_enter">左侧入</button>
+        <button id="right_enter">右侧入</button>
+    </div>
+    <div class="exit">
+        <button id="left_out">左侧出</button>
+        <button id="right_out">右侧出</button>
+    </div>
+    <div class="sort">
+        <button id="bubble_sort">冒泡排序</button>
+        <button id="quick_sort">快速排序</button>
+    </div>
+    <br>
+    <button id="add">添加一个随机数</button>
+</div>
+<div id="num_box" class="num-box">
+</div>
+<script src="task5.js"></script>
+</body>
+</html>
