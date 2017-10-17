@@ -5,11 +5,26 @@ var left_enter = document.getElementById('left_enter'),
 var add = document.getElementById('add'),
     add_all = document.getElementById('add_all');
 var bubble_sort = document.getElementById('bubble_sort'),
+    select_sort = document.getElementById('select_sort'),
     quick_sort = document.getElementById('quick_sort');
 var numArr = [];
 
 var SORT = {
     bubbleSort:function (numArr) {
+        for(let i = 0;i<numArr.length-1;i++){
+                for (let j = 0;j<numArr.length-i-1;j++){
+                    setInterval(function () {
+                        if (numArr[j]>numArr[j+1]){
+                            numArr[j] = numArr[j]+numArr[j+1];
+                            numArr[j+1] = numArr[j]-numArr[j+1];
+                            numArr[j] = numArr[j]-numArr[j+1];
+                            NUM.initNum(numArr);
+                        }
+                    },(i+j)*10)
+                }
+        }
+    },
+    selectSort:function (numArr) {
         for(let i = 0;i<numArr.length;i++){
             for(let j = i+1;j<numArr.length;j++){
                 setTimeout(function () {
@@ -24,7 +39,9 @@ var SORT = {
         }
     },
     veryQuickSort:function (numArr) {
-        NUM.initNum(numArr.sort());
+        NUM.initNum(numArr.sort(function (a,b) {
+            return a-b;
+        }));
     }
 };
 
@@ -110,15 +127,19 @@ add.onclick = function () {
 };
 add_all.onclick = function () {
     numArr = [];
-    for(let i=0;i<61;i++){
+    for(let i=0;i<60;i++){
         setTimeout(function () {
             numArr.push(NUM.randomNum(10,100));
             NUM.initNum(numArr);
         },i*10)
     }
 };
+
 bubble_sort.onclick = function () {
     SORT.bubbleSort(numArr);
+};
+select_sort.onclick = function () {
+    SORT.selectSort(numArr);
 };
 quick_sort.onclick = function () {
     SORT.veryQuickSort(numArr);
