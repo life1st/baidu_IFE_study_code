@@ -38,6 +38,8 @@
 
 > 想了下，这个后面的任务确实工作量比较大...要做完一个提交一次恐怕很久都不能提交，所以每天做多少就提交多少了。
 
+[任务十：Flexbox 布局练习](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task9.html) [任务页](http://ife.baidu.com/course/detail/id/114)
+
 ### 斌斌学院
 
 [任务一：零基础JavaScript编码（一）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task1.html) [任务页](http://ife.baidu.com/course/detail/id/93)
