@@ -1,0 +1,36 @@
+@import (less) "../../css/common.css";
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .item {
+    margin: 20px;
+    width: 148px;
+    border: 1px solid #f00;
+  }
+  .box1 {
+    height: 120px;
+  }
+  .box2 {
+    height: 100px;
+  }
+  .box3 {
+    height: 40px;
+  }
+  .box4 {
+    height: 200px;
+    border: 1px solid #1717FD;
+  }
+}
+
+@media screen and (max-width: 740px){
+  .main-content {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .box4 {
+      order: -1;//控制顺序
+    }
+  }
+}
