@@ -209,78 +209,6 @@ header .search-box .search-icon {
 .left-content .navi .third-navi {
   padding-left: 34px;
 }
-/*栅格布局*/
-.grid-container {
-  width: 100%;
-}
-.grid-container * {
-  box-sizing: border-box;
-}
-.grid-container .col-1 {
-  width: 8.3333%;
-}
-.grid-container .col-2 {
-  width: 16.6666%;
-}
-.grid-container .col-3 {
-  width: 25%;
-}
-.grid-container .col-4 {
-  width: 33.3333%;
-}
-.grid-container .col-5 {
-  width: 41.66%;
-}
-.grid-container .col-6 {
-  width: 50%;
-}
-.grid-container .col-7 {
-  width: 58.3333%;
-}
-.grid-container .col-8 {
-  width: 66.6666%;
-}
-.grid-container .col-9 {
-  width: 75%;
-}
-.grid-container .col-10 {
-  width: 80%;
-}
-.grid-container .col-11 {
-  width: 91.6666%;
-}
-.grid-container .col-12 {
-  width: 100%;
-}
-@media screen and (max-width: 768px) {
-  .grid-container .col-md-2 {
-    width: 16.6666%;
-  }
-  .grid-container .col-md-3 {
-    width: 25%;
-  }
-  .grid-container .col-md-6 {
-    width: 50%;
-  }
-  .grid-container .col-md-8 {
-    width: 66.6666%;
-  }
-  .grid-container .col-md-12 {
-    width: 100%;
-  }
-}
-.row > div {
-  float: left;
-  padding: 12px;
-  min-height: 1px;
-}
-.row::before,
-.row::after {
-  /*-- 清除浮动 -- */
-  content: "";
-  display: table ;
-  clear: both;
-}
 .right-content {
   position: fixed;
   left: 260px;
@@ -304,16 +232,84 @@ header .search-box .search-icon {
 .right-content .pbc span:last-child {
   color: #6898c2;
 }
-.right-content .grid-wrap {
-  padding: 0 60px 12px;
+.right-content .main-msg-box {
+  margin: 0 auto;
 }
-.right-content .row {
+.right-content .main-msg-box p {
+  color: #aaa;
+}
+.right-content .box1 {
+  height: 85px;
+  margin: 20px 60px 10px;
+  border: 1px solid #dcdde0;
+  padding-top: 16px;
   background-color: #fff;
-  margin: 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-.right-content .box1 .col-2 p,
-.right-content .box1 .col-2 select {
+@media screen and (max-width: 1360px) {
+  .right-content .box1 {
+    height: 170px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .right-content .box1 {
+    height: 255px;
+  }
+}
+.right-content .box1 .inquiry {
+  width: 150px;
+  vertical-align: top;
+  font-size: 0;
+  margin-left: 30px;
+}
+.right-content .box1 .inquiry p,
+.right-content .box1 .inquiry select {
   display: inline-block;
+  font-size: 12px;
+  font-family: '黑体';
+}
+.right-content .box1 .biz {
+  vertical-align: top;
+  width: 220px;
+}
+.right-content .box1 .biz select {
+  width: 120px;
+}
+.right-content .box1 .date-msg {
+  vertical-align: top;
+  min-width: 326px;
+  font-size: 0;
+}
+.right-content .box1 .date-msg .item {
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 14px;
+}
+.right-content .box1 .date-msg .item * {
+  display: inline-block;
+}
+.right-content .box1 .date-msg .item4 select {
+  width: 166px;
+}
+.right-content .box1 .date-msg p {
+  line-height: 39px;
+}
+.right-content .box1 .search-btn button {
+  border: none;
+  background-color: #388ac1;
+  padding: 5px 12px;
+  margin-right: 110px;
+  border-radius: 3px;
+  color: #fff;
+  margin-top: 20px;
+}
+.right-content .box1 .search-btn button:focus {
+  outline: none;
+}
+.right-content .box1 .search-btn button:active {
+  background-color: #3077A7;
 }
 .right-content .box1 .buyer *,
 .right-content .box1 .seller * {
@@ -323,8 +319,94 @@ header .search-box .search-icon {
   float: left;
 }
 .right-content .box1 .switch-btn {
-  margin-top: 3px;
+  height: 74px;
 }
-.right-content .box1 .col-5 > .item * {
+.right-content .box1 .switch-btn img {
+  margin-top: 18px;
+}
+.right-content .box1 select,
+.right-content .box1 input {
+  color: #323333;
+  padding: 4px 10px;
+  margin: 3px 0 3px 16px;
+  border: 2px solid #dcdde0;
+}
+.right-content .box1 select:focus,
+.right-content .box1 input:focus {
+  outline: none;
+}
+.right-content .box2 {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin: 0 60px 10px;
+  min-width: 1280px;
+}
+.right-content .box2 .button {
+  width: 31px;
+  height: 65px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px #ced0d4;
+}
+.right-content .box2 .button i {
+  display: block;
+  width: 31px;
+  height: 65px;
+}
+.right-content .box2 .button.left i {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAARCAMAAADT/c3XAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAZlBMVEUAAACqqqqrq6qrq6qrq6qqqqqqqqqrqqqrq6qrqqqqqqqrqqqrq6urqqqrq6urq6uqqqqrqqqqqqqqqqqqqqqrq6uqqqqqqqqqqqqqqqqrqqqrq6urqqqrqqqrq6urq6qqqqoAAAC9rVpmAAAAIXRSTlMABnGx8ArwNgaxNgax8DYGsYn7N1P8lgFa/AFa/JaW7g9bCyYNAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFNJREFUCNdtykkSgCAMRNFEEcF5AkWc7n9KF0ksFvbqVdcHoGGGolwVIl2SjNUVqbaKZZqWhVZ3pH6QDsZpZsHi/CreQmLnd3E8zvT/78P1Od7PCwZ1BAgjOGppAAAAAElFTkSuQmCC") center no-repeat;
+}
+.right-content .box2 .button.right i {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAARCAMAAADT/c3XAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAY1BMVEUAAACqqqqrqqqqqqqrq6uqqqqqqqqrq6qrqqqrqqqrq6uqqqqrq6qrqqqqqqqrq6qrqqqrq6uqqqqqqqqrq6uqqqqrqqqqqqqrqqqrq6urq6qrq6urqqqrq6urq6qqqqoAAAC/xnvXAAAAIHRSTlMAQz96+U0DpPlNA6RNA/mtFCPjyAgj4w8jDw/jyMiGwgqd+R0AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAV0lEQVQI103M3RZAIBAE4EWKoijlp/D+b+miXbVX35k5s9C0QNexnsjFMJKlYsWCTeS5yrnSlcsfafSCXK3bsnxwe9YR3Pm3FyomzLxNmPl44wKeF1v4APyNA9Ctf3+TAAAAAElFTkSuQmCC") center no-repeat;
+}
+.right-content .box2 .content-wrap {
+  margin: 0 4px;
+  width: 702px;
+  display: flex;
+}
+.right-content .box2 .item {
+  width: 111px;
+  height: 61px;
+  border-top: 4px solid transparent;
+  margin: 0 3px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 1px 1px 5px #ced0d4;
+}
+.right-content .box2 .item.active {
+  border-top: 4px solid #4389c9;
+}
+.right-content .box2 .item p:first-child {
+  line-height: 28px;
+  font-size: 12px;
+  color: #323333;
+}
+.right-content .box2 .item span {
+  color: #ec6500;
+  font-size: 21px;
+  font-family: 'Microsoft YaHei';
+}
+.right-content .box2 .inquiry-history {
+  width: 131px;
+  height: 65px;
+  background-color: #fff;
+  transition: all .3s;
+  box-shadow: 1px 1px 5px #ced0d4;
+}
+.right-content .box2 .inquiry-history:hover {
+  background-color: #f8f8f8;
+}
+.right-content .box2 .inquiry-history p {
   display: inline-block;
+  font-size: 12px;
+  line-height: 65px;
+  color: #535353;
+  vertical-align: top;
+}
+.right-content .box2 .inquiry-history i {
+  display: inline-block;
+  margin: 0 8px 0 18px;
+  width: 32px;
+  height: 65px;
+  background: url("imgs-task9/calendar-icon.png") center no-repeat;
 }

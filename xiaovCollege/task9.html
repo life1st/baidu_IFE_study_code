@@ -71,56 +71,97 @@
                 <a href="#"><span>文档一</span></a>
             </p>
         </div>
-        <div class="grid-wrap">
-            <div class="grid-container">
-                <div class="row box1">
-                    <div class="col-2 col-md-12">
-                        <p>查询项</p>
+        <div class="main-msg-box">
+            <div class="box1">
+                <div class="inquiry">
+                    <p>查询项</p>
+                    <select>
+                        <option value="one">第一项</option>
+                        <option value="two">第二项</option>
+                    </select>
+                </div>
+                <div class="biz">
+                    <div class="info">
+                        <div class="buyer">
+                            <p>买方</p>
+                            <select>
+                                <option value="one">小王</option>
+                                <option value="two">小张</option>
+                            </select>
+                        </div>
+                        <div class="seller">
+                            <p>卖方</p>
+                            <select>
+                                <option value="one">小赵</option>
+                                <option value="">小李</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="switch-btn">
+                        <img src="imgs-task9/switch-b&c.png" alt="">
+                    </div>
+                </div>
+                <div class="date-msg">
+                    <div class="item">
+                        <p>日&nbsp;&nbsp;&nbsp;期：</p><input type="date">
+                    </div>
+                    <div class="item">
+                        <p>总耗时：</p>
                         <select>
-                            <option value="one">第一项</option>
-                            <option value="two">第二项</option>
+                            <option value="one">8天</option>
                         </select>
                     </div>
-                    <div class="col-3 col-md-12">
-                        <div class="info">
-                            <div class="buyer">
-                                <p>买方</p>
-                                <select>
-                                    <option value="one">小王</option>
-                                    <option value="two">小张</option>
-                                </select>
-                            </div>
-                            <div class="seller">
-                                <p>卖方</p>
-                                <select>
-                                    <option value="one">小赵</option>
-                                    <option value="">小李</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="switch-btn">
-                            <img src="imgs-task9/switch-b&c.png" alt="">
-                        </div>
+                    <br>
+                    <div class="item">
+                        <p>人&nbsp;&nbsp;&nbsp;数：</p>
+                        <select>
+                            <option value="one">10人</option>
+                        </select>
                     </div>
-                    <div class="col-5 col-md-12">
-                        <div class="item day-time">
-                            <p>日期：</p><input type="date">
-                            <p>总耗时：</p><input type="date">
-                        </div>
-                        <div class="item">
-                            <p>人数：</p>
-                            <select>
-                                <option value="one">10人</option>
-                            </select>
-                            <p>成交额：</p>
-                            <select>
-                                <option value="one">10项</option>
-                            </select>
-                        </div>
+
+                    <div class="item item4">
+                        <p>成交项：</p>
+                        <select>
+                            <option value="one">10项</option>
+                        </select>
                     </div>
-                    <div class="col-2 col-md-12">
-                        <button>搜索</button>
+                </div>
+                <div class="search-btn">
+                    <button>搜索</button>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="button left"><i></i></div>
+                <div class="content-wrap">
+                    <div class="item active">
+                        <p><time>10:00</time>am</p>
+                        <p>$<span>1200</span></p>
                     </div>
+                    <div class="item">
+                        <p><time>11:00</time>am</p>
+                        <p>$<span>1300</span></p>
+                    </div>
+                    <div class="item">
+                        <p><time>12:00</time>am</p>
+                        <p>$<span>1200</span></p>
+                    </div>
+                    <div class="item">
+                        <p><time>01:00</time>pm</p>
+                        <p>$<span>1400</span></p>
+                    </div>
+                    <div class="item">
+                        <p><time>02:00</time>pm</p>
+                        <p>$<span>1500</span></p>
+                    </div>
+                    <div class="item">
+                        <p><time>03:00</time>pm</p>
+                        <p>$<span>1800</span></p>
+                    </div>
+                </div>
+                <div class="button right"><i></i></div>
+                <div class="inquiry-history">
+                    <i></i>
+                    <p>历史查询</p>
                 </div>
             </div>
         </div>
@@ -148,7 +189,6 @@
         }
 
     };
-
 
 </script>
 </html>
