@@ -1,10 +1,3 @@
-var left_enter = document.getElementById('left_enter'),
-    right_enter = document.getElementById('right_enter'),
-    left_out = document.getElementById('left_out'),
-    right_out = document.getElementById('right_out');
-var add = document.getElementById('add');
-var numArr = [];
-
 function initNum(numArr) {
     console.log(numArr);
     var box = document.getElementById('num_box');
@@ -20,7 +13,6 @@ function initNum(numArr) {
         }
     }
 }
-
 function addNum() {
     var numNode = document.getElementById('num');
     var num = numNode.value||' ';
@@ -36,35 +28,48 @@ function addNum() {
     }
 }
 
-left_enter.onclick = function () {
-    var num = addNum();
-    if(num!==' '){
-        numArr.unshift(num);
-        initNum(numArr);
-    }
-};
-right_enter.onclick = function () {
-    var num = addNum();
-    if(num!==' '){
-        numArr.push(num);
-        initNum(numArr);
-    }
-};
-left_out.onclick = function () {
-    alert('你删除的元素是：'+numArr[0]);
-    numArr.shift();
-    initNum(numArr);
-};
-right_out.onclick = function () {
-    alert('你删除的元素是：'+numArr[numArr.length-1]);
-    numArr.pop();
-    initNum(numArr);
-};
+function initDom() {
+    var left_enter = document.getElementById('left_enter'),
+        right_enter = document.getElementById('right_enter'),
+        left_out = document.getElementById('left_out'),
+        right_out = document.getElementById('right_out');
+    var add = document.getElementById('add');
+    var numArr = [];
 
-add.onclick = function () {
-    var num = Math.floor(Math.random()*100);
-    var numNode = document.getElementById('num');
-    numNode.value = '';
-    numNode.value = num;
+
+    left_enter.onclick = function () {
+        var num = addNum();
+        if(num!==' '){
+            numArr.unshift(num);
+            initNum(numArr);
+        }
+    };
+    right_enter.onclick = function () {
+        var num = addNum();
+        if(num!==' '){
+            numArr.push(num);
+            initNum(numArr);
+        }
+    };
+    left_out.onclick = function () {
+        alert('你删除的元素是：'+numArr[0]);
+        numArr.shift();
+        initNum(numArr);
+    };
+    right_out.onclick = function () {
+        alert('你删除的元素是：'+numArr[numArr.length-1]);
+        numArr.pop();
+        initNum(numArr);
+    };
+
+    add.onclick = function () {
+        var num = Math.floor(Math.random()*100);
+        var numNode = document.getElementById('num');
+        numNode.value = '';
+        numNode.value = num;
+    };
 }
 
+window.onload = function () {
+    initDom();
+};
