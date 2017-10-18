@@ -11,32 +11,32 @@ var numArr = [];
 
 var SORT = {
     bubbleSort:function (numArr) {
+        var numArrTemp = [];
         for(let i = 0;i<numArr.length-1;i++){
                 for (let j = 0;j<numArr.length-i-1;j++){
-                    setInterval(function () {
                         if (numArr[j]>numArr[j+1]){
                             numArr[j] = numArr[j]+numArr[j+1];
                             numArr[j+1] = numArr[j]-numArr[j+1];
                             numArr[j] = numArr[j]-numArr[j+1];
-                            NUM.initNum(numArr);
+                            numArrTemp.push(numArr.slice());
                         }
-                    },(i+j)*10)
                 }
         }
+        return numArrTemp;
     },
     selectSort:function (numArr) {
+        var numArrTemp = [];
         for(let i = 0;i<numArr.length;i++){
             for(let j = i+1;j<numArr.length;j++){
-                setTimeout(function () {
                     if (numArr[i] > numArr[j]) {
                         numArr[i] = numArr[i]+numArr[j];
                         numArr[j] = numArr[i]-numArr[j];
                         numArr[i] = numArr[i]-numArr[j];
-                        NUM.initNum(numArr);
+                        numArrTemp.push(numArr.slice());
                     }
-                },i*j*2)
             }
         }
+        return numArrTemp;
     },
     veryQuickSort:function (numArr) {
         NUM.initNum(numArr.sort(function (a,b) {
@@ -71,7 +71,7 @@ var NUM = {
             pNode.innerText = numArr[i];
             box.appendChild(pNode);
             pNode.onclick = function () {
-                alert('你点击的第'+(i+1)+'个元素：'+numArr[i]+'，将被删除。')
+                alert('你点击的第'+(i+1)+'个元素：'+numArr[i]+'，将被删除。');
                 numArr.splice(i,1);
                 NUM.initNum(numArr);//重新绑定点击事件，所有数据都是从数组中更新，保持数据纯洁~
             }
@@ -136,10 +136,26 @@ add_all.onclick = function () {
 };
 
 bubble_sort.onclick = function () {
-    SORT.bubbleSort(numArr);
+    var newNumArr = SORT.bubbleSort(numArr);
+    var i = 0;
+    var t = setInterval(function () {
+        if (i<newNumArr.length){
+            NUM.initNum(newNumArr[i++]);
+        }else {
+            clearInterval(t);
+        }
+    },10)
 };
 select_sort.onclick = function () {
-    SORT.selectSort(numArr);
+    var newNumArr = SORT.selectSort(numArr);
+    var i = 0;
+    var t = setInterval(function () {
+        if (i<newNumArr.length){
+            NUM.initNum(newNumArr[i++]);
+        }else {
+            clearInterval(t);
+        }
+    },10)
 };
 quick_sort.onclick = function () {
     SORT.veryQuickSort(numArr);
