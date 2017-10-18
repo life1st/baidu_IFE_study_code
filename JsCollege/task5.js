@@ -8,6 +8,9 @@ var bubble_sort = document.getElementById('bubble_sort'),
     select_sort = document.getElementById('select_sort'),
     quick_sort = document.getElementById('quick_sort');
 var numArr = [];
+var speed = function () {
+    return document.getElementById('speed_input').value || 10;
+};
 
 var SORT = {
     bubbleSort:function (numArr) {
@@ -64,18 +67,20 @@ var NUM = {
     initNum:function (numArr) {
         console.log(numArr);
         var box = document.getElementById('num_box');
+        var tempNode = document.createDocumentFragment();
         box.innerText = '';
         for(let i = 0;i<numArr.length;i++){
             var pNode = document.createElement('p');
             pNode.style.height = numArr[i]*2+'px';
             pNode.innerText = numArr[i];
-            box.appendChild(pNode);
             pNode.onclick = function () {
                 alert('你点击的第'+(i+1)+'个元素：'+numArr[i]+'，将被删除。');
                 numArr.splice(i,1);
                 NUM.initNum(numArr);//重新绑定点击事件，所有数据都是从数组中更新，保持数据纯洁~
             }
+            tempNode.appendChild(pNode);
         }
+        box.appendChild(tempNode);
     },
 
     randomNum:function (n,m) {
@@ -127,12 +132,15 @@ add.onclick = function () {
 };
 add_all.onclick = function () {
     numArr = [];
-    for(let i=0;i<60;i++){
-        setTimeout(function () {
+    var i = 0;
+    var t = setInterval(function () {
+        if(i++<60){
             numArr.push(NUM.randomNum(10,100));
             NUM.initNum(numArr);
-        },i*10)
-    }
+        }else {
+            clearInterval(t);
+        }
+    },speed());
 };
 
 bubble_sort.onclick = function () {
@@ -144,7 +152,7 @@ bubble_sort.onclick = function () {
         }else {
             clearInterval(t);
         }
-    },10)
+    },speed())
 };
 select_sort.onclick = function () {
     var newNumArr = SORT.selectSort(numArr);
@@ -155,7 +163,7 @@ select_sort.onclick = function () {
         }else {
             clearInterval(t);
         }
-    },10)
+    },speed())
 };
 quick_sort.onclick = function () {
     SORT.veryQuickSort(numArr);
