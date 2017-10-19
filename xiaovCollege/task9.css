@@ -84,6 +84,7 @@ html {
 body {
   min-width: 1280px;
   height: 100%;
+  overflow-x: visible;
 }
 header {
   height: 56px;
@@ -234,6 +235,7 @@ header .search-box .search-icon {
 }
 .right-content .main-msg-box {
   margin: 0 auto;
+  min-width: 1031px;
 }
 .right-content .main-msg-box p {
   color: #aaa;
@@ -336,19 +338,21 @@ header .search-box .search-icon {
   outline: none;
 }
 .right-content .box2 {
-  display: flex;
   position: relative;
-  justify-content: space-between;
-  margin: 0 60px 10px;
-  min-width: 1280px;
+  margin: 0 60px 22px;
+  font-size: 0;
 }
 .right-content .box2 .button {
-  width: 31px;
+  display: inline-block;
+  width: 5%;
   height: 65px;
+}
+.right-content .box2 .button .button-wrap {
   background-color: #fff;
   box-shadow: 1px 1px 5px #ced0d4;
 }
 .right-content .box2 .button i {
+  margin: 0 auto;
   display: block;
   width: 31px;
   height: 65px;
@@ -360,20 +364,25 @@ header .search-box .search-icon {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAARCAMAAADT/c3XAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAY1BMVEUAAACqqqqrqqqqqqqrq6uqqqqqqqqrq6qrqqqrqqqrq6uqqqqrq6qrqqqqqqqrq6qrqqqrq6uqqqqqqqqrq6uqqqqrqqqqqqqrqqqrq6urq6qrq6urqqqrq6urq6qqqqoAAAC/xnvXAAAAIHRSTlMAQz96+U0DpPlNA6RNA/mtFCPjyAgj4w8jDw/jyMiGwgqd+R0AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAV0lEQVQI103M3RZAIBAE4EWKoijlp/D+b+miXbVX35k5s9C0QNexnsjFMJKlYsWCTeS5yrnSlcsfafSCXK3bsnxwe9YR3Pm3FyomzLxNmPl44wKeF1v4APyNA9Ctf3+TAAAAAElFTkSuQmCC") center no-repeat;
 }
 .right-content .box2 .content-wrap {
-  margin: 0 4px;
-  width: 702px;
-  display: flex;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  width: 75%;
 }
 .right-content .box2 .item {
-  width: 111px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 16.66666%;
+  padding: 0 4px;
+  text-align: center;
+}
+.right-content .box2 .item .content {
   height: 61px;
   border-top: 4px solid transparent;
-  margin: 0 3px;
   background-color: #fff;
-  text-align: center;
   box-shadow: 1px 1px 5px #ced0d4;
 }
-.right-content .box2 .item.active {
+.right-content .box2 .item.active .content {
   border-top: 4px solid #4389c9;
 }
 .right-content .box2 .item p:first-child {
@@ -387,10 +396,15 @@ header .search-box .search-icon {
   font-family: 'Microsoft YaHei';
 }
 .right-content .box2 .inquiry-history {
-  width: 131px;
+  display: inline-block;
+  width: 15%;
   height: 65px;
-  background-color: #fff;
   transition: all .3s;
+  text-align: center;
+}
+.right-content .box2 .inquiry-history .content {
+  margin: 0 0 0 12px;
+  background-color: #fff;
   box-shadow: 1px 1px 5px #ced0d4;
 }
 .right-content .box2 .inquiry-history:hover {
@@ -405,8 +419,74 @@ header .search-box .search-icon {
 }
 .right-content .box2 .inquiry-history i {
   display: inline-block;
-  margin: 0 8px 0 18px;
+  margin-right: 18px;
   width: 32px;
   height: 65px;
   background: url("imgs-task9/calendar-icon.png") center no-repeat;
+}
+.right-content .box3 {
+  margin: 0 60px 16px;
+  font-size: 0;
+}
+.right-content .box3 .title {
+  margin-bottom: 7px;
+  color: #323333;
+  font-family: 'Microsoft YaHei';
+}
+.right-content .box3 .title h2 {
+  font-size: 12px;
+}
+.right-content .box3 .content {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 23%;
+  height: 71px;
+  margin-right: 2.6666%;
+  padding: 13px 16px 0 8px;
+  background-color: #fff;
+  font-family: '黑体';
+  box-shadow: 1px 1px 5px #ccc;
+}
+.right-content .box3 .content:last-child {
+  margin-right: 0;
+}
+.right-content .box3 .content .img {
+  float: right;
+  width: 60px;
+  height: 45px;
+}
+.right-content .box3 .content h3 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #323333;
+  margin-top: 4px;
+}
+.right-content .box3 .content p {
+  font-size: 10px;
+  color: #aaa;
+  margin-top: 10px;
+}
+.right-content .box3 .item1 {
+  border-left: 4px solid #43b29d;
+}
+.right-content .box3 .item1 .img {
+  background-color: #43b29d;
+}
+.right-content .box3 .item2 {
+  border-left: 4px solid #388bc2;
+}
+.right-content .box3 .item2 .img {
+  background-color: #388bc2;
+}
+.right-content .box3 .item3 {
+  border-left: 4px solid #d04b36;
+}
+.right-content .box3 .item3 .img {
+  background-color: #d04b36;
+}
+.right-content .box3 .item4 {
+  border-left: 4px solid #e2cd46;
+}
+.right-content .box3 .item4 .img {
+  background-color: #e2cd46;
 }

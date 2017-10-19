@@ -1,8 +1,11 @@
 @import (less) '../../css/common.css';
-
+.shadow(@c){
+  box-shadow: 1px 1px 5px @c;
+}
 body {
   min-width: 1280px;
   height: 100%;
+  overflow-x: visible;
 }
 header {
   height: 56px;
@@ -156,6 +159,7 @@ header {
   }
   .main-msg-box {
     margin: 0 auto;
+    min-width: 1031px;
     p {
       color: #aaa;
     }
@@ -258,20 +262,19 @@ header {
     }
   }
   .box2 {
-    .shadow(@c){
-      box-shadow: 1px 1px 5px @c;
-    }
-    display: flex;
     position: relative;
-    justify-content: space-between;
-    margin: 0 60px 10px;
-    min-width: 1280px;
+    margin: 0 60px 22px;
+    font-size: 0;
     .button {
-      width: 31px;
+      display: inline-block;
+      width: 5%;
       height: 65px;
-      background-color: #fff;
-      .shadow(#ced0d4);
+      .button-wrap {
+        background-color: #fff;
+        .shadow(#ced0d4);
+      }
       i {
+        margin: 0 auto;
         display: block;
         width: 31px;
         height: 65px;
@@ -284,19 +287,24 @@ header {
       }
     }
     .content-wrap {
-      margin: 0 4px;
-      width: 702px;
-      display: flex;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 0;
+      width: 75%;
     }
     .item {
-      width: 111px;
-      height: 61px;
-      border-top: 4px solid transparent;
-      margin: 0 3px;
-      background-color: #fff;
+      display: inline-block;
+      box-sizing: border-box;
+      width: 16.66666%;
+      padding: 0 4px;
       text-align: center;
-      .shadow(#ced0d4);
-      &.active {
+      .content {
+        height: 61px;
+        border-top: 4px solid transparent;
+        background-color: #fff;
+        .shadow(#ced0d4);
+      }
+      &.active .content {
         border-top: 4px solid #4389c9;
       }
       p:first-child {
@@ -311,11 +319,16 @@ header {
       }
     }
     .inquiry-history {
-      width: 131px;
+      display: inline-block;
+      width: 15%;
       height: 65px;
-      background-color: #fff;
       transition: all .3s;
-      .shadow(#ced0d4);
+      text-align: center;
+      .content {
+        margin: 0 0 0 12px;
+        background-color: #fff;
+        .shadow(#ced0d4);
+      }
       &:hover {
         background-color: #f8f8f8;
       }
@@ -328,10 +341,82 @@ header {
       }
       i {
         display: inline-block;
-        margin: 0 8px 0 18px;
+        margin-right: 18px;
         width: 32px;
         height: 65px;
         background: url("imgs-task9/calendar-icon.png") center no-repeat;
+      }
+    }
+  }
+  .box3 {
+    .bd-l(@c) {
+      border-left: 4px solid @c;
+    }
+    .img-bg(@c) {
+      background-color: @c;
+    }
+    margin: 0 60px 16px;
+    font-size: 0;
+    .title {
+      margin-bottom: 7px;
+      color: #323333;
+      font-family: 'Microsoft YaHei';
+      h2 {
+        font-size: 12px;
+      }
+    }
+    .content {
+      box-sizing: border-box;
+      display: inline-block;
+      width: 23%;
+      height: 71px;
+      margin-right: 2.6666%;
+      padding: 13px 16px 0 8px;
+      background-color: #fff;
+      font-family: '黑体';
+      .shadow(#ccc);
+      &:last-child {
+        margin-right: 0;
+      }
+      .img {
+        float: right;
+        width: 60px;
+        height: 45px;
+      }
+      h3 {
+        font-size: 12px;
+        font-weight:500;
+        color: #323333;
+        margin-top: 4px;
+      }
+      p {
+        font-size: 10px;
+        color: #aaa;
+        margin-top: 10px;
+      }
+    }
+    .item1 {
+      .bd-l(#43b29d);
+      .img {
+        .img-bg(#43b29d);
+      }
+    }
+    .item2 {
+      .bd-l(#388bc2);
+      .img {
+        .img-bg(#388bc2);
+      }
+    }
+    .item3 {
+      .bd-l(#d04b36);
+      .img {
+        .img-bg(#d04b36);
+      }
+    }
+    .item4 {
+      .bd-l(#e2cd46);
+      .img {
+        .img-bg(#e2cd46);
       }
     }
   }
