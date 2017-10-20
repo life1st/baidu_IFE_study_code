@@ -38,7 +38,11 @@
 
 > 想了下，这个后面的任务确实工作量比较大...要做完一个提交一次恐怕很久都不能提交，所以每天做多少就提交多少了。
 
+> update 2017.10.21 怎么这么多内容啊这个页面...关于页面的宽度，试了很多种方案，最后还是选定了百分比。使用前面的网格布局，内容无法分成12等份；使用flex-box，又会留下空隙，自适应宽度还不如百分比方便。
+
 [任务十：Flexbox 布局练习](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task9.html) [任务页](http://ife.baidu.com/course/detail/id/114)
+
+[任务十二：学习CSS 3的新特性](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task12.html) [任务页](http://ife.baidu.com/course/detail/id/117)
 
 ### 斌斌学院
 
@@ -53,3 +57,7 @@
 > 这个练习其实还有点疑惑。怎样优雅的实现点击元素更新数组的功能？前提是只从数组更新DOM，而不用DOM元素更新整个数组。目前用的绑定方法略复杂。
 
 [任务五：基础JavaScript练习（二）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task5.html) [任务页](http://ife.baidu.com/course/detail/id/105)
+
+> update 2017.10.18 使用临时数组保存数据，性能大提升！
+
+> 可以说是最佳实践了！迭代了多个版本，最终确定了用二维数组保存排序中每次数组变化状态的方案。排序过程和动画过程解耦，代码结构清晰、可以灵活的控制动画间隔时间、性能更强同时动画不受排序影响。另外，对DOM的更新也采用了更加高效的方式：将子元素全部append到临时元素中，大量减少了对DOM的操作，极大的提高了性能。
