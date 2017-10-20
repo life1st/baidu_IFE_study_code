@@ -143,6 +143,23 @@ header {
   right: 0;
   overflow-y: auto;
   background-color: #ededec;
+  .search-btn {
+    button {
+      border: none;
+      background-color: #388ac1;
+      padding: 5px 12px;
+      margin-right: 110px;
+      border-radius: 3px;
+      color: #fff;
+      //margin-top: (@box1-h - 29px - 16) /2;
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        background-color: #3077A7;
+      }
+    }
+  }
   .pbc {
     padding-left: 30px;
     height: 30px;
@@ -184,6 +201,9 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    button {
+      margin-top: (@box1-h - 29px - 16) /2;
+    }
     .inquiry {
       width: 150px;
       vertical-align: top;
@@ -219,23 +239,6 @@ header {
       }
       p {
         line-height: 39px;
-      }
-    }
-    .search-btn {
-      button {
-        border: none;
-        background-color: #388ac1;
-        padding: 5px 12px;
-        margin-right: 110px;
-        border-radius: 3px;
-        color: #fff;
-        margin-top: (@box1-h - 29px - 16) /2;
-        &:focus {
-          outline: none;
-        }
-        &:active {
-          background-color: #3077A7;
-        }
       }
     }
     .buyer *,.seller *{
@@ -374,6 +377,7 @@ header {
       padding: 13px 16px 0 8px;
       background-color: #fff;
       font-family: '黑体';
+      border-radius: 2px 4px 4px 2px;
       .shadow(#ccc);
       &:last-child {
         margin-right: 0;
@@ -417,6 +421,145 @@ header {
       .bd-l(#e2cd46);
       .img {
         .img-bg(#e2cd46);
+      }
+    }
+  }
+  .box4 {
+    font-size: 0;
+    margin: 0 60px 8px;
+    box-sizing: border-box;
+    .table,.form {
+      height: 357px;
+      font-size: 12px;
+      background-color: #fff;
+      border-radius: 6px 6px 8px 8px;
+      border: 1px solid #d0d2d6;
+    }
+    .table {
+      width: 59%;
+      .content {
+        padding: 12px 20px 0;
+        li {
+          display: inline-block;
+        }
+        ul{
+          z-index: 1;
+          a {
+            position: relative;
+            bottom: -1px;
+            z-index: 0;
+            display: inline-block;
+            box-sizing: border-box;
+            border: 1px solid #fff;
+            border-radius: 4px 4px 0 0;
+            width: 85px;
+            height: 26px;
+            line-height: 26px;
+            text-align: center;
+            color: #535353;
+            font-size: 12px;
+            font-family: 'Microsoft YaHei';
+            background-color: #ededf0;
+          }
+          .active {
+            a{
+              position: relative;
+              bottom: -3px;
+              z-index: 10;
+              border: 2px solid #d9dada;
+              border-bottom: 4px solid #fff;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .form {
+      float: right;
+      width: 39%;
+      .content {
+        padding: 12px 35px 0;
+        input[type=text],textarea {
+          width: 100%;
+          height: 32px;
+          border: 1px solid transparent;
+          border-bottom: 1px solid #e8e8e8;
+          padding: 0 16px;
+          box-sizing: border-box;
+          resize: none;
+          transition: all .2s;
+          &:focus {
+            outline: none;
+            border-bottom: 1px solid #388bc2;
+          }
+        }
+        textarea {
+          height: 126px;
+        }
+        input[type=checkbox] {
+          margin-right: 8px;
+          vertical-align: text-bottom;
+        }
+        h4,label {
+          font-weight: 500;
+          color: #c3c2c2;
+          line-height: 21px;
+          margin-left: 16px;
+        }
+        .item {
+          width: 100%;
+          .ib {
+            width: 49.5%;
+          }
+          span {
+            position: absolute;
+            left: 16px;
+            bottom: 8px;
+          }
+        }
+        .price {
+          position: relative;
+          border-right: 1px solid #e8e8e8;
+          input {
+            text-indent: 1.5em;
+          }
+        }
+        .search-btn {
+          text-align: right;
+          button {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .title {
+      height: 41px;
+      line-height: 41px;
+      font-family: '黑体';
+      background-color: #f3f5f6;
+      border-radius: 6px 6px 0 0;
+      border-bottom: 1px solid #e7e9eb;
+      h4 {
+        padding-left: 20px;
+        font-weight: 500;
+        color: #aaa;
+      }
+    }
+    .table-wrap {
+      position: relative;
+      z-index: 2;
+      padding: 28px 35px 36px;
+      border: 2px solid #d9dada;
+      border-radius: 0 5px 5px 5px;
+      table {
+        width: 100%;
+        text-align: center;
+        th,td {
+          font-family: '宋体';
+          line-height: 30px;
+          font-weight: 500;
+          border: 1px solid #ddddde;
+        }
       }
     }
   }

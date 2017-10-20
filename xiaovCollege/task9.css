@@ -219,6 +219,20 @@ header .search-box .search-icon {
   overflow-y: auto;
   background-color: #ededec;
 }
+.right-content .search-btn button {
+  border: none;
+  background-color: #388ac1;
+  padding: 5px 12px;
+  margin-right: 110px;
+  border-radius: 3px;
+  color: #fff;
+}
+.right-content .search-btn button:focus {
+  outline: none;
+}
+.right-content .search-btn button:active {
+  background-color: #3077A7;
+}
 .right-content .pbc {
   padding-left: 30px;
   height: 30px;
@@ -260,6 +274,9 @@ header .search-box .search-icon {
     height: 255px;
   }
 }
+.right-content .box1 button {
+  margin-top: 20px;
+}
 .right-content .box1 .inquiry {
   width: 150px;
   vertical-align: top;
@@ -297,21 +314,6 @@ header .search-box .search-icon {
 }
 .right-content .box1 .date-msg p {
   line-height: 39px;
-}
-.right-content .box1 .search-btn button {
-  border: none;
-  background-color: #388ac1;
-  padding: 5px 12px;
-  margin-right: 110px;
-  border-radius: 3px;
-  color: #fff;
-  margin-top: 20px;
-}
-.right-content .box1 .search-btn button:focus {
-  outline: none;
-}
-.right-content .box1 .search-btn button:active {
-  background-color: #3077A7;
 }
 .right-content .box1 .buyer *,
 .right-content .box1 .seller * {
@@ -445,6 +447,7 @@ header .search-box .search-icon {
   padding: 13px 16px 0 8px;
   background-color: #fff;
   font-family: '黑体';
+  border-radius: 2px 4px 4px 2px;
   box-shadow: 1px 1px 5px #ccc;
 }
 .right-content .box3 .content:last-child {
@@ -489,4 +492,146 @@ header .search-box .search-icon {
 }
 .right-content .box3 .item4 .img {
   background-color: #e2cd46;
+}
+.right-content .box4 {
+  font-size: 0;
+  margin: 0 60px 8px;
+  box-sizing: border-box;
+}
+.right-content .box4 .table,
+.right-content .box4 .form {
+  height: 357px;
+  font-size: 12px;
+  background-color: #fff;
+  border-radius: 6px 6px 8px 8px;
+  border: 1px solid #d0d2d6;
+}
+.right-content .box4 .table {
+  width: 59%;
+}
+.right-content .box4 .table .content {
+  padding: 12px 20px 0;
+}
+.right-content .box4 .table .content li {
+  display: inline-block;
+}
+.right-content .box4 .table .content ul {
+  z-index: 1;
+}
+.right-content .box4 .table .content ul a {
+  position: relative;
+  bottom: -1px;
+  z-index: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 4px 4px 0 0;
+  width: 85px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  color: #535353;
+  font-size: 12px;
+  font-family: 'Microsoft YaHei';
+  background-color: #ededf0;
+}
+.right-content .box4 .table .content ul .active a {
+  position: relative;
+  bottom: -3px;
+  z-index: 10;
+  border: 2px solid #d9dada;
+  border-bottom: 4px solid #fff;
+  background-color: #fff;
+}
+.right-content .box4 .form {
+  float: right;
+  width: 39%;
+}
+.right-content .box4 .form .content {
+  padding: 12px 35px 0;
+}
+.right-content .box4 .form .content input[type=text],
+.right-content .box4 .form .content textarea {
+  width: 100%;
+  height: 32px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 16px;
+  box-sizing: border-box;
+  resize: none;
+  transition: all .2s;
+}
+.right-content .box4 .form .content input[type=text]:focus,
+.right-content .box4 .form .content textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #388bc2;
+}
+.right-content .box4 .form .content textarea {
+  height: 126px;
+}
+.right-content .box4 .form .content input[type=checkbox] {
+  margin-right: 8px;
+  vertical-align: text-bottom;
+}
+.right-content .box4 .form .content h4,
+.right-content .box4 .form .content label {
+  font-weight: 500;
+  color: #c3c2c2;
+  line-height: 21px;
+  margin-left: 16px;
+}
+.right-content .box4 .form .content .item {
+  width: 100%;
+}
+.right-content .box4 .form .content .item .ib {
+  width: 49.5%;
+}
+.right-content .box4 .form .content .item span {
+  position: absolute;
+  left: 16px;
+  bottom: 8px;
+}
+.right-content .box4 .form .content .price {
+  position: relative;
+  border-right: 1px solid #e8e8e8;
+}
+.right-content .box4 .form .content .price input {
+  text-indent: 1.5em;
+}
+.right-content .box4 .form .content .search-btn {
+  text-align: right;
+}
+.right-content .box4 .form .content .search-btn button {
+  margin-right: 0;
+}
+.right-content .box4 .title {
+  height: 41px;
+  line-height: 41px;
+  font-family: '黑体';
+  background-color: #f3f5f6;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid #e7e9eb;
+}
+.right-content .box4 .title h4 {
+  padding-left: 20px;
+  font-weight: 500;
+  color: #aaa;
+}
+.right-content .box4 .table-wrap {
+  position: relative;
+  z-index: 2;
+  padding: 28px 35px 36px;
+  border: 2px solid #d9dada;
+  border-radius: 0 5px 5px 5px;
+}
+.right-content .box4 .table-wrap table {
+  width: 100%;
+  text-align: center;
+}
+.right-content .box4 .table-wrap table th,
+.right-content .box4 .table-wrap table td {
+  font-family: '宋体';
+  line-height: 30px;
+  font-weight: 500;
+  border: 1px solid #ddddde;
 }
