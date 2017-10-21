@@ -15,8 +15,8 @@ var speed = function () {
 var SORT = {
     bubbleSort:function (numArr) {
         var numArrTemp = [];
-        for(let i = 0;i<numArr.length-1;i++){
-                for (let j = 0;j<numArr.length-i-1;j++){
+        for(var i = 0;i<numArr.length-1;i++){
+                for (var j = 0;j<numArr.length-i-1;j++){
                         if (numArr[j]>numArr[j+1]){
                             numArr[j] = numArr[j]+numArr[j+1];
                             numArr[j+1] = numArr[j]-numArr[j+1];
@@ -29,8 +29,8 @@ var SORT = {
     },
     selectSort:function (numArr) {
         var numArrTemp = [];
-        for(let i = 0;i<numArr.length;i++){
-            for(let j = i+1;j<numArr.length;j++){
+        for(var i = 0;i<numArr.length;i++){
+            for(var j = i+1;j<numArr.length;j++){
                     if (numArr[i] > numArr[j]) {
                         numArr[i] = numArr[i]+numArr[j];
                         numArr[j] = numArr[i]-numArr[j];
@@ -69,7 +69,7 @@ var NUM = {
         var box = document.getElementById('num_box');
         var tempNode = document.createDocumentFragment();
         box.innerText = '';
-        for(let i = 0;i<numArr.length;i++){
+        for(var i = 0;i<numArr.length;i++){
             var pNode = document.createElement('p');
             pNode.style.height = numArr[i]*2+'px';
             pNode.innerText = numArr[i];
