@@ -22,6 +22,7 @@ header {
       line-height: 56px;
       color: #fff;
       font-family: 'Adobe 黑体 Std R';
+      transition: all .2s;
       &::before {
         content: ' ';
         display: inline-block;
@@ -30,6 +31,9 @@ header {
         margin: 0 4px 0 0;
         background: url("imgs-task9/user-login-icon.png") center no-repeat;
         vertical-align: text-bottom;
+      }
+      &:hover {
+        color: #f1f1f1;
       }
     }
   }
@@ -508,8 +512,10 @@ header {
         }
         .item {
           width: 100%;
+          font-size: 0;
           .ib {
             width: 49.5%;
+            font-size: 12px;
           }
           span {
             position: absolute;
@@ -559,6 +565,141 @@ header {
           line-height: 30px;
           font-weight: 500;
           border: 1px solid #ddddde;
+        }
+      }
+    }
+  }
+  .box5 {
+    font-size: 0;
+    margin: 0 60px 156px;
+    .calendar,.ranking {
+      height: 411px;
+      font-size: 12px;
+      border: 1px solid #d0d2d6;
+      border-radius: 6px 6px 8px 8px;
+      background-color: #fff;
+    }
+    .title {
+      height: 41px;
+      line-height: 41px;
+      font-family: '黑体';
+      background-color: #f3f5f6;
+      border-radius: 6px 6px 0 0;
+      border-bottom: 1px solid #e7e9eb;
+      h4 {
+        padding-left: 20px;
+        font-weight: 500;
+        color: #aaa;
+      }
+    }
+    .calendar {
+      width: 39.3%;
+      table {
+        width: 100%;
+        thead {
+          border-top: 1px solid #a9cfec;
+          border-bottom: 1px solid #e1e1e2;
+          th {
+            line-height: 29px;
+            font-weight: 500;
+            color: #535353;
+            font-family: '黑体';
+          }
+        }
+        tbody {
+          text-align: center;
+          .active {
+            border: 2px solid #f5c732;
+          }
+          td {
+            width: 14.28%;
+            padding: 8px 0;
+          }
+          h4,p {
+
+          }
+          span {
+            color: #cd3539;
+          }
+          tr{
+            td:nth-child(6),td:nth-child(7) {
+              h4 {
+                color: #cd3539;
+              }
+            }
+          }
+        }
+      }
+    }
+    .ranking {
+      float: right;
+      width: 59.5%;
+      table {
+        width: 100%;
+        tr {
+          transition: all .3s;
+          td {
+            border: 1px solid #c5c6c6;
+            text-align: center;
+            line-height: 29px;
+            &:last-child {
+              width: 50%;
+            }
+          }
+          &:hover {
+            background-color: #f4f5f7;
+          }
+        }
+      }
+      p {
+        display: inline-block;
+        color: #323333;
+      }
+      .line {
+        width: 169px;
+        display: inline-block;
+        height: 4px;
+        background-color: #dcdcdc;
+        vertical-align: middle;
+        position: relative;
+        p {
+          position: absolute;
+          left: 0;
+          height: 4px;
+          background-color: #7fcbf0; //默认色
+        }
+      }
+    }
+    .content {
+      background-color: #fff;
+      border-radius: 0 0 8px 8px;
+      padding: 11px 18px 21px;
+    }
+    .btn-box {
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 10px;
+      select,button {
+        border: 1px solid #cacbcb;
+        height: 28px;
+        padding: 0 8px;
+        background-color: #fff;
+        transition: all .3s;
+      }
+      select {
+        &:focus {
+          outline: none;
+          border: 1px solid #388bc2;
+        }
+      }
+      button {
+        &:focus {
+          outline:none;
+        }
+        &:active {
+          outline: none;
+          border: 1px solid #388bc2;
+          background-color: #efefef;
         }
       }
     }

@@ -103,6 +103,7 @@ header .login-box a {
   line-height: 56px;
   color: #fff;
   font-family: 'Adobe 黑体 Std R';
+  transition: all .2s;
 }
 header .login-box a::before {
   content: ' ';
@@ -112,6 +113,9 @@ header .login-box a::before {
   margin: 0 4px 0 0;
   background: url("imgs-task9/user-login-icon.png") center no-repeat;
   vertical-align: text-bottom;
+}
+header .login-box a:hover {
+  color: #f1f1f1;
 }
 header .search-box {
   float: right;
@@ -582,9 +586,11 @@ header .search-box .search-icon {
 }
 .right-content .box4 .form .content .item {
   width: 100%;
+  font-size: 0;
 }
 .right-content .box4 .form .content .item .ib {
   width: 49.5%;
+  font-size: 12px;
 }
 .right-content .box4 .form .content .item span {
   position: absolute;
@@ -634,4 +640,131 @@ header .search-box .search-icon {
   line-height: 30px;
   font-weight: 500;
   border: 1px solid #ddddde;
+}
+.right-content .box5 {
+  font-size: 0;
+  margin: 0 60px 156px;
+}
+.right-content .box5 .calendar,
+.right-content .box5 .ranking {
+  height: 411px;
+  font-size: 12px;
+  border: 1px solid #d0d2d6;
+  border-radius: 6px 6px 8px 8px;
+  background-color: #fff;
+}
+.right-content .box5 .title {
+  height: 41px;
+  line-height: 41px;
+  font-family: '黑体';
+  background-color: #f3f5f6;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid #e7e9eb;
+}
+.right-content .box5 .title h4 {
+  padding-left: 20px;
+  font-weight: 500;
+  color: #aaa;
+}
+.right-content .box5 .calendar {
+  width: 39.3%;
+}
+.right-content .box5 .calendar table {
+  width: 100%;
+}
+.right-content .box5 .calendar table thead {
+  border-top: 1px solid #a9cfec;
+  border-bottom: 1px solid #e1e1e2;
+}
+.right-content .box5 .calendar table thead th {
+  line-height: 29px;
+  font-weight: 500;
+  color: #535353;
+  font-family: '黑体';
+}
+.right-content .box5 .calendar table tbody {
+  text-align: center;
+}
+.right-content .box5 .calendar table tbody .active {
+  border: 2px solid #f5c732;
+}
+.right-content .box5 .calendar table tbody td {
+  width: 14.28%;
+  padding: 8px 0;
+}
+.right-content .box5 .calendar table tbody span {
+  color: #cd3539;
+}
+.right-content .box5 .calendar table tbody tr td:nth-child(6) h4,
+.right-content .box5 .calendar table tbody tr td:nth-child(7) h4 {
+  color: #cd3539;
+}
+.right-content .box5 .ranking {
+  float: right;
+  width: 59.5%;
+}
+.right-content .box5 .ranking table {
+  width: 100%;
+}
+.right-content .box5 .ranking table tr {
+  transition: all .3s;
+}
+.right-content .box5 .ranking table tr td {
+  border: 1px solid #c5c6c6;
+  text-align: center;
+  line-height: 29px;
+}
+.right-content .box5 .ranking table tr td:last-child {
+  width: 50%;
+}
+.right-content .box5 .ranking table tr:hover {
+  background-color: #f4f5f7;
+}
+.right-content .box5 .ranking p {
+  display: inline-block;
+  color: #323333;
+}
+.right-content .box5 .ranking .line {
+  width: 169px;
+  display: inline-block;
+  height: 4px;
+  background-color: #dcdcdc;
+  vertical-align: middle;
+  position: relative;
+}
+.right-content .box5 .ranking .line p {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  background-color: #7fcbf0;
+}
+.right-content .box5 .content {
+  background-color: #fff;
+  border-radius: 0 0 8px 8px;
+  padding: 11px 18px 21px;
+}
+.right-content .box5 .btn-box {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+.right-content .box5 .btn-box select,
+.right-content .box5 .btn-box button {
+  border: 1px solid #cacbcb;
+  height: 28px;
+  padding: 0 8px;
+  background-color: #fff;
+  transition: all .3s;
+}
+.right-content .box5 .btn-box select:focus {
+  outline: none;
+  border: 1px solid #388bc2;
+}
+.right-content .box5 .btn-box button:focus {
+  outline: none;
+}
+.right-content .box5 .btn-box button:active {
+  outline: none;
+  border: 1px solid #388bc2;
+  background-color: #efefef;
 }
