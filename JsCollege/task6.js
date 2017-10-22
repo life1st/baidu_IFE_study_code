@@ -1,20 +1,26 @@
+/*
+允许一次批量输入多个内容，格式可以为数字、中文、英文等，可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔
+*/
 function initNum(numArr) {
     console.log(numArr);
     var box = document.getElementById('num_box');
     box.innerText = '';
+
+    var tempNode = document.createDocumentFragment();
     for(let i = 0;i<numArr.length;i++){
         var pNode = document.createElement('p');
         pNode.innerText = numArr[i][0];
-        if (numArr[i][1] =='select') {
+        if (numArr[i][1] == 'select') {
             pNode.setAttribute('class','select');
         }
-        box.appendChild(pNode);
         pNode.onclick = function () {
             alert('你点击的第'+(i+1)+'个元素：'+numArr[i]+'，将被删除。');
             numArr.splice(i,1);
             initNum(numArr);//重新绑定点击事件，所有数据都是从数组中更新，保持数据纯洁~
-        }
+        };
+        tempNode.appendChild(pNode);
     }
+    box.appendChild(tempNode);
 }
 function addNum() {
     var numNode = document.getElementById('content_input');
