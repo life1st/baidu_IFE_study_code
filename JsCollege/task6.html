@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>task6</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 120px auto;
+        }
+        .enter,.exit {
+            display: inline-block;
+            margin-right: 20px;
+            vertical-align: top;
+        }
+        .num-box p {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 12px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .num-box p:hover {
+            background-color: #e8e8e8;
+        }
+        .num-box .select {
+            background-color: #c00;
+            color: #fff;
+        }
+        .num-box .select:hover {
+            background-color: #b81010;
+        }
+    </style>
+</head>
+<body>
+<textarea class="content-input" id="content_input"></textarea>
+<div class="enter">
+    <button id="left_enter">左侧入</button>
+    <button id="right_enter">右侧入</button>
+</div>
+<div class="exit">
+    <button id="left_out">左侧出</button>
+    <button id="right_out">右侧出</button>
+</div>
+<div class="add-box">
+    <button id="add">添加一个随机数</button>
+</div>
+<div class="select-box">
+    <input type="text" placeholder="请输入查询内容" id="select_content">
+    <button id="select_btn">查询</button>
+</div>
+<br>
+<div id="num_box" class="num-box">
+</div>
+<script src="task6.js"></script>
+</body>
+</html>
