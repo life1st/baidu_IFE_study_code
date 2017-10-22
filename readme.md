@@ -40,7 +40,7 @@
 
 > update 2017.10.21 怎么这么多内容啊这个页面...关于页面的宽度，试了很多种方案，最后还是选定了百分比。使用前面的网格布局，内容无法分成12等份；使用flex-box，又会留下空隙，自适应宽度还不如百分比方便。
 
-[任务十：Flexbox 布局练习](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task9.html) [任务页](http://ife.baidu.com/course/detail/id/114)
+[任务十：Flexbox 布局练习](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task10.html) [任务页](http://ife.baidu.com/course/detail/id/114)
 
 [任务十二：学习CSS 3的新特性](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task12.html) [任务页](http://ife.baidu.com/course/detail/id/117)
 
@@ -63,3 +63,7 @@
 > 可以说是最佳实践了！迭代了多个版本，最终确定了用二维数组保存排序中每次数组变化状态的方案。排序过程和动画过程解耦，代码结构清晰、可以灵活的控制动画间隔时间、性能更强同时动画不受排序影响。另外，对DOM的更新也采用了更加高效的方式：将子元素全部append到临时元素中，大量减少了对DOM的操作，极大的提高了性能。
 
 > update 2017.10.21 在运行iOS 9 的iPad air 上发现无法运行，调试后发现是老旧的Safari不支持es6语法造成的，debug后在动画过程中会频繁触发gc，最终导致页面崩溃，暂时没有解决办法。
+
+[任务六：基础JavaScript练习（三）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task6.html) [任务页](http://ife.baidu.com/course/detail/id/107)
+
+> 基本上都是任务四的代码。做了两件事，一件是从textarea里读取字符串后，用正则把数据分割为数组，第二件是push的时候给每位加上状态即使用二维数组保存数据，一位是数据，一位是数据状态。目前分隔输入数据还有点问题，现在的正则匹配了所有非数字。
