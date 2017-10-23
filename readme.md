@@ -42,6 +42,8 @@
 
 [任务十：Flexbox 布局练习](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task10.html) [任务页](http://ife.baidu.com/course/detail/id/114)
 
+[任务十一：移动Web页面布局实践](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task11.html) [任务页](http://ife.baidu.com/course/detail/id/116)
+
 [任务十二：学习CSS 3的新特性](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task12.html) [任务页](http://ife.baidu.com/course/detail/id/117)
 
 ### 斌斌学院
