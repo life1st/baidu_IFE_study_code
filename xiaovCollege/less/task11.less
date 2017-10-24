@@ -145,24 +145,74 @@ header {
     padding: .5rem 0;
     border-bottom: 1px solid #f3f3f3;
     background-color: #fff;
+    position: relative;
     img {
       box-sizing: border-box;
       padding: 0 .7rem;
-      width: 40%;
+      width: 35%;
     }
     .infos {
-      width: 60%;
       display: inline-block;
+      width: 65%;
       vertical-align: top;
+      box-sizing: border-box;
+      padding-right: .5rem;
     }
     h2 {
       font-size: .9rem;
       font-weight: 500;
     }
     p {
-      vertical-align: bottom;
       font-size: .6rem;
       color: #c5c5c5;
+      position: absolute;
+      bottom: .5rem;
+      left: 35%;
     }
+  }
+  .article2 {
+    background: #fff;
+    padding: 0 .6rem;
+    h2 {
+      padding: 0 .1rem;
+      font-size:.9rem;
+      font-weight: 500;
+      line-height: 1.8rem;
+    }
+    .img-box {
+      text-align: center;
+      margin-bottom: .3rem;
+      img {
+        width: 33%;
+        box-sizing: border-box;
+        padding: 0 .1rem;
+      }
+    }
+    p {
+      padding: 0 .1rem;
+      font-size: .6rem;
+      line-height: 1rem;
+      color: #c5c5c5;
+    }
+  }
+}
+footer {
+  text-align: center;
+  background-color: #f8f8f8;
+  padding-bottom: 1rem;
+  &::before {
+    content: ' ';
+    display: block;
+    width: 100%;
+    border-top: 1px dotted #4e4e4e;
+    position: relative;
+    top: 0.5rem;
+  }
+  .content {
+    display: inline-block;
+    background-color: #f8f8f8;
+  }
+  p {
+    background-color: #f8f8f8;
   }
 }
