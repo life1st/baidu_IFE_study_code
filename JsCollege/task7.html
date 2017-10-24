@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>task7</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .rootNode,.node2,.node3,.node4 {
+            display: inline-block;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        .active {
+            background-color: #cc5a59;
+        }
+    </style>
+</head>
+<body>
+<div class="rootNode">A
+    <div class="left node2">B
+        <div class="left node3">D
+            <div class="left node4">H</div>
+            <div class="right node4">I</div>
+        </div>
+        <div class="right node3">E
+            <div class="left node4">J</div>
+            <div class="right node4">K</div>
+        </div>
+    </div>
+    <div class="right node2">C
+        <div class="left node3">F
+            <div class="left node4">L</div>
+            <div class="right node4">M</div>
+        </div>
+        <div class="right node3">G
+            <div class="left node4">N</div>
+            <div class="right node4">O</div>
+        </div>
+    </div>
+</div>
+
+<div class="btn-box">
+    <button id="per_order">前序遍历</button>
+    <button id="in_order">中序遍历</button>
+    <button id="post_order">后序遍历</button>
+</div>
+<script src="task7.js"></script>
+</body>
+</html>

@@ -69,3 +69,7 @@
 [任务六：基础JavaScript练习（三）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task6.html) [任务页](http://ife.baidu.com/course/detail/id/107)
 
 > 基本上都是任务四的代码。做了两件事，一件是从textarea里读取字符串后，用正则把数据分割为数组，第二件是push的时候给每位加上状态即使用二维数组保存数据，一位是数据，一位是数据状态。目前分隔输入数据还有点问题，现在的正则匹配了所有非数字。
+
+[任务七：JavaScript和树（一）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task7.html) [任务页](http://ife.baidu.com/course/detail/id/108)
+
+>  关键点是学习二叉树遍历的思想（那么问题来了，遍历二叉树在工程上有什么应用？），三种遍历方法的区别是遍历顺序，相同点都是使用递归。动画的展现方法和排序一致，将遍历状态压入数组，然后循环。
