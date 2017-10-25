@@ -22,7 +22,7 @@ function perOrder(node) {
         if (!!node.firstElementChild){
             perOrder(node.firstElementChild);
         }
-        if(!!node.lastElementChild){
+        if(node.getElementsByTagName('div').length>1){
             perOrder(node.lastElementChild);
         }
     }
@@ -35,7 +35,7 @@ function inOrder(node) {
             inOrder(node.firstElementChild);
         }
         nodeArr.push([node,node.innerText]);
-        if(!!node.lastElementChild){
+        if(node.getElementsByTagName('div').length>1) {
             inOrder(node.lastElementChild);
         }
     }
@@ -47,7 +47,7 @@ function postOrder(node) {
         if (!!node.firstElementChild){
             postOrder(node.firstElementChild);
         }
-        if(!!node.lastElementChild){
+        if(node.getElementsByTagName('div').length>1){
             postOrder(node.lastElementChild);
         }
         nodeArr.push([node,node.innerText]);

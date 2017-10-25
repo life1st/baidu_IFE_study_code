@@ -6,9 +6,9 @@ function getData() {
     var data = [];
     var dataNode = document.getElementById('source');
     var list = dataNode.getElementsByTagName('li');
-    for(var i = 0;i<list.length;i++){
+    for (var i = 0;i<list.length;i++){
         var listNode = list[i].innerText.split('：');
-        data.push([listNode[0],listNode[1]]);
+        data.push([listNode[0], listNode[1]]);
     }
     /* data = [["北京", 90],["北京", 90]……] */
     return data;
@@ -19,13 +19,14 @@ function getData() {
  * 返回一个排序后的数组
  */
 function sortAqiData(data) {
-    for(var i = 0;i<data.length;i++){
-        for (j = 0; j < data.length - 1 - i; j++)
+    for (var i = 0;i<data.length;i++){
+        for (var j = 0; j < data.length - 1 - i; j++){
             if (data[j][1] > data[j + 1][1]) {
                 var temp = data[j];
                 data[j] = data[j + 1];
                 data[j + 1] = temp;
             }
+        }
     }
     return data;
 }
@@ -35,7 +36,7 @@ function sortAqiData(data) {
  */
 function render(data) {
     var resort = document.getElementById('resort');
-    var num = ['一','二','三','四','五','六','七','八','九','十'];
+    var num = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
     for(var i=0;i<data.length;i++){
         var liNode = document.createElement('li');
         var bNode = document.createElement('b');
