@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>task8</title>
+    <style>
+        .rootNode,.node2,.node3,.node4,.node5 {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        .btn-box {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="rootNode" data-value="super">super
+    <div class="node2" data-value="car">car
+        <div class="node3" data-value="apple">apple
+            <div class="node4" data-value="pear">pear</div>
+            <div class="node4" data-value="pig">pig</div>
+            <div class="node4" data-value="cala">cala</div>
+            <div class="node4" data-value="soccer">soccer</div>
+        </div>
+        <div class="node3" data-value="phone">phone</div>
+        <div class="node3" data-value="">
+            <div class="node4" data-value="book">book</div>
+            <div class="node4" data-value="school">school</div>
+        </div>
+    </div>
+    <div class="node2" data-value="note">note
+        <div class="node3" data-value="human">human
+            <div class="node4" data-value="code">code</div>
+            <div class="node4" data-value="oprate">oprate</div>
+            <div class="node4" data-value="man">man</div>
+        </div>
+        <div class="node3" data-value="program">program
+            <div class="node4" data-value="bement">bement
+                <div class="node5" data-value="cat">cat</div>
+            </div>
+            <div class="node4" data-value="class">class</div>
+        </div>
+    </div>
+    <div class="node2" data-value="fish">fish</div>
+</div>
+<div class="btn-box">
+    <button id="order">开始遍历</button>
+    <br>
+    <input type="text" id="search_content" placeholder="请输入搜索内容"><button id="search_btn">搜索</button>
+</div>
+<script src="task8.js"></script>
+</body>
+</html>
