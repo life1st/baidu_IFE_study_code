@@ -1,0 +1,36 @@
+@import (less) "../../css/common.css";
+
+table {
+  margin: 0 auto 20px;
+}
+th,td {
+  padding: 4px 12px;
+  border: 1px solid #fff;
+}
+tr:nth-child(2n+1) {
+  background: #ccc;
+}
+tr:nth-child(-n+4) {
+  color: #f00;
+}
+tr:first-child {
+  background: #000;
+  color: #fff;
+}
+
+input {
+  width: 50px;
+  text-align: center;
+  &:hover {
+    animation: wd 2s ease;
+    width: 100px;
+  }
+}
+
+@keyframes wd {
+  from {
+    width: 50px;
+  }to {
+    width: 100px;
+     }
+}
