@@ -42,13 +42,13 @@ function search() {
             j++;
             nodeArr[i][1] = 'select';
         }
-        console.log(nodeArr[i]);
     }
     return j;
 }
 
 window.onload = function () {
     var rootNode = document.querySelector('.rootNode');
+    var addNode = [];
 
     document.getElementById('order').onclick = function () {
         nodeArr = [];
@@ -62,12 +62,40 @@ window.onload = function () {
         order(rootNode);
         var j = search();
         animation(nodeArr,j);
+        nodeArr = [];
     }
 
-    document.querySelector('body').addEventListener('click',function (e) {
+    document.querySelector('.rootNode').addEventListener('click',function (e) {
         if (e.target.nodeName.toUpperCase() =='DIV') {
-            e.toElement.style.backgroundColor = '#1dd17c'
+                if(addNode.length!==0){
+                    addNode[0].style.backgroundColor = '#fff';
+                    addNode = [];
+                }
+                addNode.push(e.target);
+                e.toElement.style.backgroundColor = '#1dd17c'
         }
-    })
+        console.log(addNode)
+    });
+    
+    document.getElementById('add_node_btn').onclick = function () {
+        var nodeName = document.getElementById('node_name').value;
+        var newNode  = document.createElement('div');
+        newNode.setAttribute('class','new-node');
+        newNode.setAttribute('data-value',nodeName);
+        newNode.innerText = nodeName;
+        if(addNode.length!=0){
+            addNode[0].appendChild(newNode);
+        }else {
+            alert('未选中元素。')
+        }
+    }
 
+    document.getElementById('remove_node_btn').onclick = function () {
+        if(addNode.length!=0){
+            addNode[0].remove();
+            addNode = [];
+        }else {
+            alert('未选中元素。')
+        }
+    }
 }
