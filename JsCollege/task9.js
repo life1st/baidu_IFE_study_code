@@ -1,15 +1,17 @@
-var nodeArr = [];
+var nodeArr = [];//储存节点遍历状态，推入动画函数延时展示
 
-function animation(arr,j) {
+function animation(arr) {
     console.log(arr);
     var i = 0;
     var speed = 500;
+    var flag = 0; //统计搜索是否找到元素
     var t = setInterval(function () {
         if(i<arr.length){
             if(i>0){
                 if (arr[i-1][1] === 'null'){
                     arr[i-1][0].style.backgroundColor = '#fff';
                 }else if (arr[i-1][1] === 'select') {
+                    flag++;
                     arr[i-1][0].style.backgroundColor = '#9195ff';
                 }
             }
@@ -17,7 +19,7 @@ function animation(arr,j) {
         }else {
             clearInterval(t);
             arr[arr.length-1][0].style.backgroundColor = '#fff';
-            if (j===0){
+            if (flag===0){
                 alert('找不到元素.');
             }
         }
@@ -35,36 +37,36 @@ function order(node) {
 }
 function search() {
     var text = document.getElementById('search_content').value;
-    var j = 0;
     for (let i = 0;i<nodeArr.length;i++){
         var nodeText = nodeArr[i][0].dataset.value;
         if (nodeText.match(text)) {
-            j++;
             nodeArr[i][1] = 'select';
         }
     }
-    return j;
 }
 
 window.onload = function () {
     var rootNode = document.querySelector('.rootNode');
     var addNode = [];
 
+    //绑定开始遍历按钮点击事件
     document.getElementById('order').onclick = function () {
         nodeArr = [];
         order(rootNode);
-        animation(nodeArr,1);
+        animation(nodeArr);
         console.log(nodeArr)
     }
 
+    //绑定搜索按钮事件
     document.getElementById('search_btn').onclick = function () {
         nodeArr = [];
         order(rootNode);
-        var j = search();
-        animation(nodeArr,j);
+        search();
+        animation(nodeArr);
         nodeArr = [];
     }
 
+    //绑定节点点击事件
     document.querySelector('.rootNode').addEventListener('click',function (e) {
         if (e.target.nodeName.toUpperCase() =='DIV') {
                 if(addNode.length!==0){
@@ -76,7 +78,8 @@ window.onload = function () {
         }
         console.log(addNode)
     });
-    
+
+    //绑定添加节点事件
     document.getElementById('add_node_btn').onclick = function () {
         var nodeName = document.getElementById('node_name').value;
         var newNode  = document.createElement('div');
@@ -90,6 +93,7 @@ window.onload = function () {
         }
     }
 
+    //绑定删除节点事件
     document.getElementById('remove_node_btn').onclick = function () {
         if(addNode.length!=0){
             addNode[0].remove();

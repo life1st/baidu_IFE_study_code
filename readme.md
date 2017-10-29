@@ -75,3 +75,5 @@
 >  关键点是学习二叉树遍历的思想（那么问题来了，遍历二叉树在工程上有什么应用？），三种遍历方法的区别是遍历顺序，相同点都是使用递归。动画的展现方法和排序一致，将遍历状态压入数组，然后循环。
 
 [任务八：JavaScript和树（二）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task8.html) [任务页](http://ife.baidu.com/course/detail/id/110)
+
+[任务九：JavaScript和树（三）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task9.html) [任务页](http://ife.baidu.com/course/detail/id/111)
