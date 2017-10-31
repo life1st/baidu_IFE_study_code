@@ -3,9 +3,14 @@ var system = require('system'); //输入模块
 
 var page = webPage.create();
 var keyword = system.args[1];
+if (system.args.length === 1) {
+    console.log('未输入关键词.')
+    phantom.exit();
+}
 
+var url = encodeURI('https://www.baidu.com/s?wd='+keyword);//中文关键词编码
 var t = Date.now();
-page.open('https://www.baidu.com/s?wd='+keyword,function(status){
+page.open(url,function(status){
     if (status!='success'){
         console.log('fail');
         var res = {
@@ -18,15 +23,26 @@ page.open('https://www.baidu.com/s?wd='+keyword,function(status){
     }else {
         t = Date.now() - t;
         console.log('loading time:'+ t);
-        page.render('example.png'); //截图debug.
+
+        //截图debug.
+        page.viewportSize= {
+            width: 1920
+        }
+        page.render('example.png',{
+            format: 'jpeg',
+            quality: 85,
+        });
+
+        //在打开的页面内操作，无法使用外部定义的变量
         var dom = page.evaluate(function(){
             var res = {
                 code: 1,
                 msg: '抓取成功',
-                dataList: []
+                dataList: [],
+                keyword:document.getElementById('kw').value
             }
-            var result = document.querySelectorAll('#content_left .c-container');
 
+            var result = document.querySelectorAll('#content_left .c-container');
             for(var i = 0;i<result.length;i++){
                 var picSrc = '',
                     infoText = '';
@@ -39,9 +55,10 @@ page.open('https://www.baidu.com/s?wd='+keyword,function(status){
                     title: result[i].querySelector('h3').innerText
                 })
             }
-            res.keyword = document.getElementById('kw').value;
             return res;
         });
+
+        //格式化数据
         dom.time = t;
         console.log(JSON.stringify(dom));
     }
