@@ -1,17 +1,19 @@
 var fs = require('fs');
+/*这个fs不是nodejs里的fs。因此，方法也是phantomjs的方法，无法混用。*/
 
 var webPage = require('webpage');
-var system = require('system'); //输入模块
 var page = webPage.create();
+
+var system = require('system'); //输入模块
 var keyword = system.args[1];
 if (system.args.length === 1) {
     console.log('未输入关键词.')
     phantom.exit();
 }
 
-var devices = JSON.parse(fs.read('devices.json'));
 
 //设置设备信息
+var devices = JSON.parse(fs.read('devices.json'));
 var device = devices.default;
 page.settings.userAgent = device.ua;
 page.viewportSize= {
@@ -50,6 +52,7 @@ page.open(url,function(status){
                 dataList: [],
                 keyword:document.getElementById('kw').value,
                 device:{
+                    name: d.name,
                     width: window.innerWidth,
                     height: window.innerHeight,
                     userAgent: window.navigator.userAgent
