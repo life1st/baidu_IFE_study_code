@@ -1,7 +1,6 @@
 function verificat(node,reg) {
     return !!node.querySelector('input[type=text]').value.match(reg);
 }
-
 function addClass(node,newClassName) {
         var n = node;
         var c = newClassName;
