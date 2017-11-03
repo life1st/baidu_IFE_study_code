@@ -98,4 +98,4 @@ var option = {
     }
 };
 
-myChart.setOption(option)
+myChart.setOption(option);
