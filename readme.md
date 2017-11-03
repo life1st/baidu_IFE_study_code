@@ -88,8 +88,8 @@
 
 #### ECharts
 
-[ECharts NO.1 - 零基础绘制ECharts图表](https://github.com/life1st/baidu_IFE_study_code/tree/master/graphCollege/echarts/task1.html) [任务页](http://ife.baidu.com/course/detail/id/42)
+[ECharts NO.1 - 零基础绘制ECharts图表](https://life1st.github.io/baidu_IFE_study_code/tree/master/graphCollege/echarts/task1.html) [任务页](http://ife.baidu.com/course/detail/id/42)
 
 > 7月份实习入职的时候接触了echarts，所以也不算零基础啦，不过也只是会写配置的水平。（另外，羡辙小姐姐最棒了！
 
-[ECharts NO.2 - 实现自定义的统计图表](https://github.com/life1st/baidu_IFE_study_code/tree/master/graphCollege/echarts/task2.html) [任务页](http://ife.baidu.com/course/detail/id/45)
+[ECharts NO.2 - 实现自定义的统计图表](https://life1st.github.io/life1st/baidu_IFE_study_code/tree/master/graphCollege/echarts/task2.html) [任务页](http://ife.baidu.com/course/detail/id/45)
