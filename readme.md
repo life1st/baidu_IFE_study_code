@@ -83,3 +83,13 @@
 [网页抓取分析服务系列之一（基础分析）](https://github.com/life1st/baidu_IFE_study_code/tree/master/nuomiCollege/node) [任务页](http://ife.baidu.com/course/detail/id/85)
 
 > 写代码真的太有趣了！今天下班我都是蹦着走的！JS简直就是喜欢做工程的最佳选择！什么都可以做！对于简单的需求，性能也不是问题！非常棒！开心！
+
+### ECharts & WebVR学院
+
+#### ECharts
+
+[ECharts NO.1 - 零基础绘制ECharts图表](https://github.com/life1st/baidu_IFE_study_code/tree/master/graphCollege/echarts/task1.html) [任务页](http://ife.baidu.com/course/detail/id/42)
+
+> 7月份实习入职的时候接触了echarts，所以也不算零基础啦，不过也只是会写配置的水平。（另外，羡辙小姐姐最棒了！
+
+[ECharts NO.2 - 实现自定义的统计图表](https://github.com/life1st/baidu_IFE_study_code/tree/master/graphCollege/echarts/task2.html) [任务页](http://ife.baidu.com/course/detail/id/45)

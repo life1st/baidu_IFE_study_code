@@ -1,5 +1,6 @@
 // 基于准备好的dom，初始化echarts实例
 var myChart = echarts.init(document.getElementById('chart'));
+// myChart.showLoading();
 
 var option = {
     title: [
@@ -160,3 +161,8 @@ var option = {
 };
 
 myChart.setOption(option);
+
+/*
+$ajax.done(
+    myChart.hideLoading();
+)*/
