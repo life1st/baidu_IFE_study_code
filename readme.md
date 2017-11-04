@@ -46,6 +46,8 @@
 
 [任务十二：学习CSS 3的新特性](https://life1st.github.io/baidu_IFE_study_code/xiaovCollege/task12.html) [任务页](http://ife.baidu.com/course/detail/id/117)
 
+[其他页面布局实例](https://github.com/life1st/sliceImgDemos)
+
 ### 斌斌学院
 
 [任务一：零基础JavaScript编码（一）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task1.html) [任务页](http://ife.baidu.com/course/detail/id/93)
