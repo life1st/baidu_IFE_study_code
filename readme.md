@@ -78,6 +78,10 @@
 
 [任务九：JavaScript和树（三）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task9.html) [任务页](http://ife.baidu.com/course/detail/id/111)
 
+### 耀耀学院
+
+[任务一：表单（一）单个表单项的检验](https://life1st.github.io/baidu_IFE_study_code/yaoyaoCollege/task1.html) [任务页](http://ife.baidu.com/course/detail/id/97)
+
 ### 糯米前端技术学院
 
 [网页抓取分析服务系列之一（基础分析）](https://github.com/life1st/baidu_IFE_study_code/tree/master/nuomiCollege/node) [任务页](http://ife.baidu.com/course/detail/id/85)
