@@ -1,0 +1,146 @@
+/*reset.*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fff;
+  font-size: 14px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+td,
+th,
+caption {
+  font-size: 14px;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #e74f4d;
+  transition: color 0.2s;
+}
+img {
+  border: none;
+}
+input,
+textarea,
+select,
+button {
+  font: 14px Verdana, Helvetica, Arial, sans-serif;
+}
+table {
+  border-collapse: collapse;
+}
+html {
+  overflow-y: scroll;
+}
+/*other*/
+.fr {
+  float: right;
+}
+.cl {
+  clear: both;
+}
+.ib {
+  display: inline-block;
+}
+.Form-box {
+  font-size: 14px;
+}
+.Form-box .w120 {
+  width: 120px;
+  margin-right: 8px;
+  text-align: right;
+  display: inline-block;
+}
+.Form-box .item {
+  margin-bottom: 48px;
+  position: relative;
+}
+.Form-box input {
+  border: none;
+  line-height: 24px;
+}
+.Form-box input:hover,
+.Form-box input:active,
+.Form-box input:focus {
+  outline: none;
+}
+.Form-box input[type=text],
+.Form-box input[type=password] {
+  border-bottom: 1px solid #ccc;
+  transition: all .2s;
+}
+.Form-box input[type=text]:active,
+.Form-box input[type=password]:active,
+.Form-box input[type=text]:focus,
+.Form-box input[type=password]:focus {
+  border-bottom: 1px solid #2F79BA;
+}
+.Form-box input[type=submit] {
+  background-color: #2F79BA;
+  padding: 0 8px;
+  color: #fff;
+  border-radius: 4px;
+}
+.Form-box input[type=submit]:active {
+  color: #ededed;
+  box-shadow: 1px 1px 2px #2e2e2e inset;
+}
+.Form-box .tips {
+  display: none;
+  margin-left: 128px;
+  font-size: 12px;
+  line-height: 28px;
+  color: #9f9f9f;
+  position: absolute;
+}
+.Form-box .tips.false {
+  display: block;
+  color: #f00;
+}
+.Form-box .tips.success {
+  display: block;
+  color: #00c800;
+}
+.Form-box {
+  padding: 20px;
+}
