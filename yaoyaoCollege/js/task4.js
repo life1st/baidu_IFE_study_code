@@ -100,8 +100,6 @@ var block = {
                 },10)
                 break;
         }
-
-        block.node.style.top = y + 'px';
     }
 }
 
