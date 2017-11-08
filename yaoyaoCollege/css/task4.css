@@ -167,8 +167,6 @@ tbody tr:before {
   height: 30px;
   display: block;
   position: absolute;
-  top: 20px;
-  left: 20px;
   background-color: #f00;
 }
 .block .direction {
