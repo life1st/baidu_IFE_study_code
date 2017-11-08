@@ -25,8 +25,7 @@ document.querySelector('.radio-box').addEventListener('click',function (e) {
 document.querySelector('#city').addEventListener('change',function (e) {
     var city = this.selectedOptions[0].value;
     var schoolNode = document.querySelector('#school');
-    schoolNode.innerHTML = '';
-    var tempNode,
+    var tempNode = '',
         tempData;
     switch (city){
         case 'beijing':
@@ -36,8 +35,10 @@ document.querySelector('#city').addEventListener('change',function (e) {
             tempData = schools.shanghai;
             break;
     }
-    tempData.forEach(function (e) {
-        tempNode += '<option value="'+e[0]+'">'+e[1]+'</option>'
+    tempData.forEach(function (arr) {
+        var val = arr[0],
+            ctx = arr[1];
+        tempNode += '<option value="'+val+'">'+ctx+'</option>';
     })
     schoolNode.innerHTML = tempNode;
 })
