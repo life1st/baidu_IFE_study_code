@@ -86,6 +86,8 @@
 
 [任务三：表单（三）联动](https://life1st.github.io/baidu_IFE_study_code/yaoyaoCollege/task3.html) [任务页](http://ife.baidu.com/course/detail/id/106)
 
+[任务四：听指令的小方块（一）](https://life1st.github.io/baidu_IFE_study_code/yaoyaoCollege/task4.html) [任务页](http://ife.baidu.com/course/detail/id/109)
+
 ### 糯米前端技术学院
 
 [网页抓取分析服务系列之一（基础分析）](https://github.com/life1st/baidu_IFE_study_code/tree/master/nuomiCollege/node) [任务页](http://ife.baidu.com/course/detail/id/85)
