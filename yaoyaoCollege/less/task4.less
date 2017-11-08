@@ -1,0 +1,43 @@
+@import "common";
+
+body {
+  counter-reset: num;
+}
+thead {
+  th {
+    line-height: 20px;
+  }
+}
+tbody{
+  position: relative;
+  td {
+    border: 1px solid #ccc;
+    width: 29px;
+    height: 29px;
+  }
+  tr{
+    &:before {
+      display: inline-block;
+      text-align: center;
+      width: 20px;
+      counter-increment: num;
+      content: counter(num);
+    }
+  }
+}
+.block {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #f00;
+  .direction {
+    width: 30px;
+    height: 4px;
+    background-color: #00f;
+    top: 0;
+    left: 0;
+  }
+}
