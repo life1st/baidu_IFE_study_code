@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>task4</title>
+    <title>task4 && task5</title>
     <link rel="stylesheet" href="css/task4.css">
 </head>
 <body>
-<div class="block" style="transform: rotateZ(0deg);left: 20px;top: 20px;">
+<div class="block" style="transform: rotateZ(0deg);top: 20px;left: 20px;">
     <div class="direction"></div>
 </div>
 <table>
@@ -150,25 +150,57 @@
     </tr>
     </tbody>
 </table>
-<input type="text"><input type="button" value="执行">
-<p>在输入框中允许输入如下指令，按下按钮后，使得正方形做相应动作:</p>
-<ul>
-    <li>GO
-        <br>：向蓝色边所面向的方向前进一格（一格等同于正方形的边长）</li>
-    <li>TUN LEF
-        <br>：向左转（逆时针旋转90度）</li>
-    <li>TUN RIG
-        <br>：向右转（顺时针旋转90度）</li>
-    <li>TUN BAC
-        <br>：向右转（旋转180度）</li>
-</ul>
-<br>
-<p>点下面的按钮更方便：</p>
-<div class="item">
-    <input type="button" value="LEFT" ID="left">
-    <input type="button" value="RIGHT" ID="right">
-    <input type="button" value="BAC" ID="bac">
+<div class="item button-box">
+    <input type="text"><input type="button" value="执行">
+    <br>
+    动画执行时间:<input type="number" style="width: 40px;">S(，默认 1S)
+    <br>
+    <p>点下面的按钮更方便：</p>
+    <input type="button" value="TUN LEF" ID="left">
+    <input type="button" value="TUN RIG" ID="right">
+    <input type="button" value="TUN BAC" ID="bac">
     <input type="button" value="GO" id="go">
+    <br>
+    <input type="button" value="TRA LEF">
+    <input type="button" value="TRA TOP">
+    <input type="button" value="TRA RIG">
+    <input type="button" value="TRA BOT">
+    <input type="button" value="MOV LEF">
+    <input type="button" value="MOV TOP">
+    <input type="button" value="MOV RIG">
+    <input type="button" value="MOV BOT">
+    <p>在输入框中允许输入如下指令，按下按钮后，使得正方形做相应动作:</p>
+    <ul>
+        <li>GO
+            <br>：向蓝色边所面向的方向前进一格（一格等同于正方形的边长）</li>
+        <li>TUN LEF
+            <br>：向左转（逆时针旋转90度）</li>
+        <li>TUN RIG
+            <br>：向右转（顺时针旋转90度）</li>
+        <li>TUN BAC
+            <br>：向右转（旋转180度）</li>
+
+<!--
+        Other Group.
+-->
+        <li>TRA LEF
+            <br>：向屏幕的左侧移动一格，方向不变</li>
+        <li>TRA TOP
+            <br>：向屏幕的上面移动一格，方向不变</li>
+        <li>TRA RIG
+            <br>：向屏幕的右侧移动一格，方向不变</li>
+        <li>TRA BOT
+            <br>：向屏幕的下面移动一格，方向不变</li>
+        <li>MOV LEF
+            <br>：方向转向屏幕左侧，并向屏幕的左侧移动一格
+        </li>
+        <li>MOV TOP
+            <br>：方向转向屏幕上面，向屏幕的上面移动一格</li>
+        <li>MOV RIG
+            <br>：方向转向屏幕右侧，向屏幕的右侧移动一格</li>
+        <li>MOV BOT
+            <br>：方向转向屏幕下面，向屏幕的下面移动一格</li>
+    </ul>
 </div>
 <script src="js/task4.js"></script>
 </body>

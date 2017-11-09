@@ -6,105 +6,68 @@ var block = {
         y: 20
     },
     LEF: function () {
-        console.log('左转');
-        var degBefore = block.deg,
-            degNow = block.deg;
-        var i = setInterval(function () {
-            if(degNow-degBefore > -90){
-                block.node.style.transform = 'rotateZ(' + --degNow + 'deg)';
-            }else {
-                block.deg = degNow;
-                clearInterval(i);
-            }
-        },1)
+        console.log('左转')
+        block.deg -= 90;
+        block.animate();
+        return block;
     },
     RIG: function () {
         console.log('右转')
-        var degBefore = block.deg,
-            degNow = block.deg;
-        var i = setInterval(function () {
-            if(degNow-degBefore < 90){
-                block.node.style.transform = 'rotateZ(' + ++degNow + 'deg)';
-            }else {
-                block.deg = degNow;
-                clearInterval(i);
-            }
-        },1)
+        block.deg += 90;
+        block.animate();
     },
     BAC: function () {
         console.log('倒转')
-        var degBefore = block.deg,
-            degNow = block.deg;
-        var i = setInterval(function () {
-            if(degNow-degBefore < 180){
-                block.node.style.transform = 'rotateZ(' + ++degNow + 'deg)';
-            }else {
-                block.deg = degNow;
-                clearInterval(i);
-            }
-        },1)
+        block.deg += 180;
+        block.animate();
     },
-    GO: function () {
-        console.log('前进')
-        var tempDeg = block.deg % 360;
+    GO: function (direction) {
+        var tempDeg = direction || block.deg % 360;
         var [x,y] = [block.pos.x,block.pos.y];
-        console.log(x,y)
-        var tx,ty;
         switch (tempDeg){
             case 0:
                 if (y>20){
                     block.pos.y -= 30;
                 }
-                ty = setInterval(function () {
-                    if (y > block.pos.y){
-                        block.node.style.top = --y + 'px';
-                    }else {
-                        clearInterval(tx);
-                    }
-                },10)
                 break;
             case 90:
                 if (x<=260){
                     block.pos.x += 30;
                 }
-                tx = setInterval(function () {
-                    if (x < block.pos.x){
-                        block.node.style.left = ++x + 'px';
-                    }else {
-                        clearInterval(tx);
-                    }
-                },10)
                 break;
             case 180:
                 if (y<=260) {
                     block.pos.y += 30;
                 }
-                ty = setInterval(function () {
-                    if (y < block.pos.y){
-                        block.node.style.top = ++y + 'px';
-                    }else {
-                        clearInterval(tx);
-                    }
-                },10)
                 break;
             case 270:
                 if (x>20) {
                     block.pos.x -= 30;
                 }
-                tx = setInterval(function () {
-                    if (x > block.pos.x){
-                        block.node.style.left = --x + 'px';
-                    }else {
-                        clearInterval(tx);
-                    }
-                },10)
                 break;
         }
+        block.animate();
+
+        console.log('前进:',x,y,tempDeg)
+    },
+    animate: function () {
+        var [x,y,d] = [block.pos.x, block.pos.y, block.deg];
+        block.node.style.left = x +'px';
+        block.node.style.top = y +'px';
+        block.node.style.transform = 'rotate(' + d +'deg) ';
+        //translate(' + x + 'px,'+ y + 'px) 有点问题，方向不对。
+
+        console.log('动画:',x,y,d);
     }
 }
 
-document.querySelector('input[type=button]').addEventListener('click',function () {
-    var direction = document.querySelector('input[type=text]').value;
+document.querySelector('.button-box').addEventListener('click',function (event) {
+    var t = event.target;
+    if (t.type != 'button') return;
+
+    var direction =
+        t.value === '执行' ?
+        document.querySelector('input[type=text]').value : t.value.toUpperCase();
     switch (direction){
         case 'GO':
             block.GO();
@@ -118,20 +81,37 @@ document.querySelector('input[type=button]').addEventListener('click',function (
         case 'TUN BAC':
             block.BAC();
             break;
+
+        //Other Group.
+        case 'TRA LEF':
+            block.GO(270);
+            break;
+        case 'TRA TOP':
+            block.GO(0);
+            break;
+        case 'TRA RIG':
+            block.GO(90);
+            break;
+        case 'TRA BOT':
+            block.GO(180);
+            break;
+        case 'MOV LEF':
+            block.deg = 270;
+            block.GO();
+            break;
+        case 'MOV TOP':
+            block.deg = 0;
+            block.GO();
+            break;
+        case 'MOV RIG':
+            block.deg = 90;
+            block.GO();
+            break;
+        case 'MOV BOT':
+            block.deg = 180;
+            block.GO();
+            break;
         default:
             console.log('输入有误。')
     }
 })
-
-document.querySelector('#left').onclick = function () {
-    block.LEF();
-}
-document.querySelector('#right').onclick = function () {
-    block.RIG();
-}
-document.querySelector('#bac').onclick = function () {
-    block.BAC();
-}
-document.querySelector('#go').onclick = function () {
-    block.GO();
-}
