@@ -22,7 +22,9 @@ var block = {
         block.animate();
     },
     GO: function (direction) {
-        var tempDeg = direction || block.deg % 360;
+        var tempDeg =
+            direction === undefined ?
+                block.deg % 360 : direction;
         var [x,y] = [block.pos.x,block.pos.y];
         switch (tempDeg){
             case 0:
