@@ -25,6 +25,9 @@ var block = {
         var tempDeg =
             direction === undefined ?
                 block.deg % 360 : direction;
+        if (tempDeg < 0){
+            tempDeg = -tempDeg;
+        }
         var [x,y] = [block.pos.x,block.pos.y];
         switch (tempDeg){
             case 0:
