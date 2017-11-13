@@ -1,6 +1,6 @@
 var block = {
     node: document.querySelector('.block'),
-    deg : 0,
+    deg: 0,
     pos: {
         x: 20,
         y: 20
@@ -119,4 +119,10 @@ document.querySelector('.button-box').addEventListener('click',function (event) 
         default:
             console.log('输入有误。')
     }
+});
+document.querySelector('input[type=number]').addEventListener('change', function (e) {
+    if (this.value <= 0){
+        return;
+    }
+    block.node.style.transition = 'all '+ this.value + 's';
 })
