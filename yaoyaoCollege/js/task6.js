@@ -48,12 +48,11 @@ function FloatWindow(options) {
             center = 1,
             resize = 0;
         var x,y;
-        var startW = o.width,
-            startH = o.height;
+        var startW,
+            startH;
         node.addEventListener('mousedown' ,function (e) {
             var nodeName = e.target.nodeName.toLowerCase();
             var nodeClass = e.target.className.toLowerCase();
-            console.log(nodeName)
             if (nodeName === 'h2'){
                 click = 1;
                 x = e.clientX - o.left;
@@ -62,6 +61,8 @@ function FloatWindow(options) {
                 resize = 1;
                 x = e.clientX;
                 y = e.clientY;
+                startW = o.width;
+                startH = o.height;
             }
         })
         node.addEventListener('mouseup', function (e) {
