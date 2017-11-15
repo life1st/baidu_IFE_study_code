@@ -148,12 +148,13 @@ html {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
   transition: all 1s;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .float-window .box {
   background-color: #fff;
   position: fixed;
+  cursor: se-resize;
 }
 .float-window .box h2 {
   font-size: 18px;

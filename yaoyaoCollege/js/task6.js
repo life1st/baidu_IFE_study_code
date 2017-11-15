@@ -42,10 +42,10 @@ function FloatWindow(options) {
 
     //添加方法
 
+    var center = 1;
     var move = function() {
         //拖动
         var click = 0,
-            center = 1,
             resize = 0;
         var x,y;
         var startW,
