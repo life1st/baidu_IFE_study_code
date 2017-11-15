@@ -1,10 +1,10 @@
 function FloatWindow(options) {
     var o = {
-        width: (options.width || '400'),
-        height: (options.height || '300'),
+        width: (options.width || 400),
+        height: (options.height || 300),
         title: options.title || '浮出层标题',
         msg: options.msg || '默认提示',
-        btn: options.btn || '',
+        btn: options.btn || ['确定'],
         class : options.className || 'float-window',
         animation: options.animation || true,
         moveable: options.moveable || 1
@@ -45,28 +45,43 @@ function FloatWindow(options) {
     var move = function() {
         //拖动
         var click = 0,
-            center = 1;
+            center = 1,
+            resize = 0;
         var x,y;
+        var startW = o.width,
+            startH = o.height;
         node.addEventListener('mousedown' ,function (e) {
-            if (e.target.nodeName.toLowerCase() === 'h2'){
+            var nodeName = e.target.nodeName.toLowerCase();
+            var nodeClass = e.target.className.toLowerCase();
+            console.log(nodeName)
+            if (nodeName === 'h2'){
                 click = 1;
                 x = e.clientX - o.left;
                 y = e.clientY - o.top;
+            }else if (nodeClass === 'box'){
+                resize = 1;
+                x = e.clientX;
+                y = e.clientY;
             }
         })
         node.addEventListener('mouseup', function (e) {
             click = 0;
+            resize = 0;
         })
         node.addEventListener('mousemove', function (e) {
-            if (click != 1){
-                return;
+            var box = node.querySelector('.box');
+            if (click === 1){
+                center = 0;
+                o.left = e.clientX -x;
+                o.top = e.clientY -y;
+            }else if (resize === 1){
+                o.width = startW + (e.clientX - x);
+                o.height = startH + (e.clientY - y);
             }
-            center = 0;
-            var box = node.querySelector('.box')
-            o.left = e.clientX -x;
-            o.top = e.clientY -y;
             box.style.left = o.left + 'px';
             box.style.top = o.top + 'px';
+            box.style.width = o.width + 'px';
+            box.style.height = o.height + 'px';
         })
     }
 
