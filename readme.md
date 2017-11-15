@@ -113,3 +113,5 @@
 [ECharts NO.2 - 实现自定义的统计图表](https://life1st.github.io/baidu_IFE_study_code/graphCollege/echarts/task2.html) [任务页](http://ife.baidu.com/course/detail/id/45)
 
 [ECharts NO.3 - 绘制地图](https://life1st.github.io/baidu_IFE_study_code/graphCollege/echarts/task3.html) [任务页](http://ife.baidu.com/course/detail/id/54)
+
+[ECharts No.6 - 绘制人物关系图](https://life1st.github.io/baidu_IFE_study_code/graphCollege/echarts/task6.html) [任务页](http://ife.baidu.com/course/detail/id/49)
