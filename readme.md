@@ -92,6 +92,10 @@
 
 > 任务五基于任务四，同时没有功能上的删除，所以直接升级了。就是说，任务四和任务五指向的同一个链接。
 
+[任务六：UI组件之浮出层](https://life1st.github.io/baidu_IFE_study_code/yaoyaoCollege/task6.html) [任务页](http://ife.baidu.com/course/detail/id/115)
+
+> 代码还是很不优雅，想有人给我review :(
+
 ### 糯米前端技术学院
 
 [网页抓取分析服务系列之一（基础分析）](https://github.com/life1st/baidu_IFE_study_code/tree/master/nuomiCollege/node) [任务页](http://ife.baidu.com/course/detail/id/85)

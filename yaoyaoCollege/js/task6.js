@@ -7,7 +7,7 @@ function FloatWindow(options) {
         btn: options.btn || ['确定'],
         class : options.className || 'float-window',
         animation: options.animation || true,
-        moveable: options.moveable || 1
+        moveable: options.moveable || 0
     };
     o.left = (window.innerWidth - o.width)/2
     o.top = (window.innerHeight -o.height)/2
@@ -131,7 +131,8 @@ document.querySelector('body').addEventListener('click', function (e) {
             var window2 = new FloatWindow({
                 title: '弹出层2',
                 btn: ['非常确定', '一般确定'],
-                msg: '这是第二个弹出层，第一个关闭后被销毁了,这个点一次就会创建一次'
+                msg: '这是第二个弹出层，第一个关闭后被销毁了,这个点一次就会创建一次',
+                moveable: 1
             }).show();
     }
 })
