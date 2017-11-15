@@ -1,0 +1,1434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2017-11-15">
+    <creator>Gephi 0.9</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="value" title="value" type="long"></attribute>
+    </attributes>
+    <nodes>
+      <node id="0" label="BrighamYoung">
+        <attvalues>
+          <attvalue for="value" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-323.62384" y="-397.59857"></viz:position>
+      </node>
+      <node id="1" label="FloridaState">
+        <attvalues>
+          <attvalue for="value" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-345.87244" y="-132.64809"></viz:position>
+      </node>
+      <node id="2" label="Iowa">
+        <attvalues>
+          <attvalue for="value" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-274.41827" y="-448.253"></viz:position>
+      </node>
+      <node id="3" label="KansasState">
+        <attvalues>
+          <attvalue for="value" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="17.121956" y="-147.60747"></viz:position>
+      </node>
+      <node id="4" label="NewMexico">
+        <attvalues>
+          <attvalue for="value" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-84.48138" y="295.491"></viz:position>
+      </node>
+      <node id="5" label="TexasTech">
+        <attvalues>
+          <attvalue for="value" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="177.98466" y="207.19176"></viz:position>
+      </node>
+      <node id="6" label="PennState">
+        <attvalues>
+          <attvalue for="value" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-311.98706" y="341.84183"></viz:position>
+      </node>
+      <node id="7" label="SouthernCalifornia">
+        <attvalues>
+          <attvalue for="value" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="166.66748" y="72.862206"></viz:position>
+      </node>
+      <node id="8" label="ArizonaState">
+        <attvalues>
+          <attvalue for="value" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="510.16455" y="37.470543"></viz:position>
+      </node>
+      <node id="9" label="SanDiegoState">
+        <attvalues>
+          <attvalue for="value" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-174.53119" y="266.18936"></viz:position>
+      </node>
+      <node id="10" label="Baylor">
+        <attvalues>
+          <attvalue for="value" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="20.615395" y="-10.161731"></viz:position>
+      </node>
+      <node id="11" label="NorthTexas">
+        <attvalues>
+          <attvalue for="value" value="10"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-402.83542" y="-454.03506"></viz:position>
+      </node>
+      <node id="12" label="NorthernIllinois">
+        <attvalues>
+          <attvalue for="value" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-230.41595" y="-223.42863"></viz:position>
+      </node>
+      <node id="13" label="Northwestern">
+        <attvalues>
+          <attvalue for="value" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-5.9070663" y="-68.58277"></viz:position>
+      </node>
+      <node id="14" label="WesternMichigan">
+        <attvalues>
+          <attvalue for="value" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="487.53406" y="223.49428"></viz:position>
+      </node>
+      <node id="15" label="Wisconsin">
+        <attvalues>
+          <attvalue for="value" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="433.4779" y="-168.82845"></viz:position>
+      </node>
+      <node id="16" label="Wyoming">
+        <attvalues>
+          <attvalue for="value" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-387.7191" y="9.20826"></viz:position>
+      </node>
+      <node id="17" label="Auburn">
+        <attvalues>
+          <attvalue for="value" value="9"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="82.81782" y="-98.42335"></viz:position>
+      </node>
+      <node id="18" label="Akron">
+        <attvalues>
+          <attvalue for="value" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-385.1538" y="-341.33798"></viz:position>
+      </node>
+      <node id="19" label="VirginiaTech">
+        <attvalues>
+          <attvalue for="value" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-190.85648" y="335.51834"></viz:position>
+      </node>
+      <node id="20" label="Alabama">
+        <attvalues>
+          <attvalue for="value" value="9"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-348.38034" y="45.76168"></viz:position>
+      </node>
+      <node id="21" label="UCLA">
+        <attvalues>
+          <attvalue for="value" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="691.38025" y="-306.8543"></viz:position>
+      </node>
+      <node id="22" label="Arizona">
+        <attvalues>
+          <attvalue for="value" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-348.413" y="262.31882"></viz:position>
+      </node>
+      <node id="23" label="Utah">
+        <attvalues>
+          <attvalue for="value" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-261.2895" y="180.89699"></viz:position>
+      </node>
+      <node id="24" label="ArkansasState">
+        <attvalues>
+          <attvalue for="value" value="10"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-265.5343" y="74.18871"></viz:position>
+      </node>
+      <node id="25" label="NorthCarolinaState">
+        <attvalues>
+          <attvalue for="value" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-195.90327" y="-411.63425"></viz:position>
+      </node>
+      <node id="26" label="BallState">
+        <attvalues>
+          <attvalue for="value" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-329.30365" y="-43.065376"></viz:position>
+      </node>
+      <node id="27" label="Florida">
+        <attvalues>
+          <attvalue for="value" value="9"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="364.35138" y="343.30515"></viz:position>
+      </node>
+      <node id="28" label="BoiseState">
+        <attvalues>
+          <attvalue for="value" value="11"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-434.77435" y="-155.6574"></viz:position>
+      </node>
+      <node id="29" label="BostonCollege">
+        <attvalues>
+          <attvalue for="value" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="520.10376" y="-4.6188745"></viz:position>
+      </node>
+      <node id="30" label="WestVirginia">
+        <attvalues>
+          <attvalue for="value" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="290.97742" y="-602.7982"></viz:position>
+      </node>
+      <node id="31" label="BowlingGreenState">
+        <attvalues>
+          <attvalue for="value" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-432.67575" y="-261.5593"></viz:position>
+      </node>
+      <node id="32" label="Michigan">
+        <attvalues>
+          <attvalue for="value" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-19.072716" y="-190.08101"></viz:position>
+      </node>
+      <node id="33" label="Virginia">
+        <attvalues>
+          <attvalue for="value" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-432.9916" y="56.98104"></viz:position>
+      </node>
+      <node id="34" label="Buffalo">
+        <attvalues>
+          <attvalue for="value" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-466.74933" y="171.2145"></viz:position>
+      </node>
+      <node id="35" label="Syracuse">
+        <attvalues>
+          <attvalue for="value" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="81.18726" y="-369.74014"></viz:position>
+      </node>
+      <node id="36" label="CentralFlorida">
+        <attvalues>
+          <attvalue for="value" value="5"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-16.677826" y="-578.89856"></viz:position>
+      </node>
+      <node id="37" label="GeorgiaTech">
+        <attvalues>
+          <attvalue for="value" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="63.366577" y="-128.93954"></viz:position>
+      </node>
+      <node id="38" label="CentralMichigan">
+        <attvalues>
+          <attvalue for="value" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="512.0264" y="419.9708"></viz:position>
+      </node>
+      <node id="39" label="Purdue">
+        <attvalues>
+          <attvalue for="value" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="45.5066" y="263.0012"></viz:position>
+      </node>
+      <node id="40" label="Colorado">
+        <attvalues>
+          <attvalue for="value" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-217.966" y="310.26407"></viz:position>
+      </node>
+      <node id="41" label="ColoradoState">
+        <attvalues>
+          <attvalue for="value" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-136.21146" y="-231.97499"></viz:position>
+      </node>
+      <node id="42" label="Connecticut">
+        <attvalues>
+          <attvalue for="value" value="5"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="488.69702" y="321.6827"></viz:position>
+      </node>
+      <node id="43" label="EasternMichigan">
+        <attvalues>
+          <attvalue for="value" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-243.46045" y="-136.39326"></viz:position>
+      </node>
+      <node id="44" label="EastCarolina">
+        <attvalues>
+          <attvalue for="value" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="221.03809" y="52.37362"></viz:position>
+      </node>
+      <node id="45" label="Duke">
+        <attvalues>
+          <attvalue for="value" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-45.468407" y="367.39114"></viz:position>
+      </node>
+      <node id="46" label="FresnoState">
+        <attvalues>
+          <attvalue for="value" value="11"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-98.09173" y="-142.1397"></viz:position>
+      </node>
+      <node id="47" label="OhioState">
+        <attvalues>
+          <attvalue for="value" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-412.18643" y="-176.20284"></viz:position>
+      </node>
+      <node id="48" label="Houston">
+        <attvalues>
+          <attvalue for="value" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-3.5352707" y="368.71945"></viz:position>
+      </node>
+      <node id="49" label="Rice">
+        <attvalues>
+          <attvalue for="value" value="11"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-164.51071" y="-157.18645"></viz:position>
+      </node>
+      <node id="50" label="Idaho">
+        <attvalues>
+          <attvalue for="value" value="10"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-84.7519" y="193.33922"></viz:position>
+      </node>
+      <node id="51" label="Washington">
+        <attvalues>
+          <attvalue for="value" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-439.0625" y="220.10161"></viz:position>
+      </node>
+      <node id="52" label="Kansas">
+        <attvalues>
+          <attvalue for="value" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="238.46198" y="-259.90814"></viz:position>
+      </node>
+      <node id="53" label="SouthernMethodist">
+        <attvalues>
+          <attvalue for="value" value="11"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="419.182" y="-223.61122"></viz:position>
+      </node>
+      <node id="54" label="Kent">
+        <attvalues>
+          <attvalue for="value" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-123.02917" y="414.21906"></viz:position>
+      </node>
+      <node id="55" label="Pittsburgh">
+        <attvalues>
+          <attvalue for="value" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="145.4259" y="-181.91827"></viz:position>
+      </node>
+      <node id="56" label="Kentucky">
+        <attvalues>
+          <attvalue for="value" value="9"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="318.39612" y="-37.56034"></viz:position>
+      </node>
+      <node id="57" label="Louisville">
+        <attvalues>
+          <attvalue for="value" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="525.79376" y="153.80269"></viz:position>
+      </node>
+      <node id="58" label="LouisianaTech">
+        <attvalues>
+          <attvalue for="value" value="11"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-406.45294" y="366.53543"></viz:position>
+      </node>
+      <node id="59" label="LouisianaMonroe">
+        <attvalues>
+          <attvalue for="value" value="10"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="87.69121" y="-476.58405"></viz:position>
+      </node>
+      <node id="60" label="Minnesota">
+        <attvalues>
+          <attvalue for="value" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-299.60992" y="-588.447"></viz:position>
+      </node>
+      <node id="61" label="MiamiOhio">
+        <attvalues>
+          <attvalue for="value" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="482.98804" y="-506.42398"></viz:position>
+      </node>
+      <node id="62" label="Vanderbilt">
+        <attvalues>
+          <attvalue for="value" value="9"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="350.96167" y="373.48227"></viz:position>
+      </node>
+      <node id="63" label="MiddleTennesseeState">
+        <attvalues>
+          <attvalue for="value" value="10"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-330.3733" y="-477.4662"></viz:position>
+      </node>
+      <node id="64" label="Illinois">
+        <attvalues>
+          <attvalue for="value" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-120.18899" y="-459.73444"></viz:position>
+      </node>
+      <node id="65" label="MississippiState">
+        <attvalues>
+          <attvalue for="value" value="9"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="154.36212" y="443.0209"></viz:position>
+      </node>
+      <node id="66" label="Memphis">
+        <attvalues>
+          <attvalue for="value" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-90.55578" y="-85.81257"></viz:position>
+      </node>
+      <node id="67" label="Nevada">
+        <attvalues>
+          <attvalue for="value" value="11"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-97.04601" y="-231.9594"></viz:position>
+      </node>
+      <node id="68" label="Oregon">
+        <attvalues>
+          <attvalue for="value" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-140.15186" y="102.31069"></viz:position>
+      </node>
+      <node id="69" label="NewMexicoState">
+        <attvalues>
+          <attvalue for="value" value="10"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-192.06152" y="427.00284"></viz:position>
+      </node>
+      <node id="70" label="SouthCarolina">
+        <attvalues>
+          <attvalue for="value" value="9"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="330.8412" y="-195.2145"></viz:position>
+      </node>
+      <node id="71" label="Ohio">
+        <attvalues>
+          <attvalue for="value" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="56.64161" y="325.8937"></viz:position>
+      </node>
+      <node id="72" label="IowaState">
+        <attvalues>
+          <attvalue for="value" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-471.84424" y="267.0923"></viz:position>
+      </node>
+      <node id="73" label="SanJoseState">
+        <attvalues>
+          <attvalue for="value" value="11"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-90.291405" y="-311.683"></viz:position>
+      </node>
+      <node id="74" label="Nebraska">
+        <attvalues>
+          <attvalue for="value" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="31.515938" y="118.11947"></viz:position>
+      </node>
+      <node id="75" label="SouthernMississippi">
+        <attvalues>
+          <attvalue for="value" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-235.40729" y="-432.7142"></viz:position>
+      </node>
+      <node id="76" label="Tennessee">
+        <attvalues>
+          <attvalue for="value" value="9"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="177.38611" y="-114.235085"></viz:position>
+      </node>
+      <node id="77" label="Stanford">
+        <attvalues>
+          <attvalue for="value" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="229.13318" y="429.9468"></viz:position>
+      </node>
+      <node id="78" label="WashingtonState">
+        <attvalues>
+          <attvalue for="value" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-57.470528" y="25.167057"></viz:position>
+      </node>
+      <node id="79" label="Temple">
+        <attvalues>
+          <attvalue for="value" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-295.43143" y="-286.57053"></viz:position>
+      </node>
+      <node id="80" label="Navy">
+        <attvalues>
+          <attvalue for="value" value="5"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="492.70325" y="353.97586"></viz:position>
+      </node>
+      <node id="81" label="TexasA&amp;M">
+        <attvalues>
+          <attvalue for="value" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-238.38977" y="497.6135"></viz:position>
+      </node>
+      <node id="82" label="NotreDame">
+        <attvalues>
+          <attvalue for="value" value="5"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="107.751205" y="-256.12473"></viz:position>
+      </node>
+      <node id="83" label="TexasElPaso">
+        <attvalues>
+          <attvalue for="value" value="11"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="216.51547" y="293.2339"></viz:position>
+      </node>
+      <node id="84" label="Oklahoma">
+        <attvalues>
+          <attvalue for="value" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-430.60367" y="-501.7056"></viz:position>
+      </node>
+      <node id="85" label="Toledo">
+        <attvalues>
+          <attvalue for="value" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="434.2876" y="431.10544"></viz:position>
+      </node>
+      <node id="86" label="Tulane">
+        <attvalues>
+          <attvalue for="value" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-61.81176" y="452.40054"></viz:position>
+      </node>
+      <node id="87" label="Mississippi">
+        <attvalues>
+          <attvalue for="value" value="9"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="658.1483" y="32.95607"></viz:position>
+      </node>
+      <node id="88" label="Tulsa">
+        <attvalues>
+          <attvalue for="value" value="11"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-315.14664" y="412.53775"></viz:position>
+      </node>
+      <node id="89" label="NorthCarolina">
+        <attvalues>
+          <attvalue for="value" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-235.35626" y="-349.7296"></viz:position>
+      </node>
+      <node id="90" label="UtahState">
+        <attvalues>
+          <attvalue for="value" value="5"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-424.54553" y="-57.045082"></viz:position>
+      </node>
+      <node id="91" label="Army">
+        <attvalues>
+          <attvalue for="value" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="23.518131" y="-225.25127"></viz:position>
+      </node>
+      <node id="92" label="Cincinnati">
+        <attvalues>
+          <attvalue for="value" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-394.45074" y="174.54149"></viz:position>
+      </node>
+      <node id="93" label="AirForce">
+        <attvalues>
+          <attvalue for="value" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="396.75427" y="205.11348"></viz:position>
+      </node>
+      <node id="94" label="Rutgers">
+        <attvalues>
+          <attvalue for="value" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-206.52036" y="-35.353767"></viz:position>
+      </node>
+      <node id="95" label="Georgia">
+        <attvalues>
+          <attvalue for="value" value="9"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="274.4655" y="182.60005"></viz:position>
+      </node>
+      <node id="96" label="LouisianaState">
+        <attvalues>
+          <attvalue for="value" value="9"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-175.7752" y="-292.5211"></viz:position>
+      </node>
+      <node id="97" label="LouisianaLafayette">
+        <attvalues>
+          <attvalue for="value" value="10"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="705.38007" y="-113.7529"></viz:position>
+      </node>
+      <node id="98" label="Texas">
+        <attvalues>
+          <attvalue for="value" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="293.12372" y="-443.20837"></viz:position>
+      </node>
+      <node id="99" label="Marshall">
+        <attvalues>
+          <attvalue for="value" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="60.304665" y="72.355"></viz:position>
+      </node>
+      <node id="100" label="MichiganState">
+        <attvalues>
+          <attvalue for="value" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="16.107292" y="73.119934"></viz:position>
+      </node>
+      <node id="101" label="MiamiFlorida">
+        <attvalues>
+          <attvalue for="value" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="311.77136" y="-36.207344"></viz:position>
+      </node>
+      <node id="102" label="Missouri">
+        <attvalues>
+          <attvalue for="value" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="205.7117" y="4.74045"></viz:position>
+      </node>
+      <node id="103" label="Clemson">
+        <attvalues>
+          <attvalue for="value" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="637.7785" y="-455.094"></viz:position>
+      </node>
+      <node id="104" label="NevadaLasVegas">
+        <attvalues>
+          <attvalue for="value" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="70.87281" y="186.2895"></viz:position>
+      </node>
+      <node id="105" label="WakeForest">
+        <attvalues>
+          <attvalue for="value" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-79.19268" y="-276.7615"></viz:position>
+      </node>
+      <node id="106" label="Indiana">
+        <attvalues>
+          <attvalue for="value" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-262.5094" y="380.46286"></viz:position>
+      </node>
+      <node id="107" label="OklahomaState">
+        <attvalues>
+          <attvalue for="value" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="29.770638" y="213.50197"></viz:position>
+      </node>
+      <node id="108" label="OregonState">
+        <attvalues>
+          <attvalue for="value" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="376.85938" y="413.1633"></viz:position>
+      </node>
+      <node id="109" label="Maryland">
+        <attvalues>
+          <attvalue for="value" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="121.827644" y="-157.66582"></viz:position>
+      </node>
+      <node id="110" label="TexasChristian">
+        <attvalues>
+          <attvalue for="value" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="144.88403" y="-334.12027"></viz:position>
+      </node>
+      <node id="111" label="California">
+        <attvalues>
+          <attvalue for="value" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-70.51418" y="347.13162"></viz:position>
+      </node>
+      <node id="112" label="AlabamaBirmingham">
+        <attvalues>
+          <attvalue for="value" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="318.98526" y="278.9909"></viz:position>
+      </node>
+      <node id="113" label="Arkansas">
+        <attvalues>
+          <attvalue for="value" value="9"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="9.997322" y="407.93936"></viz:position>
+      </node>
+      <node id="114" label="Hawaii">
+        <attvalues>
+          <attvalue for="value" value="11"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="232.9504" y="-141.8075"></viz:position>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="1" target="0"></edge>
+      <edge id="1" source="3" target="2"></edge>
+      <edge id="2" source="4" target="0"></edge>
+      <edge id="3" source="5" target="4"></edge>
+      <edge id="4" source="5" target="3"></edge>
+      <edge id="5" source="6" target="2"></edge>
+      <edge id="6" source="7" target="6"></edge>
+      <edge id="7" source="8" target="7"></edge>
+      <edge id="8" source="9" target="8"></edge>
+      <edge id="9" source="9" target="0"></edge>
+      <edge id="10" source="9" target="4"></edge>
+      <edge id="11" source="10" target="5"></edge>
+      <edge id="12" source="11" target="10"></edge>
+      <edge id="13" source="11" target="5"></edge>
+      <edge id="14" source="11" target="3"></edge>
+      <edge id="15" source="13" target="12"></edge>
+      <edge id="16" source="13" target="2"></edge>
+      <edge id="17" source="14" target="2"></edge>
+      <edge id="18" source="14" target="12"></edge>
+      <edge id="19" source="15" target="14"></edge>
+      <edge id="20" source="15" target="13"></edge>
+      <edge id="21" source="15" target="2"></edge>
+      <edge id="22" source="16" target="4"></edge>
+      <edge id="23" source="16" target="9"></edge>
+      <edge id="24" source="16" target="0"></edge>
+      <edge id="25" source="17" target="16"></edge>
+      <edge id="26" source="17" target="12"></edge>
+      <edge id="27" source="18" target="12"></edge>
+      <edge id="28" source="19" target="18"></edge>
+      <edge id="29" source="20" target="17"></edge>
+      <edge id="30" source="21" target="20"></edge>
+      <edge id="31" source="21" target="8"></edge>
+      <edge id="32" source="21" target="7"></edge>
+      <edge id="33" source="22" target="9"></edge>
+      <edge id="34" source="22" target="7"></edge>
+      <edge id="35" source="22" target="21"></edge>
+      <edge id="36" source="22" target="8"></edge>
+      <edge id="37" source="23" target="22"></edge>
+      <edge id="38" source="23" target="9"></edge>
+      <edge id="39" source="23" target="4"></edge>
+      <edge id="40" source="23" target="16"></edge>
+      <edge id="41" source="23" target="0"></edge>
+      <edge id="42" source="24" target="11"></edge>
+      <edge id="43" source="25" target="24"></edge>
+      <edge id="44" source="25" target="1"></edge>
+      <edge id="45" source="26" target="3"></edge>
+      <edge id="46" source="26" target="12"></edge>
+      <edge id="47" source="26" target="14"></edge>
+      <edge id="48" source="27" target="26"></edge>
+      <edge id="49" source="27" target="17"></edge>
+      <edge id="50" source="27" target="1"></edge>
+      <edge id="51" source="28" target="4"></edge>
+      <edge id="52" source="28" target="11"></edge>
+      <edge id="53" source="28" target="24"></edge>
+      <edge id="54" source="29" target="19"></edge>
+      <edge id="55" source="30" target="29"></edge>
+      <edge id="56" source="30" target="19"></edge>
+      <edge id="57" source="31" target="18"></edge>
+      <edge id="58" source="32" target="31"></edge>
+      <edge id="59" source="32" target="21"></edge>
+      <edge id="60" source="32" target="15"></edge>
+      <edge id="61" source="32" target="13"></edge>
+      <edge id="62" source="32" target="6"></edge>
+      <edge id="63" source="33" target="0"></edge>
+      <edge id="64" source="33" target="1"></edge>
+      <edge id="65" source="33" target="25"></edge>
+      <edge id="66" source="33" target="19"></edge>
+      <edge id="67" source="34" target="31"></edge>
+      <edge id="68" source="34" target="26"></edge>
+      <edge id="69" source="34" target="12"></edge>
+      <edge id="70" source="34" target="18"></edge>
+      <edge id="71" source="35" target="34"></edge>
+      <edge id="72" source="35" target="0"></edge>
+      <edge id="73" source="35" target="29"></edge>
+      <edge id="74" source="35" target="19"></edge>
+      <edge id="75" source="35" target="30"></edge>
+      <edge id="76" source="36" target="18"></edge>
+      <edge id="77" source="36" target="12"></edge>
+      <edge id="78" source="36" target="20"></edge>
+      <edge id="79" source="36" target="19"></edge>
+      <edge id="80" source="37" target="36"></edge>
+      <edge id="81" source="37" target="1"></edge>
+      <edge id="82" source="37" target="25"></edge>
+      <edge id="83" source="37" target="33"></edge>
+      <edge id="84" source="38" target="18"></edge>
+      <edge id="85" source="38" target="16"></edge>
+      <edge id="86" source="38" target="28"></edge>
+      <edge id="87" source="38" target="26"></edge>
+      <edge id="88" source="38" target="14"></edge>
+      <edge id="89" source="38" target="12"></edge>
+      <edge id="90" source="39" target="38"></edge>
+      <edge id="91" source="39" target="6"></edge>
+      <edge id="92" source="39" target="32"></edge>
+      <edge id="93" source="39" target="13"></edge>
+      <edge id="94" source="39" target="15"></edge>
+      <edge id="95" source="40" target="7"></edge>
+      <edge id="96" source="40" target="3"></edge>
+      <edge id="97" source="41" target="40"></edge>
+      <edge id="98" source="41" target="8"></edge>
+      <edge id="99" source="41" target="4"></edge>
+      <edge id="100" source="41" target="23"></edge>
+      <edge id="101" source="41" target="9"></edge>
+      <edge id="102" source="41" target="0"></edge>
+      <edge id="103" source="41" target="16"></edge>
+      <edge id="104" source="42" target="34"></edge>
+      <edge id="105" source="42" target="29"></edge>
+      <edge id="106" source="42" target="18"></edge>
+      <edge id="107" source="42" target="26"></edge>
+      <edge id="108" source="43" target="42"></edge>
+      <edge id="109" source="43" target="36"></edge>
+      <edge id="110" source="43" target="26"></edge>
+      <edge id="111" source="43" target="31"></edge>
+      <edge id="112" source="43" target="38"></edge>
+      <edge id="113" source="43" target="12"></edge>
+      <edge id="114" source="43" target="14"></edge>
+      <edge id="115" source="44" target="19"></edge>
+      <edge id="116" source="44" target="35"></edge>
+      <edge id="117" source="44" target="30"></edge>
+      <edge id="118" source="45" target="44"></edge>
+      <edge id="119" source="45" target="13"></edge>
+      <edge id="120" source="45" target="33"></edge>
+      <edge id="121" source="45" target="1"></edge>
+      <edge id="122" source="45" target="37"></edge>
+      <edge id="123" source="45" target="25"></edge>
+      <edge id="124" source="46" target="21"></edge>
+      <edge id="125" source="47" target="46"></edge>
+      <edge id="126" source="47" target="22"></edge>
+      <edge id="127" source="47" target="6"></edge>
+      <edge id="128" source="47" target="15"></edge>
+      <edge id="129" source="47" target="2"></edge>
+      <edge id="130" source="47" target="39"></edge>
+      <edge id="131" source="47" target="32"></edge>
+      <edge id="132" source="48" target="44"></edge>
+      <edge id="133" source="49" target="48"></edge>
+      <edge id="134" source="49" target="32"></edge>
+      <edge id="135" source="49" target="46"></edge>
+      <edge id="136" source="50" target="30"></edge>
+      <edge id="137" source="50" target="24"></edge>
+      <edge id="138" source="50" target="11"></edge>
+      <edge id="139" source="50" target="28"></edge>
+      <edge id="140" source="51" target="50"></edge>
+      <edge id="141" source="51" target="40"></edge>
+      <edge id="142" source="51" target="8"></edge>
+      <edge id="143" source="51" target="22"></edge>
+      <edge id="144" source="51" target="21"></edge>
+      <edge id="145" source="52" target="3"></edge>
+      <edge id="146" source="52" target="40"></edge>
+      <edge id="147" source="52" target="5"></edge>
+      <edge id="148" source="53" target="52"></edge>
+      <edge id="149" source="53" target="25"></edge>
+      <edge id="150" source="53" target="48"></edge>
+      <edge id="151" source="53" target="49"></edge>
+      <edge id="152" source="53" target="46"></edge>
+      <edge id="153" source="54" target="39"></edge>
+      <edge id="154" source="54" target="31"></edge>
+      <edge id="155" source="54" target="38"></edge>
+      <edge id="156" source="54" target="14"></edge>
+      <edge id="157" source="54" target="34"></edge>
+      <edge id="158" source="54" target="18"></edge>
+      <edge id="159" source="55" target="54"></edge>
+      <edge id="160" source="55" target="31"></edge>
+      <edge id="161" source="55" target="6"></edge>
+      <edge id="162" source="55" target="35"></edge>
+      <edge id="163" source="55" target="29"></edge>
+      <edge id="164" source="55" target="19"></edge>
+      <edge id="165" source="55" target="30"></edge>
+      <edge id="166" source="56" target="27"></edge>
+      <edge id="167" source="57" target="56"></edge>
+      <edge id="168" source="57" target="1"></edge>
+      <edge id="169" source="57" target="42"></edge>
+      <edge id="170" source="57" target="44"></edge>
+      <edge id="171" source="57" target="48"></edge>
+      <edge id="172" source="58" target="3"></edge>
+      <edge id="173" source="58" target="6"></edge>
+      <edge id="174" source="58" target="17"></edge>
+      <edge id="175" source="58" target="36"></edge>
+      <edge id="176" source="59" target="36"></edge>
+      <edge id="177" source="59" target="58"></edge>
+      <edge id="178" source="60" target="59"></edge>
+      <edge id="179" source="60" target="10"></edge>
+      <edge id="180" source="60" target="39"></edge>
+      <edge id="181" source="60" target="6"></edge>
+      <edge id="182" source="60" target="47"></edge>
+      <edge id="183" source="60" target="13"></edge>
+      <edge id="184" source="60" target="15"></edge>
+      <edge id="185" source="60" target="2"></edge>
+      <edge id="186" source="61" target="43"></edge>
+      <edge id="187" source="61" target="47"></edge>
+      <edge id="188" source="61" target="54"></edge>
+      <edge id="189" source="61" target="18"></edge>
+      <edge id="190" source="61" target="26"></edge>
+      <edge id="191" source="61" target="31"></edge>
+      <edge id="192" source="61" target="34"></edge>
+      <edge id="193" source="62" target="61"></edge>
+      <edge id="194" source="62" target="20"></edge>
+      <edge id="195" source="62" target="45"></edge>
+      <edge id="196" source="62" target="17"></edge>
+      <edge id="197" source="62" target="27"></edge>
+      <edge id="198" source="62" target="56"></edge>
+      <edge id="199" source="63" target="27"></edge>
+      <edge id="200" source="63" target="58"></edge>
+      <edge id="201" source="63" target="59"></edge>
+      <edge id="202" source="63" target="42"></edge>
+      <edge id="203" source="64" target="63"></edge>
+      <edge id="204" source="64" target="9"></edge>
+      <edge id="205" source="64" target="32"></edge>
+      <edge id="206" source="64" target="60"></edge>
+      <edge id="207" source="64" target="2"></edge>
+      <edge id="208" source="64" target="6"></edge>
+      <edge id="209" source="64" target="47"></edge>
+      <edge id="210" source="64" target="13"></edge>
+      <edge id="211" source="65" target="0"></edge>
+      <edge id="212" source="65" target="27"></edge>
+      <edge id="213" source="65" target="17"></edge>
+      <edge id="214" source="65" target="63"></edge>
+      <edge id="215" source="65" target="56"></edge>
+      <edge id="216" source="65" target="20"></edge>
+      <edge id="217" source="66" target="65"></edge>
+      <edge id="218" source="66" target="59"></edge>
+      <edge id="219" source="66" target="24"></edge>
+      <edge id="220" source="66" target="44"></edge>
+      <edge id="221" source="66" target="48"></edge>
+      <edge id="222" source="67" target="16"></edge>
+      <edge id="223" source="67" target="41"></edge>
+      <edge id="224" source="67" target="46"></edge>
+      <edge id="225" source="67" target="53"></edge>
+      <edge id="226" source="67" target="49"></edge>
+      <edge id="227" source="68" target="67"></edge>
+      <edge id="228" source="68" target="15"></edge>
+      <edge id="229" source="68" target="50"></edge>
+      <edge id="230" source="68" target="21"></edge>
+      <edge id="231" source="68" target="51"></edge>
+      <edge id="232" source="68" target="7"></edge>
+      <edge id="233" source="68" target="22"></edge>
+      <edge id="234" source="68" target="8"></edge>
+      <edge id="235" source="69" target="4"></edge>
+      <edge id="236" source="69" target="24"></edge>
+      <edge id="237" source="69" target="28"></edge>
+      <edge id="238" source="69" target="50"></edge>
+      <edge id="239" source="69" target="11"></edge>
+      <edge id="240" source="70" target="69"></edge>
+      <edge id="241" source="70" target="43"></edge>
+      <edge id="242" source="70" target="65"></edge>
+      <edge id="243" source="70" target="20"></edge>
+      <edge id="244" source="70" target="56"></edge>
+      <edge id="245" source="70" target="62"></edge>
+      <edge id="246" source="70" target="27"></edge>
+      <edge id="247" source="71" target="60"></edge>
+      <edge id="248" source="71" target="18"></edge>
+      <edge id="249" source="71" target="14"></edge>
+      <edge id="250" source="71" target="34"></edge>
+      <edge id="251" source="71" target="54"></edge>
+      <edge id="252" source="71" target="38"></edge>
+      <edge id="253" source="71" target="61"></edge>
+      <edge id="254" source="71" target="31"></edge>
+      <edge id="255" source="72" target="71"></edge>
+      <edge id="256" source="72" target="2"></edge>
+      <edge id="257" source="72" target="10"></edge>
+      <edge id="258" source="72" target="3"></edge>
+      <edge id="259" source="72" target="40"></edge>
+      <edge id="260" source="72" target="52"></edge>
+      <edge id="261" source="73" target="7"></edge>
+      <edge id="262" source="73" target="49"></edge>
+      <edge id="263" source="73" target="53"></edge>
+      <edge id="264" source="73" target="67"></edge>
+      <edge id="265" source="73" target="46"></edge>
+      <edge id="266" source="74" target="73"></edge>
+      <edge id="267" source="74" target="2"></edge>
+      <edge id="268" source="74" target="72"></edge>
+      <edge id="269" source="74" target="5"></edge>
+      <edge id="270" source="74" target="10"></edge>
+      <edge id="271" source="74" target="52"></edge>
+      <edge id="272" source="74" target="3"></edge>
+      <edge id="273" source="74" target="40"></edge>
+      <edge id="274" source="75" target="20"></edge>
+      <edge id="275" source="75" target="66"></edge>
+      <edge id="276" source="75" target="48"></edge>
+      <edge id="277" source="75" target="57"></edge>
+      <edge id="278" source="75" target="44"></edge>
+      <edge id="279" source="76" target="75"></edge>
+      <edge id="280" source="76" target="27"></edge>
+      <edge id="281" source="76" target="59"></edge>
+      <edge id="282" source="76" target="20"></edge>
+      <edge id="283" source="76" target="70"></edge>
+      <edge id="284" source="76" target="66"></edge>
+      <edge id="285" source="76" target="56"></edge>
+      <edge id="286" source="76" target="62"></edge>
+      <edge id="287" source="77" target="73"></edge>
+      <edge id="288" source="77" target="22"></edge>
+      <edge id="289" source="77" target="7"></edge>
+      <edge id="290" source="77" target="51"></edge>
+      <edge id="291" source="77" target="21"></edge>
+      <edge id="292" source="77" target="8"></edge>
+      <edge id="293" source="78" target="77"></edge>
+      <edge id="294" source="78" target="23"></edge>
+      <edge id="295" source="78" target="50"></edge>
+      <edge id="296" source="78" target="28"></edge>
+      <edge id="297" source="78" target="22"></edge>
+      <edge id="298" source="78" target="8"></edge>
+      <edge id="299" source="78" target="68"></edge>
+      <edge id="300" source="78" target="7"></edge>
+      <edge id="301" source="78" target="51"></edge>
+      <edge id="302" source="79" target="31"></edge>
+      <edge id="303" source="79" target="43"></edge>
+      <edge id="304" source="79" target="30"></edge>
+      <edge id="305" source="79" target="19"></edge>
+      <edge id="306" source="79" target="29"></edge>
+      <edge id="307" source="79" target="35"></edge>
+      <edge id="308" source="79" target="55"></edge>
+      <edge id="309" source="80" target="79"></edge>
+      <edge id="310" source="80" target="37"></edge>
+      <edge id="311" source="80" target="29"></edge>
+      <edge id="312" source="81" target="16"></edge>
+      <edge id="313" source="81" target="5"></edge>
+      <edge id="314" source="81" target="40"></edge>
+      <edge id="315" source="81" target="10"></edge>
+      <edge id="316" source="81" target="72"></edge>
+      <edge id="317" source="81" target="3"></edge>
+      <edge id="318" source="82" target="81"></edge>
+      <edge id="319" source="82" target="74"></edge>
+      <edge id="320" source="82" target="39"></edge>
+      <edge id="321" source="82" target="77"></edge>
+      <edge id="322" source="82" target="80"></edge>
+      <edge id="323" source="82" target="30"></edge>
+      <edge id="324" source="82" target="29"></edge>
+      <edge id="325" source="82" target="7"></edge>
+      <edge id="326" source="83" target="53"></edge>
+      <edge id="327" source="83" target="81"></edge>
+      <edge id="328" source="83" target="69"></edge>
+      <edge id="329" source="83" target="73"></edge>
+      <edge id="330" source="83" target="46"></edge>
+      <edge id="331" source="83" target="67"></edge>
+      <edge id="332" source="83" target="49"></edge>
+      <edge id="333" source="84" target="83"></edge>
+      <edge id="334" source="84" target="24"></edge>
+      <edge id="335" source="84" target="49"></edge>
+      <edge id="336" source="84" target="52"></edge>
+      <edge id="337" source="84" target="3"></edge>
+      <edge id="338" source="84" target="74"></edge>
+      <edge id="339" source="84" target="10"></edge>
+      <edge id="340" source="84" target="81"></edge>
+      <edge id="341" source="84" target="5"></edge>
+      <edge id="342" source="85" target="6"></edge>
+      <edge id="343" source="85" target="14"></edge>
+      <edge id="344" source="85" target="38"></edge>
+      <edge id="345" source="85" target="43"></edge>
+      <edge id="346" source="85" target="80"></edge>
+      <edge id="347" source="85" target="12"></edge>
+      <edge id="348" source="85" target="26"></edge>
+      <edge id="349" source="85" target="31"></edge>
+      <edge id="350" source="86" target="44"></edge>
+      <edge id="351" source="86" target="53"></edge>
+      <edge id="352" source="86" target="75"></edge>
+      <edge id="353" source="86" target="57"></edge>
+      <edge id="354" source="86" target="48"></edge>
+      <edge id="355" source="86" target="80"></edge>
+      <edge id="356" source="86" target="66"></edge>
+      <edge id="357" source="87" target="86"></edge>
+      <edge id="358" source="87" target="17"></edge>
+      <edge id="359" source="87" target="62"></edge>
+      <edge id="360" source="87" target="56"></edge>
+      <edge id="361" source="87" target="24"></edge>
+      <edge id="362" source="87" target="20"></edge>
+      <edge id="363" source="87" target="65"></edge>
+      <edge id="364" source="88" target="49"></edge>
+      <edge id="365" source="88" target="58"></edge>
+      <edge id="366" source="88" target="83"></edge>
+      <edge id="367" source="88" target="69"></edge>
+      <edge id="368" source="88" target="46"></edge>
+      <edge id="369" source="88" target="53"></edge>
+      <edge id="370" source="88" target="73"></edge>
+      <edge id="371" source="88" target="67"></edge>
+      <edge id="372" source="89" target="88"></edge>
+      <edge id="373" source="89" target="1"></edge>
+      <edge id="374" source="89" target="37"></edge>
+      <edge id="375" source="89" target="25"></edge>
+      <edge id="376" source="89" target="33"></edge>
+      <edge id="377" source="89" target="55"></edge>
+      <edge id="378" source="89" target="45"></edge>
+      <edge id="379" source="90" target="5"></edge>
+      <edge id="380" source="90" target="8"></edge>
+      <edge id="381" source="90" target="23"></edge>
+      <edge id="382" source="90" target="0"></edge>
+      <edge id="383" source="90" target="11"></edge>
+      <edge id="384" source="90" target="50"></edge>
+      <edge id="385" source="90" target="24"></edge>
+      <edge id="386" source="90" target="69"></edge>
+      <edge id="387" source="90" target="28"></edge>
+      <edge id="388" source="91" target="29"></edge>
+      <edge id="389" source="91" target="48"></edge>
+      <edge id="390" source="91" target="66"></edge>
+      <edge id="391" source="91" target="69"></edge>
+      <edge id="392" source="91" target="44"></edge>
+      <edge id="393" source="91" target="86"></edge>
+      <edge id="394" source="91" target="57"></edge>
+      <edge id="395" source="91" target="80"></edge>
+      <edge id="396" source="92" target="91"></edge>
+      <edge id="397" source="92" target="35"></edge>
+      <edge id="398" source="92" target="15"></edge>
+      <edge id="399" source="92" target="86"></edge>
+      <edge id="400" source="92" target="48"></edge>
+      <edge id="401" source="92" target="57"></edge>
+      <edge id="402" source="92" target="61"></edge>
+      <edge id="403" source="92" target="66"></edge>
+      <edge id="404" source="92" target="75"></edge>
+      <edge id="405" source="93" target="0"></edge>
+      <edge id="406" source="93" target="23"></edge>
+      <edge id="407" source="93" target="80"></edge>
+      <edge id="408" source="93" target="16"></edge>
+      <edge id="409" source="93" target="4"></edge>
+      <edge id="410" source="93" target="82"></edge>
+      <edge id="411" source="93" target="91"></edge>
+      <edge id="412" source="93" target="41"></edge>
+      <edge id="413" source="93" target="9"></edge>
+      <edge id="414" source="94" target="34"></edge>
+      <edge id="415" source="94" target="19"></edge>
+      <edge id="416" source="94" target="55"></edge>
+      <edge id="417" source="94" target="79"></edge>
+      <edge id="418" source="94" target="80"></edge>
+      <edge id="419" source="94" target="29"></edge>
+      <edge id="420" source="94" target="30"></edge>
+      <edge id="421" source="94" target="82"></edge>
+      <edge id="422" source="94" target="35"></edge>
+      <edge id="423" source="95" target="70"></edge>
+      <edge id="424" source="95" target="69"></edge>
+      <edge id="425" source="95" target="76"></edge>
+      <edge id="426" source="95" target="62"></edge>
+      <edge id="427" source="95" target="56"></edge>
+      <edge id="428" source="95" target="27"></edge>
+      <edge id="429" source="95" target="17"></edge>
+      <edge id="430" source="95" target="87"></edge>
+      <edge id="431" source="95" target="37"></edge>
+      <edge id="432" source="96" target="48"></edge>
+      <edge id="433" source="96" target="17"></edge>
+      <edge id="434" source="96" target="76"></edge>
+      <edge id="435" source="96" target="27"></edge>
+      <edge id="436" source="96" target="56"></edge>
+      <edge id="437" source="96" target="65"></edge>
+      <edge id="438" source="96" target="20"></edge>
+      <edge id="439" source="96" target="87"></edge>
+      <edge id="440" source="97" target="5"></edge>
+      <edge id="441" source="97" target="86"></edge>
+      <edge id="442" source="97" target="58"></edge>
+      <edge id="443" source="97" target="11"></edge>
+      <edge id="444" source="97" target="59"></edge>
+      <edge id="445" source="97" target="63"></edge>
+      <edge id="446" source="98" target="97"></edge>
+      <edge id="447" source="98" target="77"></edge>
+      <edge id="448" source="98" target="48"></edge>
+      <edge id="449" source="98" target="84"></edge>
+      <edge id="450" source="98" target="40"></edge>
+      <edge id="451" source="98" target="10"></edge>
+      <edge id="452" source="98" target="5"></edge>
+      <edge id="453" source="98" target="52"></edge>
+      <edge id="454" source="98" target="81"></edge>
+      <edge id="455" source="99" target="89"></edge>
+      <edge id="456" source="99" target="34"></edge>
+      <edge id="457" source="99" target="14"></edge>
+      <edge id="458" source="99" target="85"></edge>
+      <edge id="459" source="99" target="54"></edge>
+      <edge id="460" source="99" target="18"></edge>
+      <edge id="461" source="99" target="31"></edge>
+      <edge id="462" source="99" target="61"></edge>
+      <edge id="463" source="99" target="71"></edge>
+      <edge id="464" source="100" target="99"></edge>
+      <edge id="465" source="100" target="82"></edge>
+      <edge id="466" source="100" target="13"></edge>
+      <edge id="467" source="100" target="2"></edge>
+      <edge id="468" source="100" target="15"></edge>
+      <edge id="469" source="100" target="32"></edge>
+      <edge id="470" source="100" target="64"></edge>
+      <edge id="471" source="100" target="47"></edge>
+      <edge id="472" source="100" target="39"></edge>
+      <edge id="473" source="100" target="6"></edge>
+      <edge id="474" source="101" target="51"></edge>
+      <edge id="475" source="101" target="30"></edge>
+      <edge id="476" source="101" target="94"></edge>
+      <edge id="477" source="101" target="1"></edge>
+      <edge id="478" source="101" target="79"></edge>
+      <edge id="479" source="101" target="58"></edge>
+      <edge id="480" source="101" target="19"></edge>
+      <edge id="481" source="101" target="55"></edge>
+      <edge id="482" source="101" target="35"></edge>
+      <edge id="483" source="101" target="29"></edge>
+      <edge id="484" source="102" target="100"></edge>
+      <edge id="485" source="102" target="74"></edge>
+      <edge id="486" source="102" target="52"></edge>
+      <edge id="487" source="102" target="98"></edge>
+      <edge id="488" source="102" target="72"></edge>
+      <edge id="489" source="102" target="40"></edge>
+      <edge id="490" source="102" target="10"></edge>
+      <edge id="491" source="102" target="3"></edge>
+      <edge id="492" source="103" target="102"></edge>
+      <edge id="493" source="103" target="33"></edge>
+      <edge id="494" source="103" target="45"></edge>
+      <edge id="495" source="103" target="25"></edge>
+      <edge id="496" source="103" target="89"></edge>
+      <edge id="497" source="103" target="37"></edge>
+      <edge id="498" source="103" target="1"></edge>
+      <edge id="499" source="103" target="70"></edge>
+      <edge id="500" source="104" target="72"></edge>
+      <edge id="501" source="104" target="11"></edge>
+      <edge id="502" source="104" target="0"></edge>
+      <edge id="503" source="104" target="93"></edge>
+      <edge id="504" source="104" target="67"></edge>
+      <edge id="505" source="104" target="41"></edge>
+      <edge id="506" source="104" target="16"></edge>
+      <edge id="507" source="104" target="87"></edge>
+      <edge id="508" source="104" target="23"></edge>
+      <edge id="509" source="104" target="4"></edge>
+      <edge id="510" source="104" target="9"></edge>
+      <edge id="511" source="105" target="89"></edge>
+      <edge id="512" source="105" target="103"></edge>
+      <edge id="513" source="105" target="33"></edge>
+      <edge id="514" source="105" target="62"></edge>
+      <edge id="515" source="105" target="37"></edge>
+      <edge id="516" source="105" target="45"></edge>
+      <edge id="517" source="105" target="1"></edge>
+      <edge id="518" source="105" target="80"></edge>
+      <edge id="519" source="105" target="25"></edge>
+      <edge id="520" source="106" target="25"></edge>
+      <edge id="521" source="106" target="56"></edge>
+      <edge id="522" source="106" target="92"></edge>
+      <edge id="523" source="106" target="2"></edge>
+      <edge id="524" source="106" target="13"></edge>
+      <edge id="525" source="106" target="32"></edge>
+      <edge id="526" source="106" target="60"></edge>
+      <edge id="527" source="106" target="6"></edge>
+      <edge id="528" source="106" target="64"></edge>
+      <edge id="529" source="106" target="15"></edge>
+      <edge id="530" source="106" target="39"></edge>
+      <edge id="531" source="107" target="88"></edge>
+      <edge id="532" source="107" target="75"></edge>
+      <edge id="533" source="107" target="98"></edge>
+      <edge id="534" source="107" target="102"></edge>
+      <edge id="535" source="107" target="72"></edge>
+      <edge id="536" source="107" target="40"></edge>
+      <edge id="537" source="107" target="81"></edge>
+      <edge id="538" source="107" target="5"></edge>
+      <edge id="539" source="107" target="10"></edge>
+      <edge id="540" source="107" target="84"></edge>
+      <edge id="541" source="108" target="4"></edge>
+      <edge id="542" source="108" target="9"></edge>
+      <edge id="543" source="108" target="7"></edge>
+      <edge id="544" source="108" target="51"></edge>
+      <edge id="545" source="108" target="77"></edge>
+      <edge id="546" source="108" target="21"></edge>
+      <edge id="547" source="108" target="78"></edge>
+      <edge id="548" source="108" target="22"></edge>
+      <edge id="549" source="108" target="68"></edge>
+      <edge id="550" source="109" target="79"></edge>
+      <edge id="551" source="109" target="30"></edge>
+      <edge id="552" source="109" target="63"></edge>
+      <edge id="553" source="109" target="1"></edge>
+      <edge id="554" source="109" target="33"></edge>
+      <edge id="555" source="109" target="103"></edge>
+      <edge id="556" source="109" target="105"></edge>
+      <edge id="557" source="109" target="45"></edge>
+      <edge id="558" source="109" target="25"></edge>
+      <edge id="559" source="109" target="89"></edge>
+      <edge id="560" source="109" target="37"></edge>
+      <edge id="561" source="110" target="67"></edge>
+      <edge id="562" source="110" target="13"></edge>
+      <edge id="563" source="110" target="24"></edge>
+      <edge id="564" source="110" target="80"></edge>
+      <edge id="565" source="110" target="88"></edge>
+      <edge id="566" source="110" target="49"></edge>
+      <edge id="567" source="110" target="73"></edge>
+      <edge id="568" source="110" target="46"></edge>
+      <edge id="569" source="110" target="83"></edge>
+      <edge id="570" source="110" target="53"></edge>
+      <edge id="571" source="111" target="23"></edge>
+      <edge id="572" source="111" target="64"></edge>
+      <edge id="573" source="111" target="46"></edge>
+      <edge id="574" source="111" target="78"></edge>
+      <edge id="575" source="111" target="8"></edge>
+      <edge id="576" source="111" target="21"></edge>
+      <edge id="577" source="111" target="51"></edge>
+      <edge id="578" source="111" target="7"></edge>
+      <edge id="579" source="111" target="108"></edge>
+      <edge id="580" source="111" target="68"></edge>
+      <edge id="581" source="111" target="77"></edge>
+      <edge id="582" source="112" target="52"></edge>
+      <edge id="583" source="112" target="96"></edge>
+      <edge id="584" source="112" target="97"></edge>
+      <edge id="585" source="112" target="57"></edge>
+      <edge id="586" source="112" target="66"></edge>
+      <edge id="587" source="112" target="63"></edge>
+      <edge id="588" source="112" target="44"></edge>
+      <edge id="589" source="112" target="92"></edge>
+      <edge id="590" source="112" target="75"></edge>
+      <edge id="591" source="112" target="91"></edge>
+      <edge id="592" source="113" target="28"></edge>
+      <edge id="593" source="113" target="20"></edge>
+      <edge id="594" source="113" target="95"></edge>
+      <edge id="595" source="113" target="59"></edge>
+      <edge id="596" source="113" target="70"></edge>
+      <edge id="597" source="113" target="17"></edge>
+      <edge id="598" source="113" target="87"></edge>
+      <edge id="599" source="113" target="76"></edge>
+      <edge id="600" source="113" target="65"></edge>
+      <edge id="601" source="113" target="96"></edge>
+      <edge id="602" source="114" target="83"></edge>
+      <edge id="603" source="114" target="88"></edge>
+      <edge id="604" source="114" target="110"></edge>
+      <edge id="605" source="114" target="53"></edge>
+      <edge id="606" source="114" target="49"></edge>
+      <edge id="607" source="114" target="73"></edge>
+      <edge id="608" source="114" target="46"></edge>
+      <edge id="609" source="114" target="67"></edge>
+      <edge id="610" source="114" target="58"></edge>
+      <edge id="611" source="114" target="15"></edge>
+      <edge id="612" source="114" target="104"></edge>
+    </edges>
+  </graph>
+</gexf>
