@@ -16,7 +16,7 @@ var res = {
 * datas: {object}
 *
 */
-function TableDrawer(datas) {
+function tableDrawer(datas) {
     var table = document.createElement('table');
     var wrap = document.querySelector('.table-wrap');
     var ths = '';
@@ -72,12 +72,12 @@ function TableDrawer(datas) {
         switch (className) {
             case 'up':
                 console.log('up case ' + tag)
-                TableDrawer(sortArr(res, tag).up())
+                tableDrawer(sortArr(res, tag).up())
                 break;
             case 'down':
             default:
                 console.log('down case ' + tag)
-                TableDrawer(sortArr(res, tag).down())
+                tableDrawer(sortArr(res, tag).down())
                 break;
         }
     })
@@ -104,5 +104,11 @@ function sortArr(res,i) {
 }
 
 window.onload = function () {
-    var table = new TableDrawer(res);
+    var table = tableDrawer(res);
 }
+
+/*
+* 排序：Array.sort()
+* sort() 中可以指定排序规则
+* 规则可以是数组中元素对象的某一个属性
+* */
