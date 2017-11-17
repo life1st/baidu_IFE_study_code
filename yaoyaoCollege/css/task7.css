@@ -87,26 +87,27 @@ html {
   position: relative;
 }
 .table-wrap th .up {
-  content: ' ';
-  position: absolute;
   top: -2px;
-  right: 1px;
-  display: block;
-  border-width: 8px;
-  border-style: solid;
   border-color: transparent transparent #fff transparent;
-  z-index: 10000;
-  cursor: pointer;
+}
+.table-wrap th .up:active {
+  border-color: transparent transparent #ccc transparent;
 }
 .table-wrap th .down {
+  bottom: -2px;
+  border-color: #fff transparent transparent transparent;
+}
+.table-wrap th .down:active {
+  border-color: #ccc transparent transparent transparent;
+}
+.table-wrap th .up,
+.table-wrap th .down {
+  right: 1px;
+  border-width: 8px;
   content: ' ';
   position: absolute;
-  bottom: -2px;
-  right: 1px;
   display: block;
-  border-width: 8px;
   border-style: solid;
-  border-color: #fff transparent transparent transparent;
   z-index: 10000;
   cursor: pointer;
 }
