@@ -76,8 +76,17 @@ function tableDrawer(datas) {
             case '英语':
                 tag = 2;
                 break;
-            case '总分':
+            case '生物':
                 tag = 3;
+                break;
+            case '地理':
+                tag = 4;
+                break;
+            case '化学':
+                tag = 5;
+                break;
+            case '总分':
+                tag = 6;
                 break;
             default:
                 tag = 100;
