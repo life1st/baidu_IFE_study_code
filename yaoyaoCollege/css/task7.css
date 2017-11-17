@@ -84,9 +84,34 @@ html {
 }
 .table-wrap th {
   background-color: #ddd;
+  position: relative;
+}
+.table-wrap th .up {
+  content: ' ';
+  position: absolute;
+  top: -2px;
+  right: 1px;
+  display: block;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  z-index: 10000;
+  cursor: pointer;
+}
+.table-wrap th .down {
+  content: ' ';
+  position: absolute;
+  bottom: -2px;
+  right: 1px;
+  display: block;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  z-index: 10000;
+  cursor: pointer;
 }
 .table-wrap th,
 .table-wrap td {
-  padding: 8px 12px;
+  padding: 8px 20px 8px 12px;
   border: 1px solid #ccc;
 }

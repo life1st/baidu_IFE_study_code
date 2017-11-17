@@ -2,10 +2,41 @@
 
 .table-wrap {
   th {
+    @size: 8px;
+    @bdColor: #fff;
+    @pdRight: 1px;
+    @pdTop: -2px;
+    @pdBottom: -2px;
+
     background-color: #ddd;
+    position: relative;
+    .up {
+      content: ' ';
+      position: absolute;
+      top: @pdTop;
+      right: @pdRight;
+      display: block;
+      border-width: @size;
+      border-style: solid;
+      border-color: transparent transparent @bdColor transparent;
+      z-index: 10000;
+      cursor: pointer;
+    }
+    .down {
+      content: ' ';
+      position: absolute;
+      bottom: @pdBottom;
+      right: @pdRight;
+      display: block;
+      border-width: @size;
+      border-style: solid;
+      border-color: @bdColor transparent transparent transparent;
+      z-index: 10000;
+      cursor: pointer;
+    }
   }
   th,td {
-    padding: 8px 12px;
+    padding: 8px 20px 8px 12px;
     border: 1px solid #ccc;
   }
 }
