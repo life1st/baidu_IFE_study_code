@@ -4,14 +4,27 @@ var res = {
         {ctx: '语文', sort: true},
         {ctx: '数学', sort: true},
         {ctx: '英语', sort: true},
+        {ctx: '生物', sort: true},
+        {ctx: '地理', sort: true},
+        {ctx: '化学', sort: true},
         {ctx: '总分', sort: true},
     ],
     data: [
-        {name: '小明',scores: [80, 70, 70]},
-        {name: '小红',scores: [90, 60, 90]},
-        {name: '小亮',scores: [60, 100, 70]}
+        {name: '小明',scores: []},
+        {name: '小红',scores: []},
+        {name: '小亮',scores: []}
         ],
+    //data有6个科目的数据，写死不好看。调用mockData()循环随机数据。
 };
+function mockData(data) {
+    data.data.forEach((student) => {
+        var length = data.head.length - 2 - student.scores.length;
+        for (var i = 0 ;i < length; i++){
+            student.scores.push(Math.floor(Math.random()*100))
+        }
+        console.log(student.scores.length)
+    })
+}
 /*
 * datas: {object}
 *
@@ -104,6 +117,8 @@ function sortArr(res,i) {
 }
 
 window.onload = function () {
+    mockData(res)
+    console.log(res)
     var table = tableDrawer(res);
 }
 
