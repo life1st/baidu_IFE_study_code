@@ -96,6 +96,9 @@
 
 > 代码还是很不优雅，想有人给我review :(
 
+[任务七：UI组件之排序表格](https://life1st.github.io/baidu_IFE_study_code/yaoyaoCollege/task7.html) [任务页](http://ife.baidu.com/course/detail/id/118)
+
+
 ### 糯米前端技术学院
 
 [网页抓取分析服务系列之一（基础分析）](https://github.com/life1st/baidu_IFE_study_code/tree/master/nuomiCollege/node) [任务页](http://ife.baidu.com/course/detail/id/85)
