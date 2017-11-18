@@ -12,6 +12,9 @@ var res = {
     data: [
         {name: '小明',scores: []},
         {name: '小红',scores: []},
+        {name: '小张',scores: []},
+        {name: '小王',scores: []},
+        {name: '小孙',scores: []},
         {name: '小亮',scores: []}
         ],
     //data有6个科目的数据，写死不好看。调用mockData()循环随机数据。
@@ -20,7 +23,7 @@ function mockData(data) {
     data.data.forEach((student) => {
         var length = data.head.length - 2 - student.scores.length;
         for (var i = 0 ;i < length; i++){
-            student.scores.push(Math.floor(Math.random()*100))
+            student.scores.push(Math.floor(Math.random()*70+30)) //magic num.
         }
         console.log(student.scores.length)
     })
@@ -89,7 +92,7 @@ function tableDrawer(datas) {
                 tag = 6;
                 break;
             default:
-                tag = 100;
+                console.log('error data.')
         }
         switch (className) {
             case 'up':
