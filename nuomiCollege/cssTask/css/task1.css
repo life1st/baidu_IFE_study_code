@@ -1,0 +1,137 @@
+/*reset.*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fff;
+  font-size: 14px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+td,
+th,
+caption {
+  font-size: 14px;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #e74f4d;
+  transition: color 0.2s;
+}
+img {
+  border: none;
+}
+input,
+textarea,
+select,
+button {
+  font: 14px Verdana, Helvetica, Arial, sans-serif;
+}
+table {
+  border-collapse: collapse;
+}
+html {
+  overflow-y: scroll;
+}
+/*other*/
+.fr {
+  float: right;
+}
+.cl {
+  clear: both;
+}
+.ib {
+  display: inline-block;
+}
+.hover-box {
+  transition: all 1s;
+  position: relative;
+  background: url("../img/task1.jpg") center no-repeat;
+  width: 504px;
+  height: 300px;
+  filter: blur(0px);
+}
+.hover-box .content {
+  text-align: center;
+  z-index: 100;
+  border: 3px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 12px;
+}
+.hover-box .content h2 {
+  word-break: keep-all;
+  background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%, #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
+  font-size: 24px;
+  color: transparent;
+  -webkit-background-clip: text;
+  animation: titleColor 6s infinite;
+  margin-bottom: 20px;
+}
+.hover-box .content p {
+  font-size: 16px;
+  animation: pColor 3s infinite linear;
+}
+.hover-box:hover {
+  filter: blur(5px);
+}
+@keyframes pColor {
+  0% {
+    color: #00f;
+  }
+  50% {
+    color: #0f0;
+  }
+  100% {
+    color: #00f;
+  }
+}
+@keyframes titleColor {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 240px;
+  }
+}
