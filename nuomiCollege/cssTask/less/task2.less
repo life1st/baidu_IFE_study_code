@@ -1,0 +1,98 @@
+.one-way {
+  .check-wrap {
+    position: relative;
+    input[type=checkbox] {
+      display: none;
+      + .check-btn {
+        i {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          background: url("../img/botton.png") 0 -22px no-repeat;
+        }
+      }
+      &:checked + .check-btn i {
+        background: url("../img/botton.png") -35px -22px no-repeat;
+      }
+      &:active + .check-btn i {
+        background: url("../img/botton.png") -17px -22px no-repeat;
+      }
+    }
+  }
+  .radio-wrap {
+    input[type=radio] {
+      display: none;
+      + .radio-btn {
+        i {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          background: url("../img/botton.png") 0 0 no-repeat;
+        }
+      }
+      &:checked + .radio-btn i {
+        background: url("../img/botton.png") -35px 0 no-repeat;
+      }
+      &:active + .radio-btn i {
+        background: url("../img/botton.png") -17px 0 no-repeat;
+      }
+    }
+  }
+}
+
+.other-way {
+  input[type=radio] {
+    visibility: hidden;
+    &::before {
+      content: ' ';
+      display: inline-block;
+      visibility: visible;
+      width: 16px;
+      height: 16px;
+      background: url("../img/botton.png") 0 0 no-repeat;
+    }
+    &:checked {
+      &::before{
+        background: url("../img/botton.png") -35px 0 no-repeat;
+      }
+    }
+    &:active {
+      &::before {
+        background: url("../img/botton.png") -17px 0 no-repeat;
+      }
+    }
+  }
+  input[type=checkbox] {
+    visibility: hidden;
+    &::before {
+      content: ' ';
+      visibility: visible;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url("../img/botton.png") 0 -22px no-repeat;
+    }
+    &:checked {
+      &::before {
+        background: url("../img/botton.png") -35px -22px no-repeat;
+      }
+    }
+    &:active {
+      &::before {
+        background: url("../img/botton.png") -17px -22px no-repeat;
+      }
+    }
+  }
+}
+
+label {
+  user-select: none;
+}
+/*
+* sprite使用http://alloyteam.github.io/gopng/
+*
+* 伪元素html结构简单，不需要引入额外标签，不需要固定html结构
+* 但是无法通过给input设置display: none来隐藏元素
+* 可以给input设置visibility:hidden，同时给伪元素设置visibility:visible来隐藏默认元素
+* 我觉得可以，比label实现要简洁。
+*/
