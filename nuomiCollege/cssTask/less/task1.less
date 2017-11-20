@@ -2,15 +2,16 @@
 
 @bdW: 3px;
 @bdC: #fff;
-.bdLR {
+.bdLR() {
   border-left: @bdW solid @bdC;
   border-right: @bdW solid @bdC;
 }
-.bdTB {
+.bdTB() {
   border-top: @bdW solid @bdC;
   border-bottom: @bdW solid @bdC;
 }
-.absoluteCenter {
+.absoluteCenter() {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -24,10 +25,9 @@
     opacity: 0;
     text-align: center;
     z-index: 100;
-    position: absolute;
     .absoluteCenter;
     padding: 40px 12px;
-    transition: all 1s;
+    transition: all 2s;
     h2 {
       word-break: keep-all;
       background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%, #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
@@ -44,18 +44,18 @@
     &::before {
       content: ' ';
       width: 100%;
-      position: absolute;
+      height: 0;
       .absoluteCenter;
-      transition: all 1s;
       .bdLR;
+      transition: all 2s;
     }
     &::after {
       content: ' ';
       height: 100%;
-      position: absolute;
+      width: 0; //定义初始参数，transition才能响应过渡动画
       .absoluteCenter;
-      transition: all 1s;
       .bdTB;
+      transition: all 2s;
     }
   }
   .bg-img {
@@ -69,11 +69,9 @@
     .content {
       opacity: 1;
       &::before {
-        animation: bdlr 2s linear;
         height: 100%;
       }
       &::after {
-        animation: bdtb 2s linear;
         width: 100%;
       }
     }
@@ -98,24 +96,6 @@
   }
   100% {
     background-position-x: 240px;
-  }
-}
-
-@keyframes bdlr {
-  from {
-    height: 0;
-  }
-  to {
-    height: 100%;
-  }
-}
-
-@keyframes bdtb {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
   }
 }
 
