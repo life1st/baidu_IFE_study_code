@@ -1,21 +1,33 @@
 @import (less) "../../../css/common.css";
 
+@bdW: 3px;
+@bdC: #fff;
+.bdLR {
+  border-left: @bdW solid @bdC;
+  border-right: @bdW solid @bdC;
+}
+.bdTB {
+  border-top: @bdW solid @bdC;
+  border-bottom: @bdW solid @bdC;
+}
+.absoluteCenter {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .hover-box {
   transition: all 1s;
   position: relative;
-  background: url("../img/task1.jpg") center no-repeat;
   width: 504px;
   height: 300px;
-  filter: blur(0px);
   .content {
+    opacity: 0;
     text-align: center;
     z-index: 100;
-    border: 3px solid #fff;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    .absoluteCenter;
     padding: 40px 12px;
+    transition: all 1s;
     h2 {
       word-break: keep-all;
       background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%, #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
@@ -29,10 +41,44 @@
       font-size: 16px;
       animation: pColor 3s infinite linear;
     }
+    &::before {
+      content: ' ';
+      width: 100%;
+      position: absolute;
+      .absoluteCenter;
+      transition: all 1s;
+      .bdLR;
+    }
+    &::after {
+      content: ' ';
+      height: 100%;
+      position: absolute;
+      .absoluteCenter;
+      transition: all 1s;
+      .bdTB;
+    }
+  }
+  .bg-img {
+    transition: all 1s;
+    filter: blur(0px);
   }
   &:hover {
-    filter: blur(5px)
+    .bg-img {
+      filter: blur(5px)
+    }
+    .content {
+      opacity: 1;
+      &::before {
+        animation: bdlr 2s linear;
+        height: 100%;
+      }
+      &::after {
+        animation: bdtb 2s linear;
+        width: 100%;
+      }
+    }
   }
+
 }
 
 @keyframes pColor {
@@ -54,3 +100,27 @@
     background-position-x: 240px;
   }
 }
+
+@keyframes bdlr {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes bdtb {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/*
+* 背景图的blur需要单独指定，否则内容也会被加上滤镜
+* 内容区域的边框变化使用before和after来设置（通过befroe和after的长宽变化）
+* 字体的流光效果需要@keyframe和background-image
+*/

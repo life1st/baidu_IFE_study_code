@@ -82,23 +82,35 @@ html {
 .ib {
   display: inline-block;
 }
+.bdLR {
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+.bdTB {
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+.absoluteCenter {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .hover-box {
   transition: all 1s;
   position: relative;
-  background: url("../img/task1.jpg") center no-repeat;
   width: 504px;
   height: 300px;
-  filter: blur(0px);
 }
 .hover-box .content {
+  opacity: 0;
   text-align: center;
   z-index: 100;
-  border: 3px solid #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px 12px;
+  transition: all 1s;
 }
 .hover-box .content h2 {
   word-break: keep-all;
@@ -113,8 +125,45 @@ html {
   font-size: 16px;
   animation: pColor 3s infinite linear;
 }
-.hover-box:hover {
+.hover-box .content::before {
+  content: ' ';
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+.hover-box .content::after {
+  content: ' ';
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+.hover-box .bg-img {
+  transition: all 1s;
+  filter: blur(0px);
+}
+.hover-box:hover .bg-img {
   filter: blur(5px);
+}
+.hover-box:hover .content {
+  opacity: 1;
+}
+.hover-box:hover .content::before {
+  animation: bdlr 2s linear;
+  height: 100%;
+}
+.hover-box:hover .content::after {
+  animation: bdtb 2s linear;
+  width: 100%;
 }
 @keyframes pColor {
   0% {
@@ -135,3 +184,24 @@ html {
     background-position-x: 240px;
   }
 }
+@keyframes bdlr {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes bdtb {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/*
+* 背景图的blur需要单独指定，否则内容也会被加上滤镜
+* 内容区域的边框变化使用before和after来设置（通过befroe和after的长宽变化）
+* 字体的流光效果需要@keyframe和background-image
+*/
