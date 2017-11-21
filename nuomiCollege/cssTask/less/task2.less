@@ -44,46 +44,52 @@
 
 .other-way {
   input[type=radio] {
-    visibility: hidden;
-    &::before {
+    display: none;
+    & + label::before {
       content: ' ';
       display: inline-block;
       visibility: visible;
       width: 16px;
       height: 16px;
+      margin-right: 4px;
       vertical-align: sub;
-      background: url("../img/botton.png") 0 0 no-repeat;
+      background-image: url("../img/botton.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
     }
     &:checked {
-      &::before{
-        background: url("../img/botton.png") -35px 0 no-repeat;
+      & + label::before{
+        background-position: -35px 0;
       }
     }
     &:active {
-      &::before {
-        background: url("../img/botton.png") -17px 0 no-repeat;
+      & + label::before {
+        background-position: -17px 0;
       }
     }
   }
   input[type=checkbox] {
-    visibility: hidden;
-    &::before {
+    display: none;
+    & + label::before {
       content: ' ';
       visibility: visible;
       display: inline-block;
       width: 16px;
       height: 16px;
+      margin-right: 4px;
       vertical-align: sub;
-      background: url("../img/botton.png") 0 -22px no-repeat;
+      background-image: url("../img/botton.png");
+      background-repeat: no-repeat;
+      background-position: 0 -22px;
     }
     &:checked {
-      &::before {
-        background: url("../img/botton.png") -35px -22px no-repeat;
+      & + label::before {
+        background-position: -35px -22px;
       }
     }
     &:active {
-      &::before {
-        background: url("../img/botton.png") -17px -22px no-repeat;
+      & + label::before {
+        background-position: -17px -22px;
       }
     }
   }
@@ -99,4 +105,6 @@ label {
 * 但是无法通过给input设置display: none来隐藏元素
 * 可以给input设置visibility:hidden，同时给伪元素设置visibility:visible来隐藏默认元素
 * 我觉得可以，比label实现要简洁。
+* 白天做的有问题，input标签无法使用伪元素，因为自闭合，blink内核可以显示，其他不行。
+* 所以伪元素应该加在label上
 */
