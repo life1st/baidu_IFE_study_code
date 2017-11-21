@@ -1,0 +1,119 @@
+/*reset.*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fff;
+  font-size: 14px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+td,
+th,
+caption {
+  font-size: 14px;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #e74f4d;
+  transition: color 0.2s;
+}
+img {
+  border: none;
+}
+input,
+textarea,
+select,
+button {
+  font: 14px Verdana, Helvetica, Arial, sans-serif;
+}
+table {
+  border-collapse: collapse;
+}
+html {
+  overflow-y: scroll;
+}
+/*other*/
+.fr {
+  float: right;
+}
+.cl {
+  clear: both;
+}
+.ib {
+  display: inline-block;
+}
+.viewport {
+  width: 100%;
+  min-height: 100%;
+}
+.viewport .title {
+  margin: 20px;
+  padding: 12px 8px;
+  border-radius: 4px;
+  background-color: #e7e7e7;
+  box-shadow: 1px 2px #ccc inset;
+  border: 1px solid #bdbdbd;
+}
+.context-menu {
+  position: absolute;
+  border-radius: 4px;
+  border: 1px solid #acacac;
+  background-color: #fff;
+}
+.context-menu p {
+  padding: 8px 12px;
+  border-top: 1px solid #6f6f6f;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+}
+.context-menu p:hover {
+  background-color: #e2e2e2;
+}
+.context-menu p:first-child {
+  border-top: none;
+  border-radius: 4px 4px 0 0;
+}
+.context-menu p:last-child {
+  border-bottom: none;
+  border-radius: 0 0 4px 4px;
+}
