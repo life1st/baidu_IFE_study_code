@@ -107,9 +107,19 @@
 
 > 写代码真的太有趣了！今天下班我都是蹦着走的！JS简直就是喜欢做工程的最佳选择！什么都可以做！对于简单的需求，性能也不是问题！非常棒！开心！
 
-#### CSS 效果
+#### CSS Task
 
-[有趣的鼠标悬浮模糊效果](https://life1st.github.io/baidu_IFE_study_code/nuomiCollege/cssTask/task1.html)
+[有趣的鼠标悬浮模糊效果](https://life1st.github.io/baidu_IFE_study_code/nuomiCollege/cssTask/task1.html) [任务页](http://ife.baidu.com/course/detail/id/14)
+
+[自定义checkbox， radio样式](https://life1st.github.io/baidu_IFE_study_code/nuomiCollege/cssTask/task2.html) [任务页](http://ife.baidu.com/course/detail/id/23)
+
+#### Js Task
+
+[自定义网页右键菜单](https://life1st.github.io/baidu_IFE_study_code/nuomiCollege/jsTask/task1.html) [任务页](http://ife.baidu.com/course/detail/id/26)
+
+[实现树形组件](https://life1st.github.io/baidu_IFE_study_code/nuomiCollege/jsTask/task2.html) [任务页](http://ife.baidu.com/course/detail/id/84)
+
+> TODO 位置判断
 
 ### ECharts & WebVR学院
 
