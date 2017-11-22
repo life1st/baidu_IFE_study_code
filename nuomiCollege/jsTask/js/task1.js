@@ -2,14 +2,31 @@ document.querySelector('body').addEventListener('contextmenu',function (e) {
     e.preventDefault();
     removeWindow();
     var pos = {
-        x: e.clientX,
-        y: e.clientY
+        cX: e.clientX,
+        cY: e.clientY,
+        iH: window.innerHeight,
+        iW: window.innerWidth,
+    }
+    if (pos.iW - pos.cX < 120){ //120是css中定义的右键菜单的宽度
+        pos.x = pos.cX - 120;
+    }else {
+        pos.x = pos.cX;
+    }
+    if (pos.iH - pos.cY < 35*3){ //35是算出来的每一行的高度，3是右键菜单的行数...以hardcode为耻。
+        pos.y = pos.cY - 35*3
+    }else {
+        pos.y = pos.cY;
     }
     addWindow(pos);
     console.log(pos.x, pos.y,'contextmenu add');
 })
 
-document.addEventListener('click', function () {
+document.addEventListener('click', function (e) {
+    var node = e.target;
+    var nodeName = e.target.nodeName.toLowerCase();
+    if (nodeName === 'p'){
+        console.log(node.innerText);
+    }
     removeWindow();
 })
 function removeWindow() {
