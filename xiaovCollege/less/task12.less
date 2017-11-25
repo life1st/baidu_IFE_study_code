@@ -1,5 +1,8 @@
 @import (less) "../../css/common.css";
 
+body {
+  text-align: center;
+}
 table {
   margin: 0 auto 20px;
 }
@@ -19,18 +22,12 @@ tr:first-child {
 }
 
 input {
+  display: inline-block;
   width: 50px;
-  text-align: center;
-  &:hover {
-    animation: wd 2s ease;
+  transition: width .5s,border .3s;
+  border: 1px solid #ccc;
+  &:focus {
     width: 100px;
+    border: 3px solid #c2cc58;
   }
-}
-
-@keyframes wd {
-  from {
-    width: 50px;
-  }to {
-    width: 100px;
-     }
 }

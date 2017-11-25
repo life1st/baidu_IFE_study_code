@@ -82,6 +82,9 @@ html {
 .ib {
   display: inline-block;
 }
+body {
+  text-align: center;
+}
 table {
   margin: 0 auto 20px;
 }
@@ -101,18 +104,12 @@ tr:first-child {
   color: #fff;
 }
 input {
+  display: inline-block;
   width: 50px;
-  text-align: center;
+  transition: width .5s,border .3s;
+  border: 1px solid #ccc;
 }
-input:hover {
-  animation: wd 2s ease;
+input:focus {
   width: 100px;
-}
-@keyframes wd {
-  from {
-    width: 50px;
-  }
-  to {
-    width: 100px;
-  }
+  border: 3px solid #c2cc58;
 }
