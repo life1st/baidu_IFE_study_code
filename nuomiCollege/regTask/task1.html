@@ -5,9 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>正则表达式之入门</title>
+    <style>
+        .prompt {
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            z-index: 10;
+            color: #f00;
+        }
+        .item {
+            padding-bottom: 40px;
+        }
+    </style>
 </head>
 <body>
-<input type="text" id="phoneNum">
+<div class="item">
+    <label>电话：</label><input type="text" name="phoneNum">
+</div>
+<div class="item">
+    <label>字符串：</label><input type="text" name="string">
+</div>
 <input type="submit" id="submit">
 <script src="task1.js"></script>
 </body>
