@@ -6,8 +6,24 @@ function Validate() {
     var res = [];
     this.setData = function (data) {
         o = data;
+        this.setStyle();
     }
-
+    this.setStyle = function () {
+        var head = document.querySelector('head')
+        var style = document.createElement('style')
+        style.innerHTML =
+            '.prompt{' +
+            '   position: absolute;' +
+            '   padding: 0;' +
+            '   margin: 0;' +
+            '   z-index: 10;' +
+            '   color: #f00;' +
+            '}' +
+            '.item {' +
+            '   padding-bottom: 40px;' +
+            '}'
+        head.appendChild(style)
+    }
     this.getData = function () {
         if (o.length === 0) {
             return;
