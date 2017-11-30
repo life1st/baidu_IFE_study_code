@@ -9,33 +9,68 @@ var msg = {
     mail: ['请输入邮箱地址', '邮箱格式错误', '邮箱格式正确'],
     phoneNum: ['请输入手机号码', '手机号码格式错误', '手机格式正确']
 }
+var reg = {
+    name: /\w{4,16}/g
+}
 
 
 var vail = new vaildaete()
-vail.setMsg(msg)
+vail.setMsg(msg,reg)
 var txt = vail.res('.Form-box');
 
 function vaildaete() {
     var o = {}
-    this.setMsg = function (msg) {
-        o.msg = msg;
+    this.setMsg = function (msg,reg) {
+        o.msg = msg
+        o.reg = reg
+        this.setStyle()
         console.log(o)
+    }
+    this.setStyle = function () {
+        var promptStyle =
+            '.prompt {' +
+            '   position: absolute;' +
+            '   left: 60px;' +
+            '}'
+        var styleNode = document.createElement('style')
+        styleNode.innerHTML = promptStyle
+        document.querySelector('head').appendChild(styleNode)
+        console.log(styleNode)
     }
     this.res = function (node) {
         document.querySelector(node).addEventListener('focusin', function (e) {
             var input = e.target
             var name = input.name
-            console.log(input, name, 'test')
-            console.log(document.querySelectorAll('.prompt'))
+            var val = input.value
             if (!input.parentNode.querySelector('.prompt')){
                 var prompt = document.createElement('p')
                 prompt.className = 'prompt'
-                prompt.innerText = o.msg[name][0]
+                var txt = ''
+                if (val === ''){
+                    txt = o.msg[name][0]
+                    color = '#666'
+                }
+                prompt.innerText = txt
                 console.log(prompt)
                 input.parentNode.appendChild(prompt)
+            }else {
+                var node = input.parentNode.querySelector('.prompt')
+                var color = ''
+                console.log(node)
+                if (!o.reg[name]) return;
+                if (o.reg[name].test(val)) {
+                    node.innerText = o.msg[name][2]
+                    color = '#0f0'
+                }else {
+                    node.innerText = o.msg[name][1]
+                    color = '#f00'
+                }
+                console.log(val,'val')
+                node.style.color = color
+                input.style.borderBottom = '1px solid ' + color
             }
         })
-        document.querySelector(node).addEventListener('onchange', function (e) {
+        document.querySelector(node).addEventListener('focusout', function (e) {
             console.log(e.target)
         })
     }
