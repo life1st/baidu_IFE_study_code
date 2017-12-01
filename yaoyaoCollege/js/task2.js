@@ -10,7 +10,9 @@ var msg = {
     phoneNum: ['请输入手机号码', '手机号码格式错误', '手机格式正确']
 }
 var reg = {
-    name: /\w{4,16}/g
+    name: /\w{4,16}/g,
+    password: /(\[a-z]+[A-Z]+){8,}/,
+
 }
 
 
@@ -42,22 +44,35 @@ function vaildaete() {
             var input = e.target
             var name = input.name
             var val = input.value
-            if (!input.parentNode.querySelector('.prompt')){
-                var prompt = document.createElement('p')
-                prompt.className = 'prompt'
-                var txt = ''
-                if (val === ''){
-                    txt = o.msg[name][0]
-                    color = '#666'
-                }
-                prompt.innerText = txt
-                console.log(prompt)
-                input.parentNode.appendChild(prompt)
-            }else {
-                var node = input.parentNode.querySelector('.prompt')
+            var prom = input.parentNode.querySelector('.prompt') || false
+            if (prom){
+                prom.remove();
+            }
+            var prompt = document.createElement('p')
+            prompt.className = 'prompt'
+            var txt = '',
+                color = ''
+            if (val === ''){
+                txt = o.msg[name][0]
+                color = '#666'
+            }
+            prompt.innerText = txt
+            input.style.borderBottom = '1px solid ' + color
+            console.log(prompt)
+            input.parentNode.appendChild(prompt)
+        })
+        document.querySelector(node).addEventListener('focusout', function (e) {
+            var input = e.target
+            var name = input.name
+            var node = input.parentNode.querySelector('.prompt') || false
+            var val = input.value
+            if (node){
                 var color = ''
-                console.log(node)
-                if (!o.reg[name]) return;
+                console.log(node, 'node')
+                if (!o.reg[name]){
+                    console.log('no reg')
+                    return
+                }
                 if (o.reg[name].test(val)) {
                     node.innerText = o.msg[name][2]
                     color = '#0f0'
@@ -69,9 +84,6 @@ function vaildaete() {
                 node.style.color = color
                 input.style.borderBottom = '1px solid ' + color
             }
-        })
-        document.querySelector(node).addEventListener('focusout', function (e) {
-            console.log(e.target)
         })
     }
 
