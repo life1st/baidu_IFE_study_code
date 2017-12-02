@@ -84,6 +84,8 @@
 
 [任务一：表单（一）单个表单项的检验](https://life1st.github.io/baidu_IFE_study_code/yaoyaoCollege/task1.html) [任务页](http://ife.baidu.com/course/detail/id/97)
 
+[任务二：表单（二）多个表单项的动态校验](https://life1st.github.io/baidu_IFE_study_code/yaoyaoCollege/task2.html) [任务页](http://ife.baidu.com/course/detail/id/101)
+
 [任务三：表单（三）联动](https://life1st.github.io/baidu_IFE_study_code/yaoyaoCollege/task3.html) [任务页](http://ife.baidu.com/course/detail/id/106)
 
 [任务四：听指令的小方块（一）](https://life1st.github.io/baidu_IFE_study_code/yaoyaoCollege/task4.html) [任务页](http://ife.baidu.com/course/detail/id/109)
