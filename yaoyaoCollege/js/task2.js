@@ -12,6 +12,9 @@ var msg = {
 var reg = {
     name: /\w{4,16}/g,
     password: /(\[a-z]+[A-Z]+){8,}/,
+    confirmPw: function (val) {
+      return   val === document.querySelector('.password input').value
+    },
     mail: /\w+@\w+.\[a-z]{1,4}/,
     phoneNum: /1[35789]\d{9}/
 }
@@ -41,6 +44,7 @@ function vaildaete() {
         console.log(styleNode)
     }
     this.res = function (node) {
+        var _this = this
         document.querySelector(node).addEventListener('focusin', function (e) {
             var input = e.target
             var name = input.name
@@ -74,7 +78,7 @@ function vaildaete() {
                     console.log('no reg')
                     return
                 }
-                if (o.reg[name].test(val)) {
+                if (_this.regTest(name,val)) {
                     node.innerText = o.msg[name][2]
                     color = '#0f0'
                 }else {
@@ -86,6 +90,17 @@ function vaildaete() {
                 input.style.borderBottom = '1px solid ' + color
             }
         })
+    }
+    this.regTest = function (name,val) {
+        if (this.isFunction(o.reg[name])){
+            return o.reg[name](val);
+        }else {
+            return o.reg[name].test(val)
+        }
+    }
+
+    this.isFunction = function(fn) {
+        return Object.prototype.toString.call(fn)=== '[object Function]';
     }
 
     return this
