@@ -12,7 +12,8 @@ var msg = {
 var reg = {
     name: /\w{4,16}/g,
     password: /(\[a-z]+[A-Z]+){8,}/,
-
+    mail: /\w+@\w+.\[a-z]{1,4}/,
+    phoneNum: /1[35789]\d{9}/
 }
 
 
