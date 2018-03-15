@@ -2,13 +2,17 @@ function adShow(config) {
   let picList = config.picList
   let element = config.element
   this.picLength = 0
-  let addItem = item => {
+  this.nowPosition = 0
+  this.boxSize = config.size
+  let addItem = (item, i) => {
     let src = item.src
     let alt = item.alt
+    let picWidth = this.boxSize.width
+    let picLeft = picWidth * i
     let adItem =
-      `<div class="ad-item">
+      `<div class="ad-item" style="left: ${picLeft}px;">
         <a href="#">
-          <img src="${src}" alt="${alt}">
+          <img src="${src}" alt="${alt}" class="ad-img">
         </a>
       </div>`
 
@@ -16,21 +20,32 @@ function adShow(config) {
     return adItem
   }
   let addStyl = () => {
+    let {width, height} = {...this.boxSize}
     let stylTpl =
-      `.ad-item {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
+      `
       .ad-wrap {    
         position: relative;
         display: inline-block;
-        width: 289px;
-        height：100px;
+        overflow: hidden;
+        transition: all .3s;
+      }
+      .ad-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: ${width}px;
+        height: ${height}px;
+        foot-size: 0;
+      }
+      .ad-img {
+        width: ${width}px;
+        display: inline-block;
       }
       .ad-btns {
-        position: relative;
+        position: absolute;
         z-index: 10;
+        width: ${width}px;
+        left: 0;        
       }
       .prev-ad {
         position: absolute;
@@ -41,23 +56,55 @@ function adShow(config) {
         right: 0;
       }
       `
+    let adBox = element
+    adBox.style.width = width + 'px'
+    adBox.style.height = height + 'px'
+    adBox.style.overflow = 'hidden'
     var adStyl = document.createElement('style')
     adStyl.innerHTML = stylTpl
     document.querySelector('head').appendChild(adStyl)
   }
   let switchItem = (num) => {
-    let len = this.length
+    let len = this.picLength
+    let pos = this.nowPosition
+    let width = this.boxSize.width
+    let adWrap = document.querySelector('.ad-wrap')
+    let adBox = element
+    console.log('switchItem', len, pos, width, adWrap)
+    adWrap.style.width = len * width + 'px'
+    if (pos + num > len) {
+      //位置超过图片数量
+      this.nowPosition = 0
+      adWrap.style.transform = `translate3D(0, 0, 0)`
+    } else if (pos + num < 0) {
+      //位置小于起始位置
+      this.nowPosition = len - 1
+      let translateX = this.nowPosition * width
+      adWrap.style.transform = `translate3D(${-translateX}px, 0, 0)`
+    } else {
+      this.nowPosition = this.nowPosition + num
+      let translateX = this.nowPosition * width
+      console.log('translate', translateX)
+      adWrap.style.transform = `translate3D(${-translateX}px, 0, 0)`
+    }
   }
   let addEvents = () => {
     let btns = document.querySelector('.ad-btns')
     btns.addEventListener('click', event => {
       var btn = event.target.className.toLocaleLowerCase()
+      console.log('btn click', btn)
       if (btn === 'prev-ad') {
         switchItem(-1)
       } else if (btn === 'next-ad') {
         switchItem(1)
       }
     })
+    if (config.autoplay) {
+      var delay = config.delay || 1000
+      this.t = setInterval(() => {
+        switchItem(1)
+      }, delay)
+    }
   }
   let render = (picList, element) => {
     let list = picList
@@ -66,12 +113,12 @@ function adShow(config) {
     if (len === 0) {
       return false
     }
-    if (this.length < len) {
-      for (let i = this.length; i < len; i++ ){
-        res += addItem(list[i])
+    if (this.picLength < len) {
+      for (let i = this.picLength; i < len; i++ ){
+        res += addItem(list[i], i)
       }
     }
-    this.length = len
+    this.picLength = len
     let btns =
       `
         <div class="ad-btns">
@@ -79,10 +126,10 @@ function adShow(config) {
           <button class="next-ad">next</button>
         </div>
       `
-    res = `<div class='ad-wrap'>${btns}${res}</div>`
+    res = `<div class='ad-wrap'>${res}</div>${btns}`
     addStyl()
     element.innerHTML = res
-
+    addEvents()
   }
 
   let res = false
@@ -114,7 +161,12 @@ function init() {
 
   adShow({
     element: showWrap,
-    picList
+    picList,
+    size: {
+      height: 100,
+      width: 300
+    },
+    autoplay: true,
   })
 }
 
