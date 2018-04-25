@@ -8,6 +8,10 @@
 
 新的今年的课程代码在 2018 目录里面。
 
+[1.2 用webpack4 / parcel快速搭建开发san helloworld](http://ife.baidu.com/course/detail/id/2)
+[代码](https://github.com/life1st/baidu_IFE_study_code/tree/master/2018/MVVM/lesson1.2)
+[预览](https://life1st.github.io/baidu_IFE_study_code/2018/MVVM/lesson1.2/dist/index.html)
+
 --------------------------------------
 
 这个仓库存放的是[百度前端学院](http://ife.baidu.com/course/all)的课程代码。
