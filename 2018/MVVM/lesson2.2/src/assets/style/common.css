@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.title {
+    font-size: 24px;
+    color: #dd3;
+}
+
+.lesson4 table, th, td {
+    border: 1px solid #ccc;
+    text-align: center;
+    border-collapse: collapse;
+}
+th, td {
+    width: 100px;
+}
