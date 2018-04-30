@@ -4,10 +4,12 @@ import './assets/style/common.less'
 import san, { DataTypes } from 'san'
 
 import sInputer from './components/sInput'
+import sCheckbox from './components/sCheckbox'
 
 let App = san.defineComponent({
   components: {
-    's-inputer': sInputer
+    's-inputer': sInputer,
+    's-checkbox': sCheckbox
   },
 
   template:
@@ -28,16 +30,31 @@ let App = san.defineComponent({
         </div>
         <div class="content">
           <h2>基础状态</h2>
-          <s-inputer placeholder="{{placeholder}}"
+          <s-inputer placeholder="place holder text."
           on-input="handleInput"
           on-focus="handleFocus"
           on-blur="handleBlur"
           disabled="true"
-          alert="{{'提示文字'}}"
-          warning="{{'错误提示文字'}}"
-          <!--readonly="true"-->
+          alert="提示文字"
+          warning="错误提示文字"
+          readonly="true"
           value="{= value =}" />
-        </div>        
+        </div>
+      </div>
+      <div class="select">
+        <div class="title">
+          <div class="info">
+            <span class="name">复选框</span>
+            <div class="block">
+              <p class="type">控件</p>
+              <p class="name-en">Check Box</p>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <h2>基础形态、状态</h2>
+          <s-checkbox />
+        </div>
       </div>
     </div>
   </div>
@@ -57,7 +74,7 @@ let App = san.defineComponent({
       msg: '',
       alert: '提示文字',
       placeholder: 'this is a inputer.',
-      value: 'inputer.'
+      value: ''
     }
   }
 })
