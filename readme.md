@@ -110,6 +110,9 @@
 
 >  关键点是学习二叉树遍历的思想（那么问题来了，遍历二叉树在工程上有什么应用？），三种遍历方法的区别是遍历顺序，相同点都是使用递归。动画的展现方法和排序一致，将遍历状态压入数组，然后循环。
 
+> update 2018.5.1
+前段时间在看浙大的数据结构这门课。原来二叉树与二分查找是有对应关系的，二叉树的平衡也涉及到查询效率的问题。子节点有多个兄弟的树仍然能够用二叉树的形式来表示。通过二叉树的结构来查找一个目标数据，比起线性表性能好太多了。
+
 [任务八：JavaScript和树（二）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task8.html) [任务页](http://ife.baidu.com/course/detail/id/110)
 
 [任务九：JavaScript和树（三）](https://life1st.github.io/baidu_IFE_study_code/JsCollege/task9.html) [任务页](http://ife.baidu.com/course/detail/id/111)
