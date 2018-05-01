@@ -53,12 +53,20 @@ let App = san.defineComponent({
         </div>
         <div class="content">
           <h2>基础形态、状态</h2>
-          <s-checkbox />
+          <s-checkbox 
+          on-change="handleChange"
+          checked="true" 
+          >
+          item1
+          </s-checkbox>
         </div>
       </div>
     </div>
   </div>
   `,
+  handleChange(e) {
+    console.log('handle change', e)
+  },
   handleBlur(e) {
     console.log('handle blur', e)
   },
@@ -74,7 +82,7 @@ let App = san.defineComponent({
       msg: '',
       alert: '提示文字',
       placeholder: 'this is a inputer.',
-      value: ''
+      value: '',
     }
   }
 })

@@ -67,13 +67,13 @@ module.exports = {
       },
       {
         // 处理图片文件
-        test: /\.(png|jpg|gif)$/,
-        use: ["file-loader"]
+        test: /\.(png|jpg|gif|svg)$/,
+        use: ["url-loader?limit=10000"]
       },
-      {
-        test: /\.svg$/,
-        use: ['svg-inline-loader']
-      }
+      // {
+      //   test: /\.svg$/,
+      //   use: ['svg-inline-loader']
+      // }
     ]
   },
   resolve: {

@@ -1,0 +1,44 @@
+.checkboxer {
+  @md-size: 20px;
+  @sm-size: 14px;
+  input[type='checkbox'] {
+    display: none;
+    &+.icon {
+      margin-right: 2px;
+      display: inline-block;
+      transition: all 150ms;
+      background: url("../../assets/image/icon-uncheck.svg") center no-repeat;
+      background-size: contain;
+    }
+    &:checked {
+      &+.icon {
+        background: url("../../assets/image/icon-checked.svg") center no-repeat;
+        background-size: contain;
+      }
+    }
+    &:disabled {
+      &+.icon {
+        cursor: not-allowed;
+      }
+    }
+  }
+  .md {
+    font-size: 14px;
+    .icon {
+      width: @md-size;
+      height: @md-size;
+    }
+  }
+  .sm {
+    font-size: 12px;
+    .icon {
+      width: @sm-size;
+      height: @sm-size;
+    }
+  }
+  .s-checkbox {
+    padding: 2px 4px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
