@@ -1,0 +1,35 @@
+.task-item {
+  display: inline-block;
+  width: 270px;
+  min-height: 260px;
+  margin: 16px 18px;
+  outline: 6px solid #fcf0e2;
+  border: 1px solid #ffddb6;
+  background-color: #fcf0e2;
+  text-align: center;
+  font-family: 'STXiHei';
+  border-radius: 4px;
+  vertical-align: top;
+  .title {
+    @h: 42px;
+    display: inline-block;
+    margin: 26px auto 0;
+    height: @h;
+    min-width: 124px;
+    line-height: @h;
+    font-size: 18px;
+    color: #dc2931;
+    background: linear-gradient(to bottom, #f6cd18, #f1b826);
+  }
+  .content {
+    display: inline-block;
+    margin-top: 18px;
+    width: 200px;
+    min-height: 140px;
+    padding: 18px 28px 20px;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #ffeda8;
+    text-align: left;
+  }
+}

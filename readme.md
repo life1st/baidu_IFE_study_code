@@ -37,6 +37,11 @@
 
 [代码](https://github.com/life1st/baidu_IFE_study_code/tree/master/2018/MVVM/lesson2.5/src)
 [预览](https://life1st.github.io/baidu_IFE_study_code/2018/MVVM/lesson2.5/dist/index.html)
+
+[2.6 插槽相关](http://ife.baidu.com/course/detail/id/11)
+
+[代码](https://github.com/life1st/baidu_IFE_study_code/tree/master/2018/MVVM/lesson2.6/src)
+[预览](https://life1st.github.io/baidu_IFE_study_code/2018/MVVM/lesson2.6/dist/index.html)
 --------------------------------------
 
 这个仓库存放的是[百度前端学院](http://ife.baidu.com/course/all)的课程代码。
