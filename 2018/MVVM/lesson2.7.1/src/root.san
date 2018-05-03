@@ -1,0 +1,104 @@
+<template>
+  <div>
+    <button on-click="toggle">TOGGLE</button>
+    <span s-if="show" s-transition="hook" id="hook">
+      Transition Layer
+    </span>
+    <span s-if="show" s-transition="jsHook" id="jsHook">
+      Transition Layer js
+    </span>
+  </div>
+</template>
+
+<script>
+  export default {
+    initData() {
+      return {
+        show: true,
+        className: ''
+      };
+    },
+    toggle() {
+      this.data.set('show', !this.data.get('show'));
+    },
+    _this: this,
+    hook: {
+      enter(el, done) {
+        console.log('css enter')
+        el.className = 'before-enter'
+        setTimeout(() => {
+          el.className = 'enter'
+        }, 0)
+        el.addEventListener('transitionend', () => {
+          console.log('done.')
+          el.className = ''
+          done()
+        })
+      },
+      leave(el, done) {
+        console.log('css leave')
+        el.className = 'before-leave'
+        setTimeout(() => {
+          el.className = 'leave'
+        }, 0)
+        el.addEventListener('transitionend', () => {
+          console.log('done.')
+          el.className = ''
+          done()
+        })
+      }
+    },
+    jsHook: {
+      enter(el, done) {
+        var steps = 20;
+        var currentStep = 0;
+
+        console.log('js enter')
+        function goStep() {
+          if (currentStep >= steps) {
+            el.style.opacity = 1;
+            done();
+            return;
+          }
+
+          el.style.opacity = 1 / steps * currentStep++;
+          requestAnimationFrame(goStep);
+        }
+
+        goStep();
+      },
+      leave(el, done) {
+        var steps = 20
+        var currentStep = 0
+
+        console.log('js leave')
+        function goStep() {
+          if (currentStep >= steps) {
+            el.style.opacity = 0
+            done()
+            return
+          }
+
+          el.style.opacity = 1 - 1 / steps * currentStep++
+          requestAnimationFrame(goStep)
+        }
+
+        goStep()
+      }
+    }
+  }
+</script>
+
+<style>
+  .enter, .leave {
+    transition: all .5s;
+  }
+
+  .before-enter, .leave {
+    opacity: 0;
+  }
+
+  .enter, .before-leave {
+    opacity: 1;
+  }
+</style>
