@@ -1,0 +1,50 @@
+<template>
+  <ul class="list-view">
+    <li class="list-item"
+        s-for="item, index in list"
+        s-if="{{!item.detail}}"
+        s-transition="hook('slide', 100)"
+        on-click="openDetail(item, index)">
+      {{item.content}}
+      <button class="delete-btn" on-click="delete(index, $event)">Delete</button>
+    </li>
+  </ul>
+</template>
+<script>
+  import { transition } from 'san-transition'
+
+  export default {
+    openDetail(item, index) {
+      this.fire('openDetail', {item, index})
+    },
+    delete(index, e) {
+      e.stopPropagation()
+      this.fire('delete', index)
+    },
+    hook: transition,
+    initData() {
+      return {
+
+      }
+    }
+  }
+</script>
+<style lang="less">
+  @import "../assets/style/transition.less";
+  .list-view {
+    width: 80%;
+    /*box-shadow: 1px 1px 3px #666;*/
+    list-style: circle inside;
+    margin: 18px auto;
+    .list-item {
+      padding: 12px 8px;
+      margin: 4px auto;
+      border: 1px solid #333;
+      text-indent: 1em;
+      cursor: pointer;
+    }
+    .delete-btn {
+      float: right;
+    }
+  }
+</style>

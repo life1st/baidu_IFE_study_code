@@ -1,0 +1,80 @@
+<template>
+  <div class='root'>
+    <input type="text" on-keydown="submit" class="submit">
+    <s-list
+      on-delete="deleteItem"
+      on-openDetail="openDetail"
+      list="{{list}}" />
+    <s-detail s-if="showDetail"
+              index="{{detail.index}}"
+              s-transition="hook('zoom')"
+              on-closeDetail="closeDetail">
+      <div slot="title">第{{detail.index + 1}}条数据</div>
+      <div slot="content">{{detail.item.content}}</div>
+    </s-detail>
+  </div>
+</template>
+
+<script>
+  import sListView from './components/listView.san'
+  import detailView from './components/listItemDetail.san'
+
+  import { transition } from 'san-transition'
+  import { debounce } from "./assets/script/utils";
+
+  export default {
+    components: {
+      's-list': sListView,
+      's-detail': detailView
+    },
+    hook: transition,
+    deleteItem(index) {
+      this.data.removeAt('list', index)
+    },
+    submit: debounce(function($event) {
+      let e = $event
+      console.log(e)
+      if (e.key.toLowerCase() === 'enter' && e.target.value !== '') {
+        this.data.push('list', {
+          content: e.target.value,
+          detail: false
+        })
+        e.target.value = ''
+      }
+    }, 200),
+    openDetail({item, index}) {
+      console.log(item, index)
+      this.data.set('detail', {item, index})
+      this.data.set(`list[${index}].detail`, true)
+      this.data.set('showDetail', true)
+    },
+    closeDetail(index) {
+      this.data.set('showDetail', false)
+      this.data.set(`list[${index}].detail`, false)
+    },
+    initData() {
+      return {
+        showDetail: false,
+        detail: {},
+        list: [
+          {
+            content: 'the first item content.',
+            detail: false
+          },
+          {
+            content: 'the other item content.',
+            detail: false
+          }
+        ]
+      };
+    },
+  }
+</script>
+
+<style lang="less">
+.submit {
+  display: block;
+  margin: 12px auto;
+  padding: 4px 6px;
+}
+</style>

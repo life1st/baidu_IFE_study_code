@@ -1,0 +1,41 @@
+<template>
+  <div class="list-item-detail">
+    <i class="close-btn" on-click="emitClose()">X</i>
+    <div class="title" s-if="!!title">{{title}}</div>
+    <div class="title" s-else>
+      <slot name="title"></slot>
+    </div>
+    <div class="content">
+      {{index}}
+      <slot name="content" ></slot>
+    </div>
+    <!--<div class="border-line"></div>-->
+  </div>
+</template>
+
+<script>
+  export default {
+    emitClose() {
+      console.log('emit')
+      this.fire('closeDetail', this.data.get('index'))
+    }
+  }
+</script>
+
+<style scoped lang="less">
+  @import "../assets/style/tasker.less";
+
+  .list-item-detail {
+    position: relative;
+    .close-btn {
+      position: absolute;
+      right: 4px;
+      top: 2px;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      outline: 5px solid transparent;
+      cursor: default;
+    }
+  }
+</style>
