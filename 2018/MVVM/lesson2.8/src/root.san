@@ -1,0 +1,44 @@
+<template>
+  <div class='root'>
+    <s-exp-panel open="true">
+      <span slot="title">title</span>
+      <span slot="description">description</span>
+      <p>this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.</p>
+    </s-exp-panel>
+    <s-exp-panel >
+      <span slot="title">other Exp.</span>
+      <span slot="description">default not open detail</span>
+      <p>this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.</p>
+    </s-exp-panel>
+
+    <!-- other text -->
+    <p>this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.this is content.a long line text.</p>
+  </div>
+
+</template>
+
+<script>
+  import expansionPanel from './components/expansionPanel.san'
+
+  import { transition } from 'san-transition'
+
+  export default {
+    components: {
+      's-exp-panel': expansionPanel,
+    },
+    hook: transition,
+    initData() {
+      return {
+        showDetail: false,
+      }
+    },
+  }
+</script>
+
+<style lang="less">
+.submit {
+  display: block;
+  margin: 12px auto;
+  padding: 4px 6px;
+}
+</style>

@@ -1,0 +1,103 @@
+<template>
+  <div class='exp-panel'>
+    <div class="title cl">
+      <template>
+        <span class="text" s-if="!!panel">{{panel.title}}</span>
+        <slot name="title" s-else></slot>
+        <span class="description">
+          <slot name="description"></slot>
+        </span>
+        <button
+          on-click="toggleContent"
+          class="toggle-content {{isPanelOpen ? 'open' : 'close'}}">
+          <i class="icon"></i>
+        </button>
+      </template>
+    </div>
+    <div class="content" s-if="{{isPanelOpen}}" s-transition="hook('bottom')">
+      <slot></slot>
+    </div>
+  </div>
+</template>
+
+<script>
+  import { transition } from 'san-transition'
+
+  export default {
+    name: "exp-panel",
+    toggleContent() {
+      this.data.set('isPanelOpen', !this.data.get('isPanelOpen'))
+    },
+    hook: transition,
+    initData() {
+      return {
+        isPanelOpen: false
+      }
+    },
+    compiled() {
+      console.log('compiled')
+    },
+    inited() {
+      if (this.data.get('open')) {
+        this.data.set('isPanelOpen', true)
+      }
+      console.log('inited')
+    },
+    created() {
+      console.log('created')
+    }
+  }
+</script>
+
+<style scoped lang='less'>
+  @import "../assets/style/transition.less";
+
+  .exp-panel {
+    margin: 6px 12px;
+    transition: all .3s;
+    overflow: hidden;
+    .title {
+      justify-content: space-between;
+      border: 1px solid #999;
+      font-size: 24px;
+      border-radius: 4px 4px 0 0;
+      padding: 6px 12px;
+      /*margin-bottom: 12px;*/
+      position: relative;
+      background: #fff;
+      z-index: 10;
+      .description {
+        font-size: 14px;
+      }
+      .toggle-content {
+        @size: 20px;
+        float: right;
+        margin-right: 4px;
+        border-radius: 50%;
+        transition: all .3s;
+        padding: 10px;
+        .icon {
+          width: @size;
+          height: @size;
+          background: url("../assets/image/expansionPanel/icon-toggle-open.png") center no-repeat;
+          background-size: @size;
+        }
+        &:hover {
+          background: #b1b1b1;
+        }
+        &.open {
+          // default
+          transform: rotate(0);
+        }
+        &.close {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .content {
+      padding: 6px 12px;
+      border: 1px solid #999;
+      border-top: none;
+    }
+  }
+</style>
