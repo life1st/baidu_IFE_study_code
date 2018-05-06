@@ -1,18 +1,16 @@
 <template>
   <div class='exp-panel'>
     <div class="title cl">
-      <template>
-        <span class="text" s-if="!!panel">{{panel.title}}</span>
-        <slot name="title" s-else></slot>
-        <span class="description">
+      <span class="text" s-if="!!panel">{{panel.title}}</span>
+      <slot name="title" s-else></slot>
+      <span class="description">
           <slot name="description"></slot>
         </span>
-        <button
-          on-click="toggleContent"
-          class="toggle-content {{isPanelOpen ? 'open' : 'close'}}">
-          <i class="icon"></i>
-        </button>
-      </template>
+      <button
+        on-click="toggleContent"
+        class="toggle-content {{isPanelOpen ? 'open' : 'close'}}">
+        <i class="icon"></i>
+      </button>
     </div>
     <div class="content" s-if="{{isPanelOpen}}" s-transition="hook('bottom')">
       <slot></slot>
@@ -57,7 +55,6 @@
     transition: all .3s;
     overflow: hidden;
     .title {
-      justify-content: space-between;
       border: 1px solid #999;
       font-size: 24px;
       border-radius: 4px 4px 0 0;

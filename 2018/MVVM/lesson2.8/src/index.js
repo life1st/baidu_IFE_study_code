@@ -23,35 +23,6 @@ let App = san.defineComponent({
   initData() {
     return {
       version: '0.2.9',
-      tasks: [
-        {
-          title: '第一个task',
-          content: [
-            '列表中的第一项',
-            '列表中的第二项',
-            '列表中的第三项',
-            '列表中的第四项',
-          ]
-        },
-        {
-          title: '第二个task',
-          content: [
-            '列表中的第一项',
-            '列表中的第二项',
-            '列表中的第三项',
-            '列表中的第四项',
-          ]
-        },
-        {
-          title: '第三个task',
-          content: [
-            '列表中的第一项',
-            '列表中的第二项',
-            '列表中的第三项',
-            '列表中的第四项',
-          ]
-        },
-      ]
     }
   }
 })
