@@ -1,0 +1,29 @@
+<template>
+  <form class='s-form' style="{{styleString}}">
+
+  </form>
+</template>
+
+<script>
+  export default {
+    name: "s-form",
+    initData() {
+      return {
+        labelWidth: 100,
+        rules: [],
+        labelPosition: 'left'    // 'left', 'top', 'right'
+      }
+    },
+    computed: {
+      styleString() {
+        let string = `
+
+        `
+      }
+    }
+  }
+</script>
+
+<style scoped lang='less'>
+
+</style>
