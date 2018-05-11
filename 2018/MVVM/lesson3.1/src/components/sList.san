@@ -1,0 +1,14 @@
+<template>
+  <div class='s-list'>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: "s-list"
+  }
+</script>
+
+<style scoped lang='less'>
+
+</style>

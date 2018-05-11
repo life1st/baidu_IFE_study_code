@@ -1,0 +1,125 @@
+body, p, h2, span, ul, li {
+  font-family: 'Microsoft YaHei','STXiHei';
+  margin: 0;
+  padding: 0;
+}
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+.icon {
+  display: block;
+}
+.cl {
+  &::before {
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+  }
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+  }
+}
+.lesson4 table, th, td {
+  border: 1px solid #ccc;
+  text-align: center;
+  border-collapse: collapse;
+}
+th, td {
+  width: 100px;
+}
+
+.lesson5 {
+  .block {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.lesson6 {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  .msg {
+    color: rgb(30, 142, 187);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px;
+  }
+  .child {
+    width: 360px;
+    margin: 20px auto;
+    border: 1px solid #000000;
+  }
+  .parent {
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #600;
+  }
+}
+
+.lesson8 {
+  h2 {
+    color: #333;
+    font-size: 38px;
+    &:before {
+      content: ' ';
+      display: inline-block;
+      height: 32px;
+      margin-top: 3px;
+      margin-right: 10px;
+      border-left: 6px solid #333;
+      background-color: #333;
+    }
+  }
+  .title {
+    background: #333;
+    color: #fff;
+    height: 200px;
+    padding: 36px 24px 24px;
+    .info {
+      display: flex;
+    }
+    .name {
+      display: inline-block;
+      font-size: 56px;
+      margin-right: 12px;
+    }
+    .block {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 10px 0;
+      font-size: 14px;
+      .type {
+        width: 42px;
+        height: 24px;
+        font-size: 14px;
+        color: #333;
+        background: #666;
+        text-align: center;
+        line-height: 24px;
+      }
+      .name-en {
+        color: #666;
+      }
+    }
+  }
+  .input {
+    .content {
+      padding: 12px 24px;
+    }
+  }
+}
+
+.lesson9 {
+  ul {
+    list-style: disc inside;
+  }
+}

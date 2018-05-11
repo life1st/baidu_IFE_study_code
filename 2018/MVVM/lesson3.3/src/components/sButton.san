@@ -1,0 +1,35 @@
+<template>
+  <button class="s-button"
+          on-click="fireClick">
+    <template>{{name ? name : 'OK'}}</template>
+  </button>
+</template>
+
+<script>
+  export default {
+    name: "s-button",
+    fireClick($event) {
+      this.fire('click', $event)
+    }
+  }
+</script>
+
+<style scoped lang='less'>
+  .s-button {
+    border: 1px solid #999;
+    border-radius: 4px;
+    min-width: 78px;
+    min-height: 28px;
+    background: #fff;
+    transition: all 150ms;
+    &:hover {
+      color: #fff;
+      background: #999;
+      box-shadow: 1px 1px 5px #b4b4b4;
+    }
+    &:active {
+      background: #888;
+      box-shadow: 1px 1px 2px #999;
+    }
+  }
+</style>

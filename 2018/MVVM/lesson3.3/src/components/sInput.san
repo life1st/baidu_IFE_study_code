@@ -1,0 +1,101 @@
+<template>
+  <div class='s-input'>
+    <input
+      class="{{!!warning ? 'warning' : ''}}"
+      type="text"
+      value="{= value =}"
+      disabled="{{disabled ? 'true' : '' }}"
+      readonly="{{readonly ? 'true' : ''}}"
+      placeholder="{{placeholder}}"
+      on-focus="emitFocus"
+      on-blur="emitBlur"
+      on-input="emitInput">
+  </div>
+</template>
+
+<script>
+  export default {
+    name: "s-input",
+    initData() {
+      return {
+        showHelp: false
+      }
+    },
+    emitBlur(e) {
+      this.data.set('showHelp', false)
+      this.fire('blur', e)
+    },
+    emitFocus(e) {
+      this.data.set('showHelp', true)
+      console.log('focus input', this.data.get('helpText'))
+      this.fire('focus', e)
+    },
+    emitInput(e){
+      this.fire('input', e)
+    },
+  }
+</script>
+
+<style scoped lang='less'>
+  .s-input {
+    padding: 4px 0;
+    @fz: 14px;
+    input {
+      font-size: @fz;
+      line-height: 18px;
+      padding: 4px 6px;
+      /*min-width: 480px;*/
+      border: 1px solid #DCDCDC;
+      transition: border .3s;
+      &:hover {
+        border: 1px solid #9E9E9E;
+      }
+      &:focus {
+        outline: none;
+        border: 1px solid #A2A2A2;
+      }
+      &:disabled {
+        border: 1px solid #DBDBDB;
+        background-color: #F7F7F7;
+        color: #C2C2C2;
+        cursor: not-allowed;
+      }
+      &.warning {
+        border: 1px solid #FB5D5F;
+      }
+    }
+    .help {
+      color: #FB5F61;
+      margin-bottom: 8px;
+      .content {
+        display: inline-block;
+        padding: 6px 10px;
+        background-color: #FFEFEF;
+        position: relative;
+        //box-shadow: 1px 1px 2px #666;
+        &:after {
+          position: absolute;
+          bottom: -14px;
+          left: 50%;
+          content: ' ';
+          display: block;
+          .triangle-top(#FFEFEF);
+        }
+      }
+    }
+    .warning-text {
+      color: #FC6264;
+      font-size: @fz - 2;
+    }
+  }
+
+  .triangle-top(@c) {
+    @w: 8px;
+    width: 0;
+    height: 0;
+    border-top: @w solid @c;
+    border-left: @w solid transparent;
+    border-bottom: @w solid transparent;
+    border-right: @w solid transparent;
+  }
+</style>

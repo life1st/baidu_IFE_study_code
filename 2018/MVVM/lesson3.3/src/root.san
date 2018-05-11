@@ -1,20 +1,45 @@
 <template>
   <div class='root'>
-
+    <s-form labelWidth="300" labelPosition="right">
+      <s-item label="name" labelPosition="right">
+        <s-input></s-input>
+      </s-item>
+      <s-item label="another" labelPosition="left">
+        <s-input></s-input>
+      </s-item>
+      <s-item label="label Top"
+              labelPosition="top"
+              labelWidth="400"
+              error="Please Input something."
+              helpText="Anything just input is fine."
+              require="true">
+        <s-input></s-input>
+      </s-item>
+    </s-form>
+    <s-button on-click="submitForm" name="Submit" />
   </div>
-
 </template>
 
 <script>
+  import sForm from './components/sForm.san'
+  import sItem from './components/sFormItem.san'
+  import sInput from './components/sInput.san'
+  import sButton from './components/sButton.san'
 
   export default {
     components: {
-
+      's-form': sForm,
+      's-item': sItem,
+      's-input': sInput,
+      's-button': sButton
     },
     initData() {
       return {
       }
     },
+    submitForm(e) {
+      console.log('click', e)
+    }
   }
 </script>
 
