@@ -1,14 +1,91 @@
 <template>
-  <div class='s-list'>
-  </div>
+  <ul class='s-list'>
+    <li s-for="item,index in data" class="item">
+      <label class="label
+      {{!!item.children ? 'menu': 'item'}}
+      {{!!item.open ? 'selected' : ''}}">
+        <input type="radio"
+               name="{{name}}"
+               value="{{item.value}}"
+               on-change="handleChange($event, index, item)">
+        {{item.label}}
+      </label>
+      <s-list s-if="!!item.open && !!item.children"
+              data="{{item.children}}"
+              class="child"></s-list>
+    </li>
+  </ul>
 </template>
 
 <script>
   export default {
-    name: "s-list"
+    name: "s-list",
+    components: {
+      's-list': 'self'
+    },
+    initData() {
+      return {
+        name: 'name'
+      }
+    },
+    handleChange($event, index, item) {
+      let checked = $event.target.checked
+      let data = this.data.get('data')
+      let child = !!item.children
+      console.log('item', item, child)
+      if (!child) {
+        console.log('wtf', item)
+        this.fire('setData', item)
+        console.log('fire')
+        return
+      }
+      data.forEach((item, i) => {
+        console.log(item, i, !!(item.open && item.children))
+        if (i === index) {
+          item.open = true
+        } else {
+          item.open = false
+        }
+        console.log(item)
+      })
+      this.data.set('data', data, {force: true})
+    }
   }
 </script>
 
 <style scoped lang='less'>
-
+  .s-list {
+    position: relative;
+    width: 200px;
+    border: 1px solid #999;
+    padding: 12px 8px;
+    border-radius: 4px;
+    list-style: none;
+    .item {
+      line-height: 1.5em;
+    }
+    .label {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      input {
+        display: none;
+      }
+      &.menu:after {
+        content: '>';
+        position: absolute;
+        right: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &.selected {
+        color: #335e7e;
+      }
+    }
+    .child {
+      position: absolute;
+      top: 0;
+      right: -102%;
+    }
+  }
 </style>
