@@ -58,6 +58,11 @@
 [代码](https://github.com/life1st/baidu_IFE_study_code/tree/master/2018/MVVM/lesson2.8/src/components)
 [预览](https://life1st.github.io/baidu_IFE_study_code/2018/MVVM/lesson2.8/dist/index.html)
 
+[3.1 用递归的方式实现级联组件](http://ife.baidu.com/course/detail/id/15)
+
+[代码](https://github.com/life1st/baidu_IFE_study_code/tree/master/2018/MVVM/lesson3.1/src)
+[预览](https://life1st.github.io/baidu_IFE_study_code/2018/MVVM/lesson3.1/dist/index.html)
+
 --------------------------------------
 
 这个仓库存放的是[百度前端学院](http://ife.baidu.com/course/all)的课程代码。
