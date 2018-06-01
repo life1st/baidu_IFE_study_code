@@ -1,0 +1,68 @@
+.s-date-picker {
+  .picker {
+    width: 300px;
+    .header {
+      position: relative;
+      .btn {
+        @w: 30px;
+        @h: 20px;
+        display: block;
+        width: @w;
+        height: @h;
+        position: absolute;
+        border-radius: 4px;
+        margin: 0 2px;
+        border: 1px solid #666;
+        transition: all 120ms ease-in;
+        &:hover {
+          box-shadow: -2px -2px 3px #999;
+        }
+        &:active {
+          box-shadow: 0 0 2px #888;
+        }
+        &.prev-year {
+          left: 0;
+          .setBg('../image/icon_dbarrow.png');
+        }
+        &.prev-month {
+          left: @w;
+          .setBg('../image/icon_arrow.png');
+        }
+        &.next-month {
+          right: @w;
+          .setBg('../image/icon_arrow.png');
+          transform: rotate(180deg);
+        }
+        &.next-year {
+          right: 0;
+          .setBg('../image/icon_dbarrow.png');
+          transform: rotate(180deg);
+        }
+      }
+      .date-display {
+        text-align: center;
+      }
+    }
+    .body {
+      .day {
+        transition: background-color 180ms;
+        cursor: default;
+        &:hover {
+          background-color: #d3d3d3;
+        }
+        &.prev {
+          color: #737373;
+          cursor: not-allowed;
+          &:hover {
+            background: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+
+.setBg(@url) {
+  background: url(@url) center no-repeat;
+  background-size: contain;
+}

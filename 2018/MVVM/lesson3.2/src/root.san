@@ -1,0 +1,27 @@
+<template>
+  <div class='root'>
+    <date-picker />
+  </div>
+</template>
+
+<script>
+  import sDatePicker from './components/sDatePicker.js'
+
+  export default {
+    components: {
+      'date-picker': sDatePicker
+    },
+    initData() {
+      return {
+      }
+    },
+  }
+</script>
+
+<style lang="less">
+  .s-list {
+    position: relative;
+    display: inline-block;
+    width: 500px;
+  }
+</style>

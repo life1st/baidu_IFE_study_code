@@ -1,0 +1,43 @@
+<template>
+  <div class='s-date-picker'>
+    <s-input on-focus="openDatePicker" on-blur="closeDatePicker" />
+    <p>sdafasf</p>
+    <div class="date-picker" >
+      <p>date</p>
+    </div>
+  </div>
+</template>
+
+<script>
+  import sInput from './sInput.san'
+
+  import dateIcon from '../assets/image/icon_date.png'
+
+  export default {
+    name: "s-date-picker",
+    components: {
+      's-input': sInput
+    },
+    data() {
+      return {
+        dateIcon: dateIcon,
+        isOpenDatePicker: false
+      }
+    },
+    openDatePicker() {
+      this.data.set('isOpenDatePicker', true)
+      console.log(this.data.get('isOpenDatePicker'))
+    },
+    closeDatePicker() {
+      this.data.set('isOpenDatePicker', false)
+      console.log(this.data.get('isOpenDatePicker'))
+    },
+    inited() {
+      console.log('inited')
+    }
+  }
+</script>
+
+<style scoped lang='less'>
+
+</style>
