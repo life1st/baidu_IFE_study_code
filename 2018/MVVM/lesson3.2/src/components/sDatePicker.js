@@ -24,9 +24,7 @@ let sDatePicker = san.defineComponent({
           </tr>
           <tr s-for="week, i in month">
             <td s-for="day, j in week"
-            class="day
-             {{(7 * i + j) < month1stDayOfWeek ? 'prev': ''}
-             {{(7 * i + j) > thisMonthCountDayNum ? 'next' : ''}}"
+            class="day {{isThisMonth(i, j)}}"
             on-click="selectDay(day)">{{day}}</td>
           </tr>
         </table>
@@ -57,6 +55,17 @@ let sDatePicker = san.defineComponent({
   closeDatePicker() {
     this.data.set('isOpenDatePicker', false)
     console.log(this.data.get('isOpenDatePicker'))
+  },
+  isThisMonth(i, j) {
+    let month1stDayOfWeek = this.data.get('month1stDayOfWeek')
+    let thisMonthCountDayNum = this.data.get('thisMonthCountDayNum')
+    if ((7 * i + j) < month1stDayOfWeek) {
+      return 'prev'
+    } else if ((7 * i + j) > thisMonthCountDayNum) {
+      return 'next'
+    } else {
+      return ''
+    }
   },
   setDate(str) {
     let y = this.data.get('y')
@@ -95,7 +104,7 @@ let sDatePicker = san.defineComponent({
     let y = this.data.get('y')
     let m = this.data.get('m') + 1
     let date = `${y}-${m}-${day}`
-    console.log(date)
+    console.log(date, this.data.get('thisMonthCountDayNum'))
   },
   inited() {
     let now = new Date()
