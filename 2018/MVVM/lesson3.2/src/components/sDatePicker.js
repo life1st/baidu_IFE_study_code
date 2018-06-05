@@ -1,15 +1,17 @@
 import san from 'san'
+import { transition } from 'san-transition'
 
 import sInput from './sInput.san'
 import { countDay, initMonth } from "../assets/script/utils";
 import '../assets/style/sDatePicker.less'
+import '../assets/style/transition.less'
 
 let sDatePicker = san.defineComponent({
   template: `
   <div class='s-date-picker'>
     <button on-click="closeDatePicker">close</button>
     <s-input on-focus="openDatePicker"/>
-    <div class="picker" s-if="isOpenDatePicker">
+    <div class="picker" s-if="isOpenDatePicker" s-transition="anim('open')">
       <div class="header">
         <i class="btn prev-year" on-click="setDate('prevYear')"></i>
         <i class="btn prev-month" on-click="setDate('prevMonth')"></i>
@@ -24,8 +26,8 @@ let sDatePicker = san.defineComponent({
           </tr>
           <tr s-for="week, i in month">
             <td s-for="day, j in week"
-            class="day {{isThisMonth(i, j)}}"
-            on-click="selectDay(day)">{{day}}</td>
+            class="day {{ (7*i+j < month1stDayOfWeek ||  7*i+j > thisMonthCountDayNum)? 'prev': ''}}"
+            on-click="selectDay(day, 7*i+j)">{{day}}</td>
           </tr>
         </table>
       </div>
@@ -36,6 +38,7 @@ let sDatePicker = san.defineComponent({
   components: {
     's-input': sInput
   },
+  anim: transition,
   initData() {
     return {
       timestamp: 12,
@@ -54,17 +57,14 @@ let sDatePicker = san.defineComponent({
   },
   closeDatePicker() {
     this.data.set('isOpenDatePicker', false)
-    console.log(this.data.get('isOpenDatePicker'))
   },
-  isThisMonth(i, j) {
+  isThisMonth(position) {
     let month1stDayOfWeek = this.data.get('month1stDayOfWeek')
     let thisMonthCountDayNum = this.data.get('thisMonthCountDayNum')
-    if ((7 * i + j) < month1stDayOfWeek) {
-      return 'prev'
-    } else if ((7 * i + j) > thisMonthCountDayNum) {
-      return 'next'
+    if (position < month1stDayOfWeek || position > thisMonthCountDayNum) {
+      return false
     } else {
-      return ''
+      return true
     }
   },
   setDate(str) {
@@ -100,7 +100,8 @@ let sDatePicker = san.defineComponent({
     this.data.set('y', y)
     console.log(this.data.get('timestamp'))
   },
-  selectDay(day) {
+  selectDay(day, position) {
+    if (!isThisMonth(position)) return
     let y = this.data.get('y')
     let m = this.data.get('m') + 1
     let date = `${y}-${m}-${day}`
@@ -120,6 +121,16 @@ let sDatePicker = san.defineComponent({
     this.data.set('m', m)
     this.data.set('y', y)
     this.data.set('timestamp', now)
+    window.addEventListener('click', () => {
+      let isOpen = this.data.get('isOpenDatePicker')
+      console.log(isOpen)
+      if (isOpen) {
+        console.log('close')
+        // this.closeDatePicker()
+      } else {
+        // nothing.
+      }
+    }, true)
   },
   filters: {
     format(value) {
