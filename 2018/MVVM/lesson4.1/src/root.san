@@ -1,0 +1,136 @@
+<template>
+  <div class="root">
+    <section class="todoapp">
+      <header class="header">
+        <h1>Todos</h1>
+        <input class="new-todo"
+               autofocus autocomplete="off"
+               placeholder="What needs to be done?"
+               value="{= newTodo =}"
+               on-keyup="addTodo">
+      </header>
+      <section class="main" s-if="todos.length">
+        <input class="toggle-all" type="checkbox" value="{{allDone}}">
+        <ul class="todo-list">
+          <li s-for="todo in filteredTodos"
+              class="todo"
+              class="{{ todo === editedTodo ? 'editing': '' }}"
+              class="{{ todo.completed ? 'todo completed' : '' }}">
+            <div class="view">
+              <input class="toggle" type="checkbox" value="{= todo.completed =}">
+              <label on-dblclick="editTodo(todo)">{{ todo.title }}</label>
+              <button class="destroy" @click="removeTodo(todo)"></button>
+            </div>
+            <input class="edit" type="text"
+                   value="{= todo.title =}"
+                   @blur="doneEdit(todo)"
+                   @keyup.enter="doneEdit(todo)"
+                   @keyup.esc="cancelEdit(todo)">
+          </li>
+        </ul>
+      </section>
+      <footer class="footer" v-show="todos.length" v-cloak>
+    <span class="todo-count">
+      <strong>{{ remaining }}</strong> {{ remaining | pluralize }} left
+    </span>
+        <ul class="filters">
+          <li><button on-click="filterItem('all')"
+                      class="{{ visibility == 'all' ? 'selected' : '' }}">All
+          </button></li>
+          <li><button on-click="filterItem('active')"
+                      class="{{ visibility == 'active' ? 'selected' : '' }}">Active
+          </button></li>
+          <li><button on-click="filterItem('completed')"
+                      class="{{ visibility == 'completed' ? 'selected': ''  }}">Completed
+          </button></li>
+        </ul>
+        <button class="clear-completed"
+                on-click="removeCompleted"
+                s-if="todos.length > remaining">Clear completed</button>
+      </footer>
+    </section>
+    <footer class="info">
+      <p>Double-click to edit a todo</p>
+      <p>Written by <a href="http://evanyou.me">Evan You</a></p>
+      <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+    </footer>
+  </div>
+</template>
+
+<script>
+
+  export default {
+    initData() {
+      return {
+        newTodo: '',
+        editedTodo: null,
+        todos: [],
+        filteredTodos: [],
+        visibility: 'all'
+      }
+    },
+    computed: {
+      remaining() {
+        return this.data.get('todos').filter(item => item.completed).length
+      }
+    },
+    addTodo($event) {
+      let e = $event
+      if (e.key !== 'Enter') return
+      let newTodo = this.data.get('newTodo')
+      if (newTodo === '') return
+      this.data.push('todos', {
+        title: newTodo,
+        active: true,
+        completed: false
+      })
+      console.log(this.data.get('todos'))
+      this.data.set('newTodo', '')
+      this.filterTodos()
+    },
+    filterItem(str) {
+      console.log('click')
+      switch (str) {
+        case 'all':
+          this.data.set('visibility', 'all')
+          break
+        case 'active':
+          this.data.set('visibility', 'active')
+          break
+        case 'completed':
+          this.data.set('visibility', 'completed')
+          break
+        default:
+      }
+      this.filterTodos()
+    },
+    filterTodos() {
+      let filter = this.data.get('visibility')
+      let todos = this.data.get('todos')
+      let data
+      switch (filter) {
+        case 'all':
+          data = todos
+          break
+        case 'active':
+          data = todos.filter(item => item.active)
+          break
+        case 'completed':
+          data = todos.filter(item => item.completed)
+          break
+      }
+      this.data.set('filteredTodos', data)
+      console.log('filteredTodos')
+    },
+    editTodo() {
+
+    },
+    removeCompleted() {
+      this.data.set('todos', this.data.get('todos').filter(item => !item.completed))
+    }
+  }
+</script>
+
+<style lang="less">
+  @import (less) './assets/style/todo.css';
+</style>
