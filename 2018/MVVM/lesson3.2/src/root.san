@@ -1,6 +1,6 @@
 <template>
   <div class='root'>
-    <date-picker />
+    <date-picker on-selectDate='setDate'/>
   </div>
 </template>
 
@@ -13,8 +13,12 @@
     },
     initData() {
       return {
+        date: ''
       }
     },
+    setDate(date) {
+      this.data.set('date', date)
+    }
   }
 </script>
 

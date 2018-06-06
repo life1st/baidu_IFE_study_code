@@ -15,7 +15,7 @@ let App = san.defineComponent({
   <div class='main'>
     <h1>Hello San.</h1>
     <p>the first san app. Ver {{version}}</p>
-    <div class='lesson31'>
+    <div class='lesson32'>
       <root />
     </div>
   </div>

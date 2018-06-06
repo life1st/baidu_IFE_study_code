@@ -10,7 +10,7 @@ let sDatePicker = san.defineComponent({
   template: `
   <div class='s-date-picker'>
     <button on-click="closeDatePicker">close</button>
-    <s-input on-focus="openDatePicker"/>
+    <s-input on-focus="openDatePicker" value="{= date =}"/>
     <div class="picker" s-if="isOpenDatePicker" s-transition="anim('open')">
       <div class="header">
         <i class="btn prev-year" on-click="setDate('prevYear')"></i>
@@ -26,7 +26,7 @@ let sDatePicker = san.defineComponent({
           </tr>
           <tr s-for="week, i in month">
             <td s-for="day, j in week"
-            class="day {{ (7*i+j < month1stDayOfWeek ||  7*i+j > thisMonthCountDayNum)? 'prev': ''}}"
+            class="day {{isThisMonth(i, j)}}"
             on-click="selectDay(day, 7*i+j)">{{day}}</td>
           </tr>
         </table>
@@ -41,6 +41,7 @@ let sDatePicker = san.defineComponent({
   anim: transition,
   initData() {
     return {
+      date: '',
       timestamp: 12,
       weekTitle: ['日', '一', '二', '三', '四', '五', '六'],
       month: [],
@@ -101,11 +102,14 @@ let sDatePicker = san.defineComponent({
     console.log(this.data.get('timestamp'))
   },
   selectDay(day, position) {
-    if (!isThisMonth(position)) return
+    if (!this.isThisMonth(position)) return
     let y = this.data.get('y')
     let m = this.data.get('m') + 1
     let date = `${y}-${m}-${day}`
     console.log(date, this.data.get('thisMonthCountDayNum'))
+    this.data.set('date', date)
+    this.closeDatePicker()
+    this.fire('selectDate', date)
   },
   inited() {
     let now = new Date()
