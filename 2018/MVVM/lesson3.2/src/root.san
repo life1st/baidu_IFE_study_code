@@ -1,6 +1,7 @@
 <template>
   <div class='root'>
     <date-picker on-selectDate='setDate'/>
+    <p>the date is: {{date}}</p>
   </div>
 </template>
 

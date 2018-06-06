@@ -26,7 +26,7 @@ let sDatePicker = san.defineComponent({
           </tr>
           <tr s-for="week, i in month">
             <td s-for="day, j in week"
-            class="day {{isThisMonth(i, j)}}"
+            class="day {{((7 * i + j) < month1stDayOfWeek || (7 * i + j) > thisMonthCountDayNum + month1stDayOfWeek - 1) ? 'prev': ''}}"
             on-click="selectDay(day, 7*i+j)">{{day}}</td>
           </tr>
         </table>
@@ -49,12 +49,12 @@ let sDatePicker = san.defineComponent({
       thisMonthCountDayNum: null,
       d: null,
       m: null,
-      y: null
+      y: null,
+      isOpenDatePicker: false
     }
   },
   openDatePicker() {
     this.data.set('isOpenDatePicker', true)
-    console.log(this.data.get('isOpenDatePicker'))
   },
   closeDatePicker() {
     this.data.set('isOpenDatePicker', false)
@@ -62,7 +62,7 @@ let sDatePicker = san.defineComponent({
   isThisMonth(position) {
     let month1stDayOfWeek = this.data.get('month1stDayOfWeek')
     let thisMonthCountDayNum = this.data.get('thisMonthCountDayNum')
-    if (position < month1stDayOfWeek || position > thisMonthCountDayNum) {
+    if (position < month1stDayOfWeek || position > thisMonthCountDayNum + month1stDayOfWeek - 1) {
       return false
     } else {
       return true
@@ -106,7 +106,6 @@ let sDatePicker = san.defineComponent({
     let y = this.data.get('y')
     let m = this.data.get('m') + 1
     let date = `${y}-${m}-${day}`
-    console.log(date, this.data.get('thisMonthCountDayNum'))
     this.data.set('date', date)
     this.closeDatePicker()
     this.fire('selectDate', date)
@@ -125,16 +124,18 @@ let sDatePicker = san.defineComponent({
     this.data.set('m', m)
     this.data.set('y', y)
     this.data.set('timestamp', now)
-    window.addEventListener('click', () => {
-      let isOpen = this.data.get('isOpenDatePicker')
-      console.log(isOpen)
-      if (isOpen) {
-        console.log('close')
-        // this.closeDatePicker()
-      } else {
-        // nothing.
-      }
-    }, true)
+    // window.addEventListener('click', () => {
+    //   let isOpen = this.data.get('isOpenDatePicker')
+    //   let opened = this.data.get('isOpened')
+    //   console.log(isOpen, opened)
+    //   if (isOpen && opened) {
+    //     this.data.set('isOpened', false)
+    //     this.closeDatePicker()
+    //     console.log('wtf')
+    //   } else if (isOpen) {
+    //     this.data.set('isOpened', true)
+    //   }
+    // })
   },
   filters: {
     format(value) {
