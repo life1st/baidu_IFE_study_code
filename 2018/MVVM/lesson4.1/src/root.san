@@ -72,9 +72,7 @@
     },
     computed: {
       remaining() {
-        let todos = this.data.get('todos')
-        if (!!todos) return 0
-        return todos.filter(item => !item.completed).length
+        return this.data.get('todos').filter(item => !item.completed).length
       }
     },
     filters: {
