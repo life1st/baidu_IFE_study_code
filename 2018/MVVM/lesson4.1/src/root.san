@@ -12,24 +12,24 @@
       <section class="main" s-if="todos.length">
         <input class="toggle-all" type="checkbox" value="{{allDone}}">
         <ul class="todo-list">
-          <li s-for="todo in filteredTodos"
+          <li s-for="todo,i in filteredTodos"
               class="todo"
-              class="{{ todo === editedTodo ? 'editing': '' }}"
+              class="{{ todo.id === editedTodo.id ? 'todo editing': '' }}"
               class="{{ todo.completed ? 'todo completed' : '' }}">
             <div class="view">
-              <input class="toggle" type="checkbox" value="{= todo.completed =}">
-              <label on-dblclick="editTodo(todo)">{{ todo.title }}</label>
-              <button class="destroy" @click="removeTodo(todo)"></button>
+              <input class="toggle" type="checkbox" checked="{= todo.completed =}" on-click="complate(i)">
+              <label on-dblclick="editTodo(i)">{{ todo.title }}</label>
+              <button class="destroy" on-click="removeTodo(i)"></button>
             </div>
-            <input class="edit" type="text"
-                   value="{= todo.title =}"
-                   @blur="doneEdit(todo)"
-                   @keyup.enter="doneEdit(todo)"
-                   @keyup.esc="cancelEdit(todo)">
+            <input class="edit"
+                   type="text"
+                   value="{= editedTodo.title =}"
+                   on-blur="doneEdit(i)"
+                   on-keyup="handleEdit($event, i)">
           </li>
         </ul>
       </section>
-      <footer class="footer" v-show="todos.length" v-cloak>
+      <footer class="footer" s-if="{{todos.length}}">
     <span class="todo-count">
       <strong>{{ remaining }}</strong> {{ remaining | pluralize }} left
     </span>
@@ -58,6 +58,7 @@
 </template>
 
 <script>
+  import { getTodos, updateTodos } from "./api/store";
 
   export default {
     initData() {
@@ -71,25 +72,47 @@
     },
     computed: {
       remaining() {
-        return this.data.get('todos').filter(item => item.completed).length
+        let todos = this.data.get('todos')
+        if (!!todos) return 0
+        return todos.filter(item => !item.completed).length
       }
+    },
+    filters: {
+      pluralize(value) {
+        return value > 1 ? 'items' : 'item'
+      }
+    },
+    inited() {
+      getTodos().then(res => {
+        this.data.set('todos', res)
+        this.filterTodos()
+      })
     },
     addTodo($event) {
       let e = $event
       if (e.key !== 'Enter') return
       let newTodo = this.data.get('newTodo')
       if (newTodo === '') return
-      this.data.push('todos', {
+      let data = {
         title: newTodo,
-        active: true,
-        completed: false
-      })
-      console.log(this.data.get('todos'))
+        completed: false,
+        id: Math.floor(Math.random() * 1000) + new Date().getUTCDate() + ''
+      }
+      this.data.unshift('todos', data)
       this.data.set('newTodo', '')
       this.filterTodos()
+      this.updateTodos()
+    },
+    removeTodo(index) {
+      this.data.removeAt('todos', index)
+      this.filterTodos()
+      this.updateTodos()
+    },
+    editTodo(index) {
+      let todo = this.data.get(`todos[${index}]`)
+      this.data.set('editedTodo', todo)
     },
     filterItem(str) {
-      console.log('click')
       switch (str) {
         case 'all':
           this.data.set('visibility', 'all')
@@ -103,6 +126,7 @@
         default:
       }
       this.filterTodos()
+      this.updateTodos()
     },
     filterTodos() {
       let filter = this.data.get('visibility')
@@ -113,20 +137,52 @@
           data = todos
           break
         case 'active':
-          data = todos.filter(item => item.active)
+          data = todos.filter(item => !item.completed)
           break
         case 'completed':
           data = todos.filter(item => item.completed)
           break
       }
       this.data.set('filteredTodos', data)
-      console.log('filteredTodos')
     },
-    editTodo() {
-
+    complate(index) {
+      this.data.set(`todos[${index}].completed`, !this.data.get(`todos[${index}].completed`))
+      this.filterTodos()
+      this.updateTodos()
     },
     removeCompleted() {
-      this.data.set('todos', this.data.get('todos').filter(item => !item.completed))
+      let data = this.data.get('todos').filter(item => !item.completed)
+      this.data.set('todos',this.data.get('todos').filter(item => !item.completed),)
+      this.filterTodos()
+      this.updateTodos()
+    },
+    handleEdit($event, index) {
+      let key = $event.key
+      switch (key) {
+        case 'Enter':
+          this.doneEdit(index)
+          break
+        case 'Escape':
+          this.cancelEdit()
+          break
+        default:
+      }
+    },
+    doneEdit(index) {
+      let todo = this.data.get('editedTodo')
+      if (!todo) return
+      this.data.set(`todos[${index}]`, todo)
+      this.filterTodos()
+      this.updateTodos()
+      setTimeout(() => {
+        this.data.set('editedTodo', null)
+      }, 300)
+    },
+    cancelEdit() {
+      this.data.set('editedTodo', null)
+    },
+    updateTodos() {
+      updateTodos(this.data.get('todos'))
     }
   }
 </script>
