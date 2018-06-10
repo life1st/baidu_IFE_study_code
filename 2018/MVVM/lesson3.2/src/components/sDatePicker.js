@@ -13,7 +13,7 @@ let sDatePicker = san.defineComponent({
   template: `
   <div class='s-date-picker' s-ref="datePicker">
     <button on-click="closeDatePicker">close</button>
-    <s-input on-click="openDatePicker" value="{= date =}"/>
+    <s-input on-focus="openDatePicker" value="{= date =}"/>
     <div class="picker" s-if="isOpenDatePicker" s-transition="anim('open')">
       <div class="header">
         <i class="btn prev-year" on-click="setDate('prevYear')"></i>
@@ -138,7 +138,10 @@ let sDatePicker = san.defineComponent({
       }
       isOpen = this.data.get('isOpenDatePicker')
 
-    }, true)
+    })
+  },
+  detached() {
+    window.removeEventListener('click')
   },
   filters: {
     format(value) {

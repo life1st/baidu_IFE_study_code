@@ -1,7 +1,6 @@
 const path = require("path");
 const webpack = require('webpack')
 const HtmlPlugin = require("html-webpack-plugin");
-const CleanDir = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -32,10 +31,6 @@ module.exports = {
     new HtmlPlugin({
       title: "hello San.",
       favicon: "./static/favicon.ico"
-    }),
-    new CleanDir(["./dist"], {
-      root: path.resolve(__dirname , '..'),
-      verbose: true
     }),
   ],
   module: {
