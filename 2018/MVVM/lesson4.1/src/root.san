@@ -34,15 +34,21 @@
       <strong>{{ remaining }}</strong> {{ remaining | pluralize }} left
     </span>
         <ul class="filters">
-          <li><button on-click="filterItem('all')"
-                      class="{{ visibility == 'all' ? 'selected' : '' }}">All
-          </button></li>
-          <li><button on-click="filterItem('active')"
-                      class="{{ visibility == 'active' ? 'selected' : '' }}">Active
-          </button></li>
-          <li><button on-click="filterItem('completed')"
-                      class="{{ visibility == 'completed' ? 'selected': ''  }}">Completed
-          </button></li>
+          <li>
+            <button on-click="filterItem('all')"
+                    class="{{ visibility == 'all' ? 'selected' : '' }}">All
+            </button>
+          </li>
+          <li>
+            <button on-click="filterItem('active')"
+                    class="{{ visibility == 'active' ? 'selected' : '' }}">Active
+            </button>
+          </li>
+          <li>
+            <button on-click="filterItem('completed')"
+                    class="{{ visibility == 'completed' ? 'selected': ''  }}">Completed
+            </button>
+          </li>
         </ul>
         <button class="clear-completed"
                 on-click="removeCompleted"
@@ -109,6 +115,7 @@
     editTodo(index) {
       let todo = this.data.get(`todos[${index}]`)
       this.data.set('editedTodo', todo)
+
     },
     filterItem(str) {
       switch (str) {

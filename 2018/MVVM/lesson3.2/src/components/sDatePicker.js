@@ -2,15 +2,18 @@ import san from 'san'
 import { transition } from 'san-transition'
 
 import sInput from './sInput.san'
+// utils
+// import { upperDom } from "../assets/script/utils";
+import { upperDom } from "../assets/script/dom";
 import { countDay, initMonth } from "../assets/script/utils";
 import '../assets/style/sDatePicker.less'
 import '../assets/style/transition.less'
 
 let sDatePicker = san.defineComponent({
   template: `
-  <div class='s-date-picker'>
+  <div class='s-date-picker' s-ref="datePicker">
     <button on-click="closeDatePicker">close</button>
-    <s-input on-focus="openDatePicker" value="{= date =}"/>
+    <s-input on-click="openDatePicker" value="{= date =}"/>
     <div class="picker" s-if="isOpenDatePicker" s-transition="anim('open')">
       <div class="header">
         <i class="btn prev-year" on-click="setDate('prevYear')"></i>
@@ -110,7 +113,7 @@ let sDatePicker = san.defineComponent({
     this.closeDatePicker()
     this.fire('selectDate', date)
   },
-  inited() {
+  attached() {
     let now = new Date()
     let y = now.getFullYear()
     let m = now.getMonth()
@@ -124,18 +127,18 @@ let sDatePicker = san.defineComponent({
     this.data.set('m', m)
     this.data.set('y', y)
     this.data.set('timestamp', now)
-    // window.addEventListener('click', () => {
-    //   let isOpen = this.data.get('isOpenDatePicker')
-    //   let opened = this.data.get('isOpened')
-    //   console.log(isOpen, opened)
-    //   if (isOpen && opened) {
-    //     this.data.set('isOpened', false)
-    //     this.closeDatePicker()
-    //     console.log('wtf')
-    //   } else if (isOpen) {
-    //     this.data.set('isOpened', true)
-    //   }
-    // })
+
+    // let datePicker = this.ref('datePicker')
+    let isOpen
+    window.addEventListener('click', (e) => {
+      let datePicker = document.querySelector('.picker')
+      console.log(isOpen, upperDom(datePicker, e.target))
+      if (isOpen && upperDom(datePicker, e.target)) {
+        this.closeDatePicker()
+      }
+      isOpen = this.data.get('isOpenDatePicker')
+
+    }, true)
   },
   filters: {
     format(value) {
