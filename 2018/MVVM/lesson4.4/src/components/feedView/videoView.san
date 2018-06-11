@@ -1,0 +1,16 @@
+<template>
+  <div class='s-video'>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: "s-video"
+  }
+</script>
+
+<style scoped lang='less'>
+  .s-video {
+
+  }
+</style>

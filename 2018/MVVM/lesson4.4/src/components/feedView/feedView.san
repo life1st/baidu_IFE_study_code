@@ -1,0 +1,26 @@
+<template>
+  <ul class='s-feed'>
+    <s-item s-for="item in items" />
+  </ul>
+</template>
+
+<script>
+  import sItem from './feedItem.san'
+
+  export default {
+    name: "s-feed",
+    components: {
+      's-item': sItem
+    },
+    initData() {
+      return {
+      }
+    }
+  }
+</script>
+
+<style scoped lang='less'>
+  .s-feed {
+
+  }
+</style>

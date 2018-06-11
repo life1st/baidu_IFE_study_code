@@ -1,0 +1,16 @@
+<template>
+  <div class='s-img'>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: "s-img"
+  }
+</script>
+
+<style scoped lang='less'>
+  .s-img {
+
+  }
+</style>

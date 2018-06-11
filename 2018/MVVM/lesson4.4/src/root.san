@@ -1,0 +1,33 @@
+<template>
+  <div class='root'>
+    <s-feed data="{{items}}" on-slideToBottem="fetchData" />
+  </div>
+</template>
+
+<script>
+  import feedView from './components/feedView/feedView.san'
+
+  import { getList } from "./api";
+
+  export default {
+    components: {
+      's-feed': feedView
+    },
+    initData() {
+      return {
+        items: []
+      }
+    },
+
+    // custom function
+    fetchData() {
+      getList().then(res => {
+        this.data.set('items', res)
+      })
+    }
+  }
+</script>
+
+<style lang="less" scoped>
+
+</style>

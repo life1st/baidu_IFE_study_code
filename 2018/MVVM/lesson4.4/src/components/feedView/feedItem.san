@@ -1,0 +1,20 @@
+<template>
+  <li class='s-feed-item'>
+    <p>{{}}</p>
+  </li>
+</template>
+
+<script>
+  import mediaRender from './mediaRender.san'
+
+  export default {
+    name: "s-feed-item",
+    components: {
+      's-media': mediaRender
+    }
+  }
+</script>
+
+<style scoped lang='less'>
+
+</style>
