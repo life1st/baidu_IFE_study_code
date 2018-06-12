@@ -1,11 +1,14 @@
-function getList() {
-  const DATA_LEN = 10
+function getList(config) {
+  const DATA_LEN = 300
   let data = []
   for (let i = 0; i < DATA_LEN; i++ ){
     data.push(getItem(i))
   }
 
-  return data
+  return new Promise(resolve => resolve({
+    list: data,
+    index: config.index
+  }))
 }
 
 function getItem(index) {

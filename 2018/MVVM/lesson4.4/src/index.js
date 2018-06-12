@@ -13,14 +13,11 @@ let App = san.defineComponent({
   template:
     `
   <div class='main'>
-
+    <!--<h1>Hello San.</h1>-->
+    <!--<p>the first san app. Ver {{version}}</p>-->
     <div class='lesson41'>
       <root />
     </div>
-    <!--<footer>-->
-      <!--<h1>Hello San.</h1>-->
-      <!--<p>the first san app. Ver {{version}}</p>-->
-    <!--</footer>-->
   </div>
   `,
   initData() {

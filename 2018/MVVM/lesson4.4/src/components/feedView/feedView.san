@@ -1,11 +1,26 @@
 <template>
   <ul class='s-feed'>
-    <s-item s-for="item in items" />
+    <!--
+    item: Object {
+      title: String
+      time: String
+      media: Array {
+        type: Number
+        urls: Array
+      }
+    }
+    -->
+    <slot></slot>
+    <s-item s-if="data"
+            s-for="item in data"
+            data="{{item}}"/>
   </ul>
 </template>
 
 <script>
   import sItem from './feedItem.san'
+
+  import { throttle } from "../../assets/script/utils";
 
   export default {
     name: "s-feed",
@@ -14,13 +29,52 @@
     },
     initData() {
       return {
+        wSize: {
+          MAX_Height: screen.availHeight
+        },
+        windowPosition: {
+          top: 0,
+          bottom: 0
+        },
+        domPosition: {
+          top: 0,
+          bottom: 0
+        }
       }
+    },
+    attached() {
+      let feedEl = document.querySelector('.s-feed')
+      let el = document.body
+
+      // feedEl.style.cssText = `
+      // max-height: ${this.data.get('wSize.MAX_Height') - 50}px;
+      // overflow-y: auto;
+      // `
+      window.addEventListener('scroll', throttle(() => {
+        console.log(feedEl.clientHeight)
+
+        let wSize = () => {
+          return {
+            height: el.scrollHeight,
+            top: window.pageYOffset
+          }
+        }
+
+        let feedSize = () => {
+          return {
+            height: feedEl.scrollTop
+          }
+        }
+        console.log(wSize(), feedSize())
+      }, 500))
     }
+
+    // custom function
   }
 </script>
 
 <style scoped lang='less'>
   .s-feed {
-
+    overflow-y: auto;
   }
 </style>

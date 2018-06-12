@@ -15,14 +15,22 @@
     },
     initData() {
       return {
-        items: []
+        items: [],
+        index: 1
       }
+    },
+    inited() {
+      this.fetchData()
     },
 
     // custom function
     fetchData() {
-      getList().then(res => {
-        this.data.set('items', res)
+      getList({
+        index: this.data.get('index')
+      }).then(res => {
+        console.log('res', res)
+        this.data.set('items', res.list)
+        this.data.set('index', this.data.get('index') + 1)
       })
     }
   }

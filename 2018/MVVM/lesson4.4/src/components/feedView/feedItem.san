@@ -1,6 +1,20 @@
 <template>
+  <!--
+  item: Object {
+    title: String
+    time: String
+    media: Array {
+      type: Number
+      urls: Array
+    }
+  }
+  -->
   <li class='s-feed-item'>
-    <p>{{}}</p>
+    <p>{{data.title}}</p>
+    <s-media data="{{data.media}}" />
+    <p class="info">
+      <span class="time">{{data.time}}</span>
+    </p>
   </li>
 </template>
 
