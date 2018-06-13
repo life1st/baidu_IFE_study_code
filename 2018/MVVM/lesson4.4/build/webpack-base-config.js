@@ -31,7 +31,10 @@ module.exports = {
   plugins: [
     new HtmlPlugin({
       title: "hello San.",
-      favicon: "./static/favicon.ico"
+      favicon: "./static/favicon.ico",
+      meta: {
+        viewport: 'width=device-width, initial-scale=1'
+      }
     }),
     new CleanDir(["./dist"], {
       root: path.resolve(__dirname , '..'),

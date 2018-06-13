@@ -1,6 +1,6 @@
 <template>
   <div class='root'>
-    <s-feed data="{{items}}" on-slideToBottem="fetchData" />
+    <s-feed data="{{items}}" on-scrolledbottom="addData" on-customclick="clickit"/>
   </div>
 </template>
 
@@ -24,6 +24,20 @@
     },
 
     // custom function
+    clickit() {
+      console.log('click parent')
+    },
+    addData() {
+      getList({
+        index: this.data.get('index')
+      }).then(res => {
+        console.log('res', res)
+        res.list.forEach(item => {
+          this.data.push('items', item)
+        })
+        this.data.set('index', this.data.get('index') + 1)
+      })
+    },
     fetchData() {
       getList({
         index: this.data.get('index')

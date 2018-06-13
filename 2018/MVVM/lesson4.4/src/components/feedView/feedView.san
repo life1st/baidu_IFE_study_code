@@ -10,9 +10,10 @@
       }
     }
     -->
-    <slot></slot>
+    <slot s-if="!data"></slot>
     <s-item s-if="data"
-            s-for="item in data"
+            s-for="item in filterData"
+            class="feed-item"
             data="{{item}}"/>
   </ul>
 </template>
@@ -43,38 +44,39 @@
       }
     },
     attached() {
-      let feedEl = document.querySelector('.s-feed')
-      let el = document.body
-
       // feedEl.style.cssText = `
       // max-height: ${this.data.get('wSize.MAX_Height') - 50}px;
       // overflow-y: auto;
       // `
+      let itemEl = document.querySelector('.feed-item')
+      this.data.set('itemHeight', itemEl.clientHeight)
       window.addEventListener('scroll', throttle(() => {
-        console.log(feedEl.clientHeight)
-
-        let wSize = () => {
-          return {
-            height: el.scrollHeight,
-            top: window.pageYOffset
-          }
+        let pageYOffset = window.pageYOffset
+        let windowHeight = window.innerHeight
+        let bodyHeight = document.body.scrollHeight
+        let itemEl = this.ref('feeditem')
+        let itemHeight = itemEl.clientHeight
+        console.log(pageYOffset + windowHeight, bodyHeight, itemHeight)
+        if (pageYOffset + windowHeight >= bodyHeight - 200) {
+          this.fire('scrolledbottom', pageYOffset)
         }
-
-        let feedSize = () => {
-          return {
-            height: feedEl.scrollTop
-          }
-        }
-        console.log(wSize(), feedSize())
-      }, 500))
+      }, 100))
+    },
+    computed: {
+      filterData() {
+        let data = this.data.get('data')
+        let len = data.length
+        let screenNum = window.innerHeight / this.data.get('itemHeight')
+        return data.splice(screenNum - 10, len)
+      }
     }
-
     // custom function
+
   }
 </script>
 
 <style scoped lang='less'>
   .s-feed {
-    overflow-y: auto;
+
   }
 </style>

@@ -1,5 +1,5 @@
 function getList(config) {
-  const DATA_LEN = 300
+  const DATA_LEN = 100
   let data = []
   for (let i = 0; i < DATA_LEN; i++ ){
     data.push(getItem(i))
