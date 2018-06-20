@@ -12,9 +12,13 @@
     -->
     <slot s-if="!data"></slot>
     <s-item s-if="data"
+            style="{{}}"
             s-for="item in filterData"
             class="feed-item"
             data="{{item}}"/>
+    <div class="loading">
+      <p>loading data...</p>
+    </div>
   </ul>
 </template>
 
@@ -44,19 +48,11 @@
       }
     },
     attached() {
-      // feedEl.style.cssText = `
-      // max-height: ${this.data.get('wSize.MAX_Height') - 50}px;
-      // overflow-y: auto;
-      // `
-      let itemEl = document.querySelector('.feed-item')
-      this.data.set('itemHeight', itemEl.clientHeight)
       window.addEventListener('scroll', throttle(() => {
         let pageYOffset = window.pageYOffset
         let windowHeight = window.innerHeight
         let bodyHeight = document.body.scrollHeight
-        let itemEl = this.ref('feeditem')
-        let itemHeight = itemEl.clientHeight
-        console.log(pageYOffset + windowHeight, bodyHeight, itemHeight)
+
         if (pageYOffset + windowHeight >= bodyHeight - 200) {
           this.fire('scrolledbottom', pageYOffset)
         }
@@ -65,6 +61,7 @@
     computed: {
       filterData() {
         let data = this.data.get('data')
+        console.log(data)
         let len = data.length
         let screenNum = window.innerHeight / this.data.get('itemHeight')
         return data.splice(screenNum - 10, len)

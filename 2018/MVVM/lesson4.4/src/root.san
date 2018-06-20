@@ -31,10 +31,11 @@
       getList({
         index: this.data.get('index')
       }).then(res => {
-        console.log('res', res)
-        res.list.forEach(item => {
-          this.data.push('items', item)
-        })
+        let data = this.data.get('items')
+        console.log('res', res, data)
+        data.concat(res.list)
+        this.data.set('items', data)
+        console.log(this.data.get('items'), data)
         this.data.set('index', this.data.get('index') + 1)
       })
     },

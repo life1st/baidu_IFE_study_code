@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config ./build/webpack-prod-config.js",
-    "start": "webpack-dev-server --open --host 0.0.0.0 --config ./build/webpack-dev-config.js"
+    "start": "webpack-dev-server --open --host 127.0.0.1 --config ./build/webpack-dev-config.js"
   },
   "keywords": [
     "ife"
